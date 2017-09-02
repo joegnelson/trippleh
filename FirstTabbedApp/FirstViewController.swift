@@ -16,7 +16,7 @@ struct cellData {
     
 }
 
-class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
+class FirstViewController: UITableViewController /*, UITableViewDataSource*/ {
     
     var arrayofCellData = [cellData]()
     

@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="-2114" y="68"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Mook Doggie-->
         <scene sceneID="ASF-cZ-Orr">
             <objects>
                 <tableViewController id="tca-Y3-Kln" customClass="FirstViewController" customModule="FirstTabbedApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,7 +84,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ZCA-ci-TR1" kind="show" id="qLc-tw-4IJ"/>
+                                    <segue destination="ZCA-ci-TR1" kind="show" identifier="segue" id="qLc-tw-4IJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,16 +93,16 @@
                             <outlet property="delegate" destination="tca-Y3-Kln" id="Pdo-a9-ePA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ECa-nS-E44"/>
+                    <navigationItem key="navigationItem" title="Mook Doggie" id="ECa-nS-E44"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxh-sv-0QT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-753" y="-1061"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="VLy-OR-N00">
             <objects>
-                <viewController id="ZCA-ci-TR1" sceneMemberID="viewController">
+                <viewController id="ZCA-ci-TR1" customClass="RecipeViewController" customModule="FirstTabbedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nvf-Vi-ER1"/>
                         <viewControllerLayoutGuide type="bottom" id="4FI-CG-V02"/>
@@ -110,12 +110,37 @@
                     <view key="view" contentMode="scaleToFill" id="bDw-sz-GJJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow5-zn-pui">
+                                <rect key="frame" x="67" y="201" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hV8-qQ-JDC">
+                                <rect key="frame" x="1479" y="80" width="208" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijg-qZ-KbI">
+                                <rect key="frame" x="67" y="109" width="240" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="RecipeName" destination="ijg-qZ-KbI" id="vVX-GZ-T6L"/>
+                        <outlet property="lblId" destination="hV8-qQ-JDC" id="5oN-XT-98o"/>
+                        <outlet property="recipeImage" destination="ow5-zn-pui" id="kBy-uw-G6i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kge-yI-pVG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73" y="-1061"/>
+            <point key="canvasLocation" x="154" y="-1061"/>
         </scene>
         <!--Item-->
         <scene sceneID="4lc-xw-H8n">

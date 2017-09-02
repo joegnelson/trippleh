@@ -16,9 +16,15 @@ struct cellData {
     
 }
 
+//Recipe cells
+var arrayofCellData  = [cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna")),
+                   cellData(cell : 1, text : "Vegan Brownies", image : #imageLiteral(resourceName: "VeganBrownies")),
+                   cellData(cell : 1, text : "Vegan Eggplant Parmesean", image : #imageLiteral(resourceName: "VeganEggplantParm"))]
+
+var rowIndex : Int = 0
+
 class FirstViewController: UITableViewController /*, UITableViewDataSource*/ {
     
-    var arrayofCellData = [cellData]()
     
     //let data:[String] = ["Item 1", "Item 2", "Item 3", "Item 4"]
     
@@ -26,10 +32,6 @@ class FirstViewController: UITableViewController /*, UITableViewDataSource*/ {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //Recipe cells
-        arrayofCellData = [cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna")),
-                           cellData(cell : 1, text : "Vegan Brownies", image : #imageLiteral(resourceName: "VeganBrownies")),
-                           cellData(cell : 1, text : "Vegan Eggplant Parmesean", image : #imageLiteral(resourceName: "VeganEggplantParm"))]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,6 +88,13 @@ class FirstViewController: UITableViewController /*, UITableViewDataSource*/ {
             return 320
         }
 
+    }
+    override func tableView(_ tableView:UITableView,didSelectRowAt indexPath: IndexPath){
+    
+        print("\(indexPath.row) \(indexPath.item) \(indexPath.section)");
+        rowIndex=indexPath.row
+        
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
 }

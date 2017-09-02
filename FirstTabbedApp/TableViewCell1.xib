@@ -24,7 +24,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjV-qQ-clr">
                         <rect key="frame" x="10" y="262" width="310" height="58"/>
-                        <color key="backgroundColor" red="0.68873461787564771" green="0.68873461787564771" blue="0.68873461787564771" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.68873461787564771" green="0.68873461787564771" blue="0.68873461787564771" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="58" id="VxO-cN-dCA"/>
                         </constraints>

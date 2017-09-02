@@ -9,12 +9,12 @@
 import UIKit
 
 struct cellData {
-    
     let cell: Int!
     let text: String!
     let image: UIImage!
-    
 }
+
+var myIndex = 0
 
 class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
     
@@ -75,17 +75,21 @@ class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if arrayofCellData[indexPath.row].cell == 1 {
-            return 320
+            return 250
         }
             
         else if arrayofCellData[indexPath.row].cell == 2 {
-            return 79.5
+            return 80
         }
         //Default cell
         else{
-            return 320
+            return 250
         }
 
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue", sender: self)
     }
     
 }

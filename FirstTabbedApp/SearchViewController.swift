@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDataSource {
+class SearchViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ICU")
     }
-    
+ /*
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -24,7 +24,7 @@ class SearchViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = "It's a cell"
         return cell
     }
-    
+*/    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

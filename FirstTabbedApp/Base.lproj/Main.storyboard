@@ -147,7 +147,7 @@
         <!--Search View Controller-->
         <scene sceneID="Bh2-WV-bh0">
             <objects>
-                <tableViewController id="Qet-VJ-F68" customClass="SearchViewController" sceneMemberID="viewController">
+                <tableViewController id="Qet-VJ-F68" customClass="SearchViewController" customModule="FirstTabbedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1aS-ih-bGD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

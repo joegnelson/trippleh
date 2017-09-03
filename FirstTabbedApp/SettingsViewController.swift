@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SettingsViewController: UIViewController {
     
     //Switches for Restictions
     @IBOutlet weak var sugFswitch: UISwitch!

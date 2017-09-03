@@ -16,7 +16,7 @@ struct cellData {
 
 var myIndex = 0
 
-class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
+class SearchResultsViewController: UITableViewController /**,UITableViewDataSource*/ {
     
     var arrayofCellData = [cellData]()
     
@@ -24,6 +24,9 @@ class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "Search Results"
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         //Recipe cells

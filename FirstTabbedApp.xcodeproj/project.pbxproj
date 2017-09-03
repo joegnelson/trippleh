@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AC51F0C03DD0057E481 /* AppDelegate.swift */; };
-		08562AC81F0C03DD0057E481 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AC71F0C03DD0057E481 /* FirstViewController.swift */; };
-		08562ACA1F0C03DD0057E481 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AC91F0C03DD0057E481 /* SecondViewController.swift */; };
+		08562AC81F0C03DD0057E481 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AC71F0C03DD0057E481 /* SearchResultsViewController.swift */; };
+		08562ACA1F0C03DD0057E481 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AC91F0C03DD0057E481 /* SettingsViewController.swift */; };
 		08562ACD1F0C03DD0057E481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08562ACB1F0C03DD0057E481 /* Main.storyboard */; };
 		08562ACF1F0C03DD0057E481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08562ACE1F0C03DD0057E481 /* Assets.xcassets */; };
 		08562ADD1F0C03DD0057E481 /* FirstTabbedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562ADC1F0C03DD0057E481 /* FirstTabbedAppTests.swift */; };
@@ -19,6 +19,8 @@
 		D2318B7B1F5A47E600E8F591 /* VeganEggPlantParm.png in Resources */ = {isa = PBXBuildFile; fileRef = D2318B781F5A47E600E8F591 /* VeganEggPlantParm.png */; };
 		D2318B7C1F5A47E600E8F591 /* VeganBrownies.png in Resources */ = {isa = PBXBuildFile; fileRef = D2318B791F5A47E600E8F591 /* VeganBrownies.png */; };
 		D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */; };
+		D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */; };
+		D244E71A1F5CA73B00D8B3D3 /* HomeRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */; };
 		D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2489D331F54CD320094D91F /* TableViewCell1.swift */; };
 		D2489D361F54CD320094D91F /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2489D341F54CD320094D91F /* TableViewCell1.xib */; };
 /* End PBXBuildFile section */
@@ -43,8 +45,8 @@
 /* Begin PBXFileReference section */
 		08562AC21F0C03DD0057E481 /* FirstTabbedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstTabbedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08562AC51F0C03DD0057E481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		08562AC71F0C03DD0057E481 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		08562AC91F0C03DD0057E481 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		08562AC71F0C03DD0057E481 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		08562AC91F0C03DD0057E481 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		08562ACC1F0C03DD0057E481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08562ACE1F0C03DD0057E481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08562AD31F0C03DD0057E481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +61,8 @@
 		D2318B781F5A47E600E8F591 /* VeganEggPlantParm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VeganEggPlantParm.png; path = ../../../../Desktop/VeganEggPlantParm.png; sourceTree = "<group>"; };
 		D2318B791F5A47E600E8F591 /* VeganBrownies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VeganBrownies.png; path = ../../../../Desktop/VeganBrownies.png; sourceTree = "<group>"; };
 		D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecipeViewController.swift; sourceTree = "<group>"; };
 		D2489D331F54CD320094D91F /* TableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		D2489D341F54CD320094D91F /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,15 +115,17 @@
 		08562AC41F0C03DD0057E481 /* FirstTabbedApp */ = {
 			isa = PBXGroup;
 			children = (
-				08562AC51F0C03DD0057E481 /* AppDelegate.swift */,
-				08562AC71F0C03DD0057E481 /* FirstViewController.swift */,
-				08562AC91F0C03DD0057E481 /* SecondViewController.swift */,
-				D211B5F51F5A39EA0092998A /* RecipeViewController.swift */,
 				D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */,
+				D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */,
+				D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */,
+				08562AC71F0C03DD0057E481 /* SearchResultsViewController.swift */,
+				D211B5F51F5A39EA0092998A /* RecipeViewController.swift */,
+				08562AC91F0C03DD0057E481 /* SettingsViewController.swift */,
 				08562ACB1F0C03DD0057E481 /* Main.storyboard */,
 				08562ACE1F0C03DD0057E481 /* Assets.xcassets */,
 				D2489D331F54CD320094D91F /* TableViewCell1.swift */,
 				D2489D341F54CD320094D91F /* TableViewCell1.xib */,
+				08562AC51F0C03DD0057E481 /* AppDelegate.swift */,
 				08562AD31F0C03DD0057E481 /* Info.plist */,
 				D2318B771F5A47E600E8F591 /* VeganBeetLasagna.png */,
 				D2318B781F5A47E600E8F591 /* VeganEggPlantParm.png */,
@@ -285,9 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D211B5F61F5A39EA0092998A /* RecipeViewController.swift in Sources */,
-				08562ACA1F0C03DD0057E481 /* SecondViewController.swift in Sources */,
+				D244E71A1F5CA73B00D8B3D3 /* HomeRecipeViewController.swift in Sources */,
+				D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */,
+				08562ACA1F0C03DD0057E481 /* SettingsViewController.swift in Sources */,
 				08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */,
-				08562AC81F0C03DD0057E481 /* FirstViewController.swift in Sources */,
+				08562AC81F0C03DD0057E481 /* SearchResultsViewController.swift in Sources */,
 				D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */,
 				D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */,
 			);

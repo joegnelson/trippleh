@@ -14,6 +14,8 @@ class RecipeViewController: UIViewController {
         recipeTitle.text = "First"
         recipeImage.image = #imageLiteral(resourceName: "VeganBeetLasagna.png")
         recipeDescrip.text = "Yummy vegan shit"
+        
+        self.navigationItem.title = recipeTitle.text
     }
     
     override func didReceiveMemoryWarning() {

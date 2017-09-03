@@ -12,17 +12,15 @@
 		08562ACA1F0C03DD0057E481 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AC91F0C03DD0057E481 /* SecondViewController.swift */; };
 		08562ACD1F0C03DD0057E481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08562ACB1F0C03DD0057E481 /* Main.storyboard */; };
 		08562ACF1F0C03DD0057E481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08562ACE1F0C03DD0057E481 /* Assets.xcassets */; };
-		08562AD21F0C03DD0057E481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08562AD01F0C03DD0057E481 /* LaunchScreen.storyboard */; };
 		08562ADD1F0C03DD0057E481 /* FirstTabbedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562ADC1F0C03DD0057E481 /* FirstTabbedAppTests.swift */; };
 		08562AE81F0C03DD0057E481 /* FirstTabbedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AE71F0C03DD0057E481 /* FirstTabbedAppUITests.swift */; };
 		D211B5F61F5A39EA0092998A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211B5F51F5A39EA0092998A /* RecipeViewController.swift */; };
 		D2318B7A1F5A47E600E8F591 /* VeganBeetLasagna.png in Resources */ = {isa = PBXBuildFile; fileRef = D2318B771F5A47E600E8F591 /* VeganBeetLasagna.png */; };
 		D2318B7B1F5A47E600E8F591 /* VeganEggPlantParm.png in Resources */ = {isa = PBXBuildFile; fileRef = D2318B781F5A47E600E8F591 /* VeganEggPlantParm.png */; };
 		D2318B7C1F5A47E600E8F591 /* VeganBrownies.png in Resources */ = {isa = PBXBuildFile; fileRef = D2318B791F5A47E600E8F591 /* VeganBrownies.png */; };
+		D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */; };
 		D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2489D331F54CD320094D91F /* TableViewCell1.swift */; };
 		D2489D361F54CD320094D91F /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2489D341F54CD320094D91F /* TableViewCell1.xib */; };
-		D2489D731F54CF240094D91F /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2489D711F54CF240094D91F /* TableViewCell2.swift */; };
-		D2489D741F54CF240094D91F /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2489D721F54CF240094D91F /* TableViewCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +47,6 @@
 		08562AC91F0C03DD0057E481 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		08562ACC1F0C03DD0057E481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		08562ACE1F0C03DD0057E481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		08562AD11F0C03DD0057E481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		08562AD31F0C03DD0057E481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08562AD81F0C03DD0057E481 /* FirstTabbedAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstTabbedAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08562ADC1F0C03DD0057E481 /* FirstTabbedAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabbedAppTests.swift; sourceTree = "<group>"; };
@@ -61,10 +58,9 @@
 		D2318B771F5A47E600E8F591 /* VeganBeetLasagna.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VeganBeetLasagna.png; path = ../../../../Desktop/VeganBeetLasagna.png; sourceTree = "<group>"; };
 		D2318B781F5A47E600E8F591 /* VeganEggPlantParm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VeganEggPlantParm.png; path = ../../../../Desktop/VeganEggPlantParm.png; sourceTree = "<group>"; };
 		D2318B791F5A47E600E8F591 /* VeganBrownies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VeganBrownies.png; path = ../../../../Desktop/VeganBrownies.png; sourceTree = "<group>"; };
+		D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D2489D331F54CD320094D91F /* TableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		D2489D341F54CD320094D91F /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
-		D2489D711F54CF240094D91F /* TableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell2.swift; path = ../TableViewCell2.swift; sourceTree = "<group>"; };
-		D2489D721F54CF240094D91F /* TableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCell2.xib; path = ../TableViewCell2.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,13 +115,11 @@
 				08562AC71F0C03DD0057E481 /* FirstViewController.swift */,
 				08562AC91F0C03DD0057E481 /* SecondViewController.swift */,
 				D211B5F51F5A39EA0092998A /* RecipeViewController.swift */,
+				D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */,
 				08562ACB1F0C03DD0057E481 /* Main.storyboard */,
 				08562ACE1F0C03DD0057E481 /* Assets.xcassets */,
 				D2489D331F54CD320094D91F /* TableViewCell1.swift */,
 				D2489D341F54CD320094D91F /* TableViewCell1.xib */,
-				D2489D711F54CF240094D91F /* TableViewCell2.swift */,
-				D2489D721F54CF240094D91F /* TableViewCell2.xib */,
-				08562AD01F0C03DD0057E481 /* LaunchScreen.storyboard */,
 				08562AD31F0C03DD0057E481 /* Info.plist */,
 				D2318B771F5A47E600E8F591 /* VeganBeetLasagna.png */,
 				D2318B781F5A47E600E8F591 /* VeganEggPlantParm.png */,
@@ -220,6 +214,7 @@
 				TargetAttributes = {
 					08562AC11F0C03DD0057E481 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3CEPUU2ZZ9;
 						ProvisioningStyle = Automatic;
 					};
 					08562AD71F0C03DD0057E481 = {
@@ -259,8 +254,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2489D741F54CF240094D91F /* TableViewCell2.xib in Resources */,
-				08562AD21F0C03DD0057E481 /* LaunchScreen.storyboard in Resources */,
 				08562ACF1F0C03DD0057E481 /* Assets.xcassets in Resources */,
 				D2318B7A1F5A47E600E8F591 /* VeganBeetLasagna.png in Resources */,
 				08562ACD1F0C03DD0057E481 /* Main.storyboard in Resources */,
@@ -291,12 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2489D731F54CF240094D91F /* TableViewCell2.swift in Sources */,
 				D211B5F61F5A39EA0092998A /* RecipeViewController.swift in Sources */,
 				08562ACA1F0C03DD0057E481 /* SecondViewController.swift in Sources */,
 				08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */,
 				08562AC81F0C03DD0057E481 /* FirstViewController.swift in Sources */,
 				D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */,
+				D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,14 +331,6 @@
 				08562ACC1F0C03DD0057E481 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		08562AD01F0C03DD0057E481 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				08562AD11F0C03DD0057E481 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -450,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CEPUU2ZZ9;
 				INFOPLIST_FILE = FirstTabbedApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cccentric.FirstTabbedApp;
@@ -462,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CEPUU2ZZ9;
 				INFOPLIST_FILE = FirstTabbedApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cccentric.FirstTabbedApp;

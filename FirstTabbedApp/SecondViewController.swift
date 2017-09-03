@@ -9,7 +9,16 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    //Switches for Restictions
+    @IBOutlet weak var sugFswitch: UISwitch!
+    @IBOutlet weak var gluFswitch: UISwitch!
+    @IBOutlet weak var veganSwitch: UISwitch!
+    @IBOutlet weak var vegetSwitch: UISwitch!
+    @IBOutlet weak var nutFswitch: UISwitch!
+    @IBOutlet weak var dairyFswitch: UISwitch!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

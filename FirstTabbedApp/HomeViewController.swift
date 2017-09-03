@@ -1,22 +1,11 @@
-//
-//  FirstViewController.swift
-//  FirstTabbedApp
-//
-//  Created by Nelson, Joe on 7/4/17.
-//  Copyright © 2017 Nelson, Joe. All rights reserved.
-//
+//Home View Controller 
+//Same as when in 
+
 
 import UIKit
 
-struct cellData {
-    let cell: Int!
-    let text: String!
-    let image: UIImage!
-}
 
-var myIndex = 0
-
-class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
+class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     
     var arrayofCellData = [cellData]()
     
@@ -38,8 +27,8 @@ class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         /**let cell = UITableViewCell()
-        cell.textLabel?.text = data[indexPath.count]
-        return cell   */
+         cell.textLabel?.text = data[indexPath.count]
+         return cell   */
         
         if arrayofCellData[indexPath.row].cell == 1 {
             
@@ -48,9 +37,9 @@ class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
             cell.mainLabel1.text = arrayofCellData[indexPath.row].text
             
             return cell
-        
+            
         }
-        //Default cell
+            //Default cell
         else {
             
             let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
@@ -58,7 +47,7 @@ class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
             cell.mainLabel1.text = arrayofCellData[indexPath.row].text
             
             return cell
-
+            
         }
         
     }
@@ -68,11 +57,11 @@ class FirstViewController: UITableViewController /**, UITableViewDataSource*/ {
             return 250
         }
             
-        //Default cell
+            //Default cell
         else{
             return 250
         }
-
+        
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row

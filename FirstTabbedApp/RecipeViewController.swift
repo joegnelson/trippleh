@@ -18,6 +18,7 @@ class RecipeViewController: UIViewController {
         super.viewDidLoad()
         recipeImage.image = arrayofCellData[rowIndex].image
         RecipeName.text = arrayofCellData[rowIndex].text
+        self.navigationItem.title=arrayofCellData[rowIndex].text
     }
     
     override func didReceiveMemoryWarning() {

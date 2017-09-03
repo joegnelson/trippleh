@@ -30,8 +30,7 @@ class FirstViewController: UITableViewController /*, UITableViewDataSource*/ {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        self.navigationItem.title="First View"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -115,7 +115,7 @@
         <scene sceneID="jyx-Fn-umo">
             <objects>
                 <navigationController id="c49-ZA-B6O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="first" id="fqb-mn-Nk2"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-Settings Filled_25" selectedImage="icons8-Settings Filled_25" id="fqb-mn-Nk2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gHU-VO-8Tl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -162,7 +162,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xdy-C5-s1B" id="fWa-iz-Y8i">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -194,7 +194,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzd-p8-9qc" id="0bO-Ef-A3j">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -218,7 +218,7 @@
         <scene sceneID="CeB-fi-uqU">
             <objects>
                 <navigationController id="wYL-b0-dyn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="E3o-AD-elJ"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-Home-25" selectedImage="icons8-Home-25" id="E3o-AD-elJ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="UOI-Bl-Old">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -244,7 +244,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QXx-gi-UaX" id="emc-97-W3R">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -318,7 +318,7 @@
         <scene sceneID="iZu-PV-Msn">
             <objects>
                 <navigationController id="QiZ-zV-RY7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="second" id="hpc-DF-gV3"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="icons8-Search Filled_25" selectedImage="icons8-Search Filled_25" id="hpc-DF-gV3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lq1-bi-hsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -334,6 +334,9 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="icons8-Home-25" width="25" height="25"/>
+        <image name="icons8-Search Filled_25" width="25" height="25"/>
+        <image name="icons8-Settings Filled_25" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

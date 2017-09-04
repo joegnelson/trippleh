@@ -4,10 +4,7 @@
 
 import UIKit
 
-
 var homeViewIndex:Int=0
-
-
 
 class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     

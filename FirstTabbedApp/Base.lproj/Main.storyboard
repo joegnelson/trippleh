@@ -303,10 +303,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="RecipeTitle" destination="U5A-Wa-Bgv" id="iOS-12-tbz"/>
-                        <outlet property="recipeDescription" destination="tef-xg-m4G" id="qvW-TD-fkZ"/>
-                        <outlet property="recipeImage" destination="Y8E-xh-DRT" id="KJq-qe-MGQ"/>
-                        <outlet property="recipeTitle" destination="U5A-Wa-Bgv" id="nLX-gB-J0Q"/>
+                        <outlet property="recipeDescrip" destination="tef-xg-m4G" id="X1w-yz-99Z"/>
+                        <outlet property="recipeImage" destination="Y8E-xh-DRT" id="b3d-vA-OYM"/>
+                        <outlet property="recipeTitle" destination="U5A-Wa-Bgv" id="dhH-Wk-Tve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNW-VL-qH1" userLabel="First Responder" sceneMemberID="firstResponder"/>

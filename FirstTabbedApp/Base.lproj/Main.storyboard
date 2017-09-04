@@ -179,7 +179,7 @@
         <!--Search Results-->
         <scene sceneID="YCj-Wl-p0a">
             <objects>
-                <tableViewController id="Qv2-q1-ubF" customClass="SearchResultsViewController" sceneMemberID="viewController">
+                <tableViewController id="Qv2-q1-ubF" customClass="SearchResultsViewController" customModule="FirstTabbedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zqR-Sv-qqM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

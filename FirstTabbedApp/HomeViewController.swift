@@ -5,11 +5,10 @@
 import UIKit
 
 
-var rowIndex : Int = 0
-var arrayofCellData = [cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna")),
-                   cellData(cell : 1, text : "Vegan Brownies", image : #imageLiteral(resourceName: "VeganBrownies")),
-                   cellData(cell : 1, text : "Vegan Eggplant Parmesean", image : #imageLiteral(resourceName: "VeganEggplantParm"))]
 var homeViewIndex:Int=0
+
+
+
 class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     
     override func viewDidLoad() {

@@ -14,6 +14,7 @@
 		08562ACF1F0C03DD0057E481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08562ACE1F0C03DD0057E481 /* Assets.xcassets */; };
 		08562ADD1F0C03DD0057E481 /* FirstTabbedAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562ADC1F0C03DD0057E481 /* FirstTabbedAppTests.swift */; };
 		08562AE81F0C03DD0057E481 /* FirstTabbedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AE71F0C03DD0057E481 /* FirstTabbedAppUITests.swift */; };
+		08EA6AD11F5DC16D00D10A73 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EA6AD01F5DC16D00D10A73 /* Recipe.swift */; };
 		D211B5F61F5A39EA0092998A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211B5F51F5A39EA0092998A /* RecipeViewController.swift */; };
 		D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */; };
 		D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */; };
@@ -53,6 +54,7 @@
 		08562AE31F0C03DD0057E481 /* FirstTabbedAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstTabbedAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08562AE71F0C03DD0057E481 /* FirstTabbedAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTabbedAppUITests.swift; sourceTree = "<group>"; };
 		08562AE91F0C03DD0057E481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08EA6AD01F5DC16D00D10A73 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D211B5F51F5A39EA0092998A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		08562AC41F0C03DD0057E481 /* FirstTabbedApp */ = {
 			isa = PBXGroup;
 			children = (
+				08EA6AD01F5DC16D00D10A73 /* Recipe.swift */,
 				D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */,
 				D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */,
 				D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */,
@@ -284,6 +287,7 @@
 				08562ACA1F0C03DD0057E481 /* SettingsViewController.swift in Sources */,
 				08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */,
 				08562AC81F0C03DD0057E481 /* SearchResultsViewController.swift in Sources */,
+				08EA6AD11F5DC16D00D10A73 /* Recipe.swift in Sources */,
 				D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */,
 				D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */,
 			);

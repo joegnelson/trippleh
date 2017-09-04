@@ -9,7 +9,12 @@
 import UIKit
 
 
-var allReecipes :[Recipe]=[]
+
+var allRecipes :[Recipe]=[]
+
+var arrayofCellData = [cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna")),
+                       cellData(cell : 1, text : "Vegan Brownies", image : #imageLiteral(resourceName: "VeganBrownies")),
+                       cellData(cell : 1, text : "Vegan Eggplant Parmesean", image : #imageLiteral(resourceName: "VeganEggplantParm"))]
 
 class Recipe: NSObject {
     var date:String
@@ -32,8 +37,8 @@ class Recipe: NSObject {
     }
     class func saveRecipes(){
         var aDictionaries:[NSDictionary] = []
-        for i:Int in 0 ..< allReecipes.count {
-            aDictionaries.append(allReecipes[i].dictionary())
+        for i:Int in 0 ..< allRecipes.count {
+            aDictionaries.append(allRecipes[i].dictionary())
         }
         
         UserDefaults.standard.setValue(aDictionaries, forKey: keyAllRecipes)
@@ -49,7 +54,7 @@ class Recipe: NSObject {
             for i:Int in 0 ..< data.count{
                 let r:Recipe=Recipe()
                 r.setValuesForKeys(data[i] as! [String : Any])
-                allReecipes.append(r)
+                allRecipes.append(r)
             
             }
         }

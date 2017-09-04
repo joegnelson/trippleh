@@ -14,21 +14,18 @@ struct cellData {
     let image: UIImage!
 }
 
-var myIndex = 0
+var searchResultsViewIndex = 0
+
+
 
 class SearchResultsViewController: UITableViewController {
     
-    var arrayofCellData = [cellData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "Search Results"
         
-        //Recipe cells
-        arrayofCellData = [cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna")),
-                           cellData(cell : 1, text : "Vegan Brownies", image : #imageLiteral(resourceName: "VeganBrownies")),
-                           cellData(cell : 1, text : "Vegan Eggplant Parmesean", image : #imageLiteral(resourceName: "VeganEggplantParm"))]
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,7 +45,7 @@ class SearchResultsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        searchResultsViewIndex = indexPath.row
         performSegue(withIdentifier: "searchSegue", sender: self)
     }
     

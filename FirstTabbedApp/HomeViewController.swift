@@ -42,7 +42,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
-        performSegue(withIdentifier: "segue", sender: self)
+        performSegue(withIdentifier: "homeSegue", sender: self)
     }
     
 }

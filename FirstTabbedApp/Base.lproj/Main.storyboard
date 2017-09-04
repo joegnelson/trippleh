@@ -157,7 +157,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xdy-C5-s1B" id="fWa-iz-Y8i">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -169,7 +169,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="ESS-xc-naf"/>
                     <connections>
-                        <segue destination="Qv2-q1-ubF" kind="show" id="CAI-5B-MQM"/>
+                        <segue destination="Qv2-q1-ubF" kind="show" identifier="searchSegue" id="CAI-5B-MQM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltp-F6-ptr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,7 +189,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzd-p8-9qc" id="0bO-Ef-A3j">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -239,7 +239,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QXx-gi-UaX" id="emc-97-W3R">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -251,7 +251,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Recently Added Recipes" id="6jx-kX-mkK"/>
                     <connections>
-                        <segue destination="M2J-Ti-7Hs" kind="show" id="F4o-2W-2nW"/>
+                        <segue destination="M2J-Ti-7Hs" kind="show" identifier="homeSegue" id="F4o-2W-2nW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxU-eb-eZY" userLabel="First Responder" sceneMemberID="firstResponder"/>

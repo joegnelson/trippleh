@@ -12,8 +12,8 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeTitle.text = "First"
-        recipeImage.image = #imageLiteral(resourceName: "VeganBeetLasagna.png")
-        recipeDescrip.text = "Yummy vegan shit"
+        recipeImage.image = #imageLiteral(resourceName: "VeganEggplantParm")
+        recipeDescrip.text = "__________"
         
         self.navigationItem.title = recipeTitle.text
     }

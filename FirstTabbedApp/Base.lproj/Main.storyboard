@@ -202,7 +202,7 @@
                     <tabBarItem key="tabBarItem" title="Search" image="second" id="PXg-En-F9h"/>
                     <navigationItem key="navigationItem" title="Search Results" id="fbb-Qg-INS"/>
                     <connections>
-                        <segue destination="TJc-b8-NNL" kind="show" identifier="segue" id="WiB-Ek-FKv"/>
+                        <segue destination="TJc-b8-NNL" kind="show" identifier="searchSegue" id="WiB-Ek-FKv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Or-38-Qvv" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="1667" y="-640"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Recipe View Controller-->
         <scene sceneID="uFO-5M-ANN">
             <objects>
-                <viewController id="M2J-Ti-7Hs" sceneMemberID="viewController">
+                <viewController id="M2J-Ti-7Hs" customClass="HomeRecipeViewController" customModule="FirstTabbedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="niB-h9-N2w"/>
                         <viewControllerLayoutGuide type="bottom" id="Mkh-49-FLQ"/>
@@ -302,6 +302,11 @@
                             <constraint firstItem="tef-xg-m4G" firstAttribute="top" secondItem="Y8E-xh-DRT" secondAttribute="bottom" constant="47" id="xsL-ku-ugC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recipeDescrip" destination="tef-xg-m4G" id="X1w-yz-99Z"/>
+                        <outlet property="recipeImage" destination="Y8E-xh-DRT" id="b3d-vA-OYM"/>
+                        <outlet property="recipeTitle" destination="U5A-Wa-Bgv" id="dhH-Wk-Tve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNW-VL-qH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

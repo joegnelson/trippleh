@@ -8,11 +8,6 @@
 
 import UIKit
 
-struct cellData {
-    let cell: Int!
-    let text: String!
-    let image: UIImage!
-}
 
 var searchResultsViewIndex = 0
 

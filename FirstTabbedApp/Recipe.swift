@@ -9,12 +9,18 @@
 import UIKit
 
 
+struct cellData {
+    let cell: Int!
+    let text: String!
+    let imageUrl: String!
+    let image: UIImage!
+}
 
 var allRecipes :[Recipe]=[]
 
-var arrayofCellData = [cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna")),
-                       cellData(cell : 1, text : "Vegan Brownies", image : #imageLiteral(resourceName: "VeganBrownies")),
-                       cellData(cell : 1, text : "Vegan Eggplant Parmesean", image : #imageLiteral(resourceName: "VeganEggplantParm"))]
+var arrayofCellData = [cellData(cell : 1, text : "Vegan Beet Lasagna",imageUrl:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/HTTPS_Everywhere_icon.svg/1200px-HTTPS_Everywhere_icon.svg.png", image : #imageLiteral(resourceName: "BeetLasagna")),
+                       cellData(cell : 1, text : "Vegan Brownies",imageUrl:"https://www.apple.com/euro/ios/ios8/a/generic/images/og.png", image : #imageLiteral(resourceName: "VeganBrownies")),
+                       cellData(cell : 1, text : "Vegan Eggplant Parmesean",imageUrl:"http://www.seriouseats.com/images/2015/07/20150728-homemade-whopper-food-lab-35.jpg", image : #imageLiteral(resourceName: "VeganEggplantParm"))]
 
 class Recipe: NSObject {
     var date:String
@@ -25,6 +31,8 @@ class Recipe: NSObject {
 
     override init() {
         date=NSDate().description
+                
+        
     }
     func dictionary()-> NSDictionary{
         return [

@@ -160,6 +160,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Qv2-q1-ubF" kind="show" id="bQF-Sn-AXE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -168,9 +171,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ESS-xc-naf"/>
-                    <connections>
-                        <segue destination="Qv2-q1-ubF" kind="show" identifier="searchSegue" id="CAI-5B-MQM"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltp-F6-ptr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="1667" y="-640"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Recipe View Controller-->
         <scene sceneID="uFO-5M-ANN">
             <objects>
-                <viewController id="M2J-Ti-7Hs" sceneMemberID="viewController">
+                <viewController id="M2J-Ti-7Hs" customClass="HomeRecipeViewController" customModule="FirstTabbedApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="niB-h9-N2w"/>
                         <viewControllerLayoutGuide type="bottom" id="Mkh-49-FLQ"/>
@@ -302,6 +302,12 @@
                             <constraint firstItem="tef-xg-m4G" firstAttribute="top" secondItem="Y8E-xh-DRT" secondAttribute="bottom" constant="47" id="xsL-ku-ugC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="RecipeTitle" destination="U5A-Wa-Bgv" id="iOS-12-tbz"/>
+                        <outlet property="recipeDescription" destination="tef-xg-m4G" id="qvW-TD-fkZ"/>
+                        <outlet property="recipeImage" destination="Y8E-xh-DRT" id="KJq-qe-MGQ"/>
+                        <outlet property="recipeTitle" destination="U5A-Wa-Bgv" id="nLX-gB-J0Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNW-VL-qH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

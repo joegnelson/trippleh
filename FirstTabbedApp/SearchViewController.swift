@@ -21,12 +21,13 @@ class SearchViewController: UITableViewController {
         
         self.navigationItem.title = "Search"
     }
- 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catagories[section].count
-    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return catagories.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return catagories[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,13 +35,13 @@ class SearchViewController: UITableViewController {
         cell.textLabel?.text = catagories[indexPath.section][indexPath.row]
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return headers[section]
     }
- 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
+    
 }

@@ -10,40 +10,28 @@ import UIKit
 
 class HomeRecipeViewController:UIViewController {
     @IBOutlet weak var recipeImage: UIImageView!
-
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeDescrip: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipeImage.image = arrayofCellData[homeViewIndex].image
-        recipeTitle.text = arrayofCellData[homeViewIndex].text
+        let data:cellData=arrayofCellData[homeViewIndex];
+        recipeImage.image = data.image
+        recipeTitle.text = data.text
+        recipeDescrip.text=data.catDetail
         
-        recipeDescrip.text=arrayofCellData[homeViewIndex].catDetail
+        self.navigationItem.title=data.text
         
-        self.navigationItem.title=arrayofCellData[homeViewIndex].text
-        
-        let url:String  = arrayofCellData[homeViewIndex].imageUrl
- //       let filePath = Bundle.main.path(forResource: url, ofType: "jpg")
+        let url:String  = data.imageUrl
         if(!url.isEmpty){
-            
-            
             if let checkedUrl = URL(string: url) {
                 self.recipeImage.contentMode = .scaleAspectFit
                 downloadImage(url: checkedUrl)
             }
-            
-            
-//            let image = UIImage(contentsOfFile: url)
-//            if(image != nil)
-//            {
-//                recipeImage.image=image
-//            }
-            
         }
-
     }
+
     func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in

@@ -8,6 +8,7 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeDescrip: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var recipeRestrictions: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,7 @@ class RecipeViewController: UIViewController {
         recipeImage.image = data.image
         recipeTitle.text = data.text
         recipeDescrip.text=data.catDetail
-        
+        recipeRestrictions.text=data.restrictions
         self.navigationItem.title=data.text
         
         let url:String  = data.imageUrl

@@ -12,6 +12,7 @@ class HomeRecipeViewController:UIViewController {
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeDescrip: UILabel!
+    @IBOutlet weak var recipeRestrictions: UILabel!
     
     
     override func viewDidLoad() {
@@ -19,8 +20,8 @@ class HomeRecipeViewController:UIViewController {
         let data:cellData=arrayofCellData[homeViewIndex];
         recipeImage.image = data.image
         recipeTitle.text = data.text
-        recipeDescrip.text=data.catDetail
-        
+        recipeDescrip.text = data.catDetail
+        recipeRestrictions.text = data.restrictions
         self.navigationItem.title=data.text
         
         let url:String  = data.imageUrl

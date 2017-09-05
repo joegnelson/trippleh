@@ -46,7 +46,7 @@
                                 <rect key="frame" x="26" y="203" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sugar Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9k-TE-K3j">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Added Suger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9k-TE-K3j">
                                 <rect key="frame" x="94" y="91" width="295" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -106,11 +106,11 @@
             </objects>
             <point key="canvasLocation" x="1667" y="728"/>
         </scene>
-        <!--Settings-->
+        <!--Filter-->
         <scene sceneID="jyx-Fn-umo">
             <objects>
                 <navigationController id="c49-ZA-B6O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="icons8-Settings Filled_25" selectedImage="icons8-Settings Filled_25" id="fqb-mn-Nk2"/>
+                    <tabBarItem key="tabBarItem" title="Filter" image="icons8-Filter and Sort Filled_25" selectedImage="icons8-Filter and Sort Filled_25" id="fqb-mn-Nk2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gHU-VO-8Tl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -136,8 +136,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="wYL-b0-dyn" kind="relationship" relationship="viewControllers" id="L8G-7Q-xfZ"/>
-                        <segue destination="QiZ-zV-RY7" kind="relationship" relationship="viewControllers" id="8tn-iR-Z3c"/>
                         <segue destination="c49-ZA-B6O" kind="relationship" relationship="viewControllers" id="Hdr-Oq-giW"/>
+                        <segue destination="QiZ-zV-RY7" kind="relationship" relationship="viewControllers" id="8tn-iR-Z3c"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -288,16 +288,28 @@
                                     <constraint firstAttribute="height" constant="291" id="kHw-NZ-Wub"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restrictions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9J-x3-dpH">
+                                <rect key="frame" x="20" y="525" width="374" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ac2-tu-6gX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tef-xg-m4G" firstAttribute="centerX" secondItem="Y8E-xh-DRT" secondAttribute="centerX" id="9kS-RA-DAv"/>
                             <constraint firstItem="tef-xg-m4G" firstAttribute="leading" secondItem="g55-Tg-uvD" secondAttribute="leadingMargin" constant="72" id="NWA-cE-LjJ"/>
+                            <constraint firstItem="j9J-x3-dpH" firstAttribute="leading" secondItem="g55-Tg-uvD" secondAttribute="leadingMargin" id="XoY-Ka-Dcu"/>
                             <constraint firstItem="U5A-Wa-Bgv" firstAttribute="centerX" secondItem="g55-Tg-uvD" secondAttribute="centerX" id="eRe-0N-sQa"/>
                             <constraint firstItem="Y8E-xh-DRT" firstAttribute="top" secondItem="U5A-Wa-Bgv" secondAttribute="bottom" constant="40" id="elv-gp-V5F"/>
                             <constraint firstItem="Y8E-xh-DRT" firstAttribute="centerX" secondItem="U5A-Wa-Bgv" secondAttribute="centerX" id="g3q-6z-vCq"/>
                             <constraint firstItem="U5A-Wa-Bgv" firstAttribute="top" secondItem="niB-h9-N2w" secondAttribute="bottom" constant="17" id="oDr-7d-Onx"/>
                             <constraint firstItem="Y8E-xh-DRT" firstAttribute="leading" secondItem="g55-Tg-uvD" secondAttribute="leadingMargin" constant="14" id="ox9-Hu-pqK"/>
+                            <constraint firstItem="j9J-x3-dpH" firstAttribute="top" secondItem="tef-xg-m4G" secondAttribute="bottom" constant="24" id="rma-si-amR"/>
+                            <constraint firstItem="j9J-x3-dpH" firstAttribute="centerX" secondItem="tef-xg-m4G" secondAttribute="centerX" id="uM9-c3-Obv"/>
                             <constraint firstItem="U5A-Wa-Bgv" firstAttribute="leading" secondItem="g55-Tg-uvD" secondAttribute="leadingMargin" constant="55" id="vBX-rM-VGU"/>
                             <constraint firstItem="tef-xg-m4G" firstAttribute="top" secondItem="Y8E-xh-DRT" secondAttribute="bottom" constant="47" id="xsL-ku-ugC"/>
                         </constraints>
@@ -305,12 +317,13 @@
                     <connections>
                         <outlet property="recipeDescrip" destination="tef-xg-m4G" id="X1w-yz-99Z"/>
                         <outlet property="recipeImage" destination="Y8E-xh-DRT" id="b3d-vA-OYM"/>
+                        <outlet property="recipeRestrictions" destination="j9J-x3-dpH" id="pzb-2C-jHC"/>
                         <outlet property="recipeTitle" destination="U5A-Wa-Bgv" id="dhH-Wk-Tve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNW-VL-qH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2448" y="-641"/>
+            <point key="canvasLocation" x="2447.826086956522" y="-641.57608695652175"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="hLI-Ui-Qo4">
@@ -320,7 +333,7 @@
                         <viewControllerLayoutGuide type="top" id="lpM-uc-e6J"/>
                         <viewControllerLayoutGuide type="bottom" id="nC1-FH-4Fd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Kxx-En-gqY" customClass="Search">
+                    <view key="view" contentMode="scaleToFill" id="Kxx-En-gqY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -342,15 +355,24 @@
                                     <constraint firstAttribute="height" constant="291" id="n88-ZD-A5S"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restrictions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRf-lh-S0y">
+                                <rect key="frame" x="20" y="524" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FRf-lh-S0y" firstAttribute="top" secondItem="TLx-b9-ZKb" secondAttribute="bottom" constant="23" id="5CB-Ot-Eaq"/>
                             <constraint firstItem="TLx-b9-ZKb" firstAttribute="leading" secondItem="Kxx-En-gqY" secondAttribute="leadingMargin" constant="72" id="BhP-eM-t8M"/>
                             <constraint firstItem="J8d-E4-mH7" firstAttribute="top" secondItem="lpM-uc-e6J" secondAttribute="bottom" constant="17" id="FTQ-pW-bdT"/>
                             <constraint firstItem="W7i-RL-TQ8" firstAttribute="leading" secondItem="Kxx-En-gqY" secondAttribute="leadingMargin" constant="14" id="HVd-w2-jNm"/>
                             <constraint firstItem="TLx-b9-ZKb" firstAttribute="centerX" secondItem="W7i-RL-TQ8" secondAttribute="centerX" id="LyZ-LI-4UY"/>
+                            <constraint firstItem="FRf-lh-S0y" firstAttribute="leading" secondItem="Kxx-En-gqY" secondAttribute="leadingMargin" id="MPT-c9-Kbd"/>
                             <constraint firstItem="TLx-b9-ZKb" firstAttribute="centerX" secondItem="J8d-E4-mH7" secondAttribute="centerX" id="Q1L-uG-kFs"/>
                             <constraint firstItem="J8d-E4-mH7" firstAttribute="centerX" secondItem="Kxx-En-gqY" secondAttribute="centerX" id="VXJ-Rk-Tes"/>
+                            <constraint firstItem="FRf-lh-S0y" firstAttribute="centerX" secondItem="TLx-b9-ZKb" secondAttribute="centerX" id="byQ-aJ-KX7"/>
                             <constraint firstItem="J8d-E4-mH7" firstAttribute="leading" secondItem="Kxx-En-gqY" secondAttribute="leadingMargin" constant="55" id="lho-83-c18"/>
                             <constraint firstItem="TLx-b9-ZKb" firstAttribute="top" secondItem="W7i-RL-TQ8" secondAttribute="bottom" constant="40" id="oqR-iJ-r0Q"/>
                             <constraint firstItem="W7i-RL-TQ8" firstAttribute="top" secondItem="J8d-E4-mH7" secondAttribute="bottom" constant="47" id="r2d-LA-ebd"/>
@@ -359,12 +381,13 @@
                     <connections>
                         <outlet property="recipeDescrip" destination="TLx-b9-ZKb" id="O9X-SC-cXz"/>
                         <outlet property="recipeImage" destination="W7i-RL-TQ8" id="fkp-B4-ys5"/>
+                        <outlet property="recipeRestrictions" destination="FRf-lh-S0y" id="tJQ-aS-6Kr"/>
                         <outlet property="recipeTitle" destination="J8d-E4-mH7" id="VzO-wh-IUL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akX-Tu-9oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241" y="0.0"/>
+            <point key="canvasLocation" x="3240.579710144928" y="0.0"/>
         </scene>
         <!--Search-->
         <scene sceneID="iZu-PV-Msn">
@@ -386,9 +409,9 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="icons8-Filter and Sort Filled_25" width="25" height="25"/>
         <image name="icons8-Home-25" width="25" height="25"/>
         <image name="icons8-Search Filled_25" width="25" height="25"/>
-        <image name="icons8-Settings Filled_25" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

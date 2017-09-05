@@ -15,7 +15,7 @@ let catagories:[[String]] = [["All Meals", "Breakfast", "Lunch/Dinner"],
 let headers:[String] = ["Meal", "Dessert", "Snacks"]
 
 var searchViewIndexPath:IndexPath?
-var lArrayofCellData = [cellData2]()
+var lArrayofCellData = [cellData]()
 
 class SearchViewController: UITableViewController {
     
@@ -46,7 +46,7 @@ class SearchViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchViewIndexPath = indexPath
-        lArrayofCellData = [cellData2]()
+        lArrayofCellData = [cellData]()
 
         for item in arrayofCellData {
             if(item.catDetail==catagories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!]){

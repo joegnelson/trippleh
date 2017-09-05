@@ -9,7 +9,7 @@
 import UIKit
 
 
-struct cellData2 {
+struct cellData {
     let text: String!
     let image: UIImage!
     let imageUrl: String!
@@ -23,9 +23,9 @@ var allRecipes :[Recipe]=[]
 var arrayofCellData = [
     
     
-    cellData2( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	"https://www.apple.com/euro/ios/ios8/a/generic/images/og.png"	, catDetail:	"Lunch/Dinner"	),
-    cellData2( text :	"Vegan Brownies"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
-    cellData2( text :	"joe Brownies2"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
+    cellData( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	"https://www.apple.com/euro/ios/ios8/a/generic/images/og.png"	, catDetail:	"Lunch/Dinner"	),
+    cellData( text :	"Vegan Brownies"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
+    cellData( text :	"joe Brownies2"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
     
 ]
 

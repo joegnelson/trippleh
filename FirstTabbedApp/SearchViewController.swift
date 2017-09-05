@@ -8,9 +8,9 @@
 
 import UIKit
 
-let catagories:[[String]] = [["All Meals", "Breakfast", "Lunch/Dinner"],
-                             ["All Desserts", "Ice Cream", "Batters","Doughs"],
-                             ["Chips", "Dips", "Granola", "Bars and Balls"]]
+let catagories:[[String]] = [[/*"All Meals",*/ "Breakfast", "Lunch/Dinner", "Soup", "Sides"],
+                             [/*"All Desserts",*/ "Ice Cream", "Batters","Doughs", "Pie"],
+                             ["Chips", "Dips", "Bars and Balls"]]
 
 let headers:[String] = ["Meal", "Dessert", "Snacks"]
 

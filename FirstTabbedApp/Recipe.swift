@@ -10,29 +10,23 @@ import UIKit
 
 
 struct cellData2 {
-    let cell: Int!
     let text: String!
     let image: UIImage!
     let imageUrl: String!
+    let catDetail: String!
     
 }
 
 var allRecipes :[Recipe]=[]
 
 
-var arrayofCellData = [cellData2(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan Brownies", image : #imageLiteral(resourceName: "VeganBrownies"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan Eggplant Parmesean", image : #imageLiteral(resourceName: "VeganEggplantParm"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan Pancakes", image : #imageLiteral(resourceName: "VeganPancakes"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan French Toast", image : #imageLiteral(resourceName: "VeganFrenchToast"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan Pumpkin Pie", image : #imageLiteral(resourceName: "VeganPumpkinPie"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan Pad Thai", image : #imageLiteral(resourceName: "VeganPadThai"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan Sloppy Joes", image : #imageLiteral(resourceName: "VeganSloppyJoes-test"), imageUrl: ""),
-                       cellData2(cell : 1, text : "Vegan Cream of Broccoli Soup", image : #imageLiteral(resourceName: "VeganCreamOfBroccoliSoup"), imageUrl: "https://www.apple.com/euro/ios/ios8/a/generic/images/og.png"),
-                       cellData2(cell : 1, text : "Vegan Coconut Whipped Cream", image : #imageLiteral(resourceName: "CoconutWhippedCream"), imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/HTTPS_Everywhere_icon.svg/1200px-HTTPS_Everywhere_icon.svg.png"),
-                       //cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna"), imageUrl: ""),
-                       //cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna"), imageUrl: ""),
-                       //cellData(cell : 1, text : "Vegan Beet Lasagna", image : #imageLiteral(resourceName: "BeetLasagna"), imageUrl: ""),
+var arrayofCellData = [
+    
+    
+    cellData2( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	"https://www.apple.com/euro/ios/ios8/a/generic/images/og.png"	, catDetail:	"Lunch/Dinner"	),
+    cellData2( text :	"Vegan Brownies"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
+    cellData2( text :	"joe Brownies2"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
+    
 ]
 
 class Recipe: NSObject {

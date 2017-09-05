@@ -18,25 +18,24 @@ struct cellData {
 var searchResultsViewIndex = 0
 
 
-
 class SearchResultsViewController: UITableViewController {
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Search Results"
+        self.navigationItem.title = "\(headers[(searchViewIndexPath?.section)!]): \(catagories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!])  "
+        
         
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayofCellData.count
+        return lArrayofCellData.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
-        cell.mainImageView1.image = arrayofCellData[indexPath.row].image
-        cell.mainLabel1.text = arrayofCellData[indexPath.row].text
+        cell.mainImageView1.image = lArrayofCellData[indexPath.row].image
+        cell.mainLabel1.text = lArrayofCellData[indexPath.row].text
         
         return cell
     }

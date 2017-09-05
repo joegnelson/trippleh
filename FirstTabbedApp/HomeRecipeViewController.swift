@@ -13,11 +13,17 @@ class HomeRecipeViewController:UIViewController {
 
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeDescrip: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeImage.image = arrayofCellData[homeViewIndex].image
         recipeTitle.text = arrayofCellData[homeViewIndex].text
+        
+        recipeDescrip.text=arrayofCellData[homeViewIndex].catDetail
+        
         self.navigationItem.title=arrayofCellData[homeViewIndex].text
+        
         let url:String  = arrayofCellData[homeViewIndex].imageUrl
  //       let filePath = Bundle.main.path(forResource: url, ofType: "jpg")
         if(!url.isEmpty){

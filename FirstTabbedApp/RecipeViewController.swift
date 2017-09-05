@@ -11,15 +11,38 @@ class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipeTitle.text = "First"
-        recipeImage.image = #imageLiteral(resourceName: "VeganEggplantParm")
-        recipeDescrip.text = "__________"
+        let data:cellData=searchResultsSelectedCellData!
+        recipeImage.image = data.image
+        recipeTitle.text = data.text
+        recipeDescrip.text=data.catDetail
         
-        self.navigationItem.title = recipeTitle.text
+        self.navigationItem.title=data.text
+        
+        let url:String  = data.imageUrl
+        if(!url.isEmpty){
+            if let checkedUrl = URL(string: url) {
+                self.recipeImage.contentMode = .scaleAspectFit
+                downloadImage(url: checkedUrl)
+            }
+        }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+    func downloadImage(url: URL) {
+        print("Download Started")
+        getDataFromUrl(url: url) { (data, response, error)  in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { () -> Void in
+                self.recipeImage.image = UIImage(data: data)
+            }
+        }
     }
     
 }

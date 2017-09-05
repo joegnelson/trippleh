@@ -9,7 +9,7 @@
 import UIKit
 
 
-struct cellData2 {
+struct cellData {
     let text: String!
     let image: UIImage!
     let imageUrl: String!
@@ -23,17 +23,10 @@ var allRecipes :[Recipe]=[]
 var arrayofCellData = [
     
     
-    cellData2( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	"https://www.apple.com/euro/ios/ios8/a/generic/images/og.png"	, catDetail:	"Lunch/Dinner"	),
-    cellData2( text :	"Vegan Brownies"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
-    cellData2( text :	"Vegan Pancakes"	, image :#imageLiteral(resourceName: "VeganPancakes"), imageUrl:	""	, catDetail:	"Breakfast"	),
-    cellData2( text :	"Vegan Pumpkin Pie"	, image :#imageLiteral(resourceName: "VeganPumpkinPie"), imageUrl:	""	, catDetail:	"Pie"	),
-    cellData2( text :	"Vegan Cream Of Broccoli Soup"	, image :#imageLiteral(resourceName: "VeganCreamOfBroccoliSoup"), imageUrl:	""	, catDetail:	"Soup"	),
-    cellData2( text :	"Kale Chips"	, image :#imageLiteral(resourceName: "KaleChips"), imageUrl:	""	, catDetail:	"Chips"	),
-    cellData2( text :	"Energy Balls"	, image :#imageLiteral(resourceName: "EnergyBalls"), imageUrl:	""	, catDetail:	"Bars and Balls"	),
-    cellData2( text :	"Raw Almond Ricotta"	, image :#imageLiteral(resourceName: "RawAlmondRicotta"), imageUrl:	""	, catDetail:	"Sides"	),
-    cellData2( text :	"Dairy Free Spinach and Artichoke Dip"	, image :#imageLiteral(resourceName: "DairyFreeSpinachArtichokeDip"), imageUrl:	"https://downshiftology.com/wp-content/uploads/2016/02/spinach-artichoke-dip-dairy-free-and-paleo-1.jpg" 	, catDetail:	"Dips"	),
-    cellData2( text :	"Vegan Chocolate Ice Cream"	, image :#imageLiteral(resourceName: "VeganChocolateIceCream"), imageUrl:	""	, catDetail:	"Ice Cream"	),
-    cellData2( text :	"Gluten Free Gingerbread Men"	, image :#imageLiteral(resourceName: "GlutenFreeGingerBreadMen"), imageUrl:	""	, catDetail:	"Doughs"	),
+    cellData( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	"https://www.apple.com/euro/ios/ios8/a/generic/images/og.png"	, catDetail:	"Lunch/Dinner"	),
+    cellData( text :	"Vegan Brownies"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
+    cellData( text :	"joe Brownies2"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	),
+    
 ]
 
 class Recipe: NSObject {

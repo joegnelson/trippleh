@@ -8,14 +8,7 @@
 
 import UIKit
 
-struct cellData {
-    let cell: Int!
-    let text: String!
-    let image: UIImage!
-    let ingredients: String!
-}
-
-var searchResultsViewIndex = 0
+var searchResultsSelectedCellData:cellData?
 
 
 class SearchResultsViewController: UITableViewController {
@@ -45,7 +38,7 @@ class SearchResultsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        searchResultsViewIndex = indexPath.row
+        searchResultsSelectedCellData = lArrayofCellData[indexPath.row]
         performSegue(withIdentifier: "searchSegue", sender: self)
     }
     

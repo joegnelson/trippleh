@@ -9,6 +9,8 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var recipeDescrip: UILabel!
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeRestrictions: UILabel!
+    @IBOutlet weak var recipeIngred: UILabel!
+    @IBOutlet weak var recipeDirect: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

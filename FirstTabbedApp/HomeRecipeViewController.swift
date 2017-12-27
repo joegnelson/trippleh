@@ -9,14 +9,13 @@
 import UIKit
 
 class HomeRecipeViewController:UIViewController {
+    //UI Labels and Images
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeTitle: UILabel!
     @IBOutlet weak var recipeDescrip: UILabel!
     @IBOutlet weak var recipeRestrictions: UILabel!
     @IBOutlet weak var recipeIngredients: UILabel!
     @IBOutlet weak var recipeDirections: UILabel!
-    
-    @IBOutlet weak var Scroll: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

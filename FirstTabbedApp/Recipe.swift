@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 struct cellData {
     let text: String!
     let image: UIImage!
@@ -18,19 +17,21 @@ struct cellData {
     let restrictions: String!
     let ingredients: String!
     //let directions: String!
-    
+    let noSugarFilter: Bool!
 }
 
 var allRecipes :[Recipe]=[]
 
 
 var arrayofCellData = [
-    
-    cellData( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	""	, catDetail:	"Lunch/Dinner"/*, headDetail: "Meals"*/	, restrictions:	"No Sugar Added, Vegan, Vegetarian, Dairy Free" , ingredients: ""),
-    
+    cellData(text: "Cookie Dough Macarons", image: #imageLiteral(resourceName: "CookieDoughMacarons"), imageUrl: "", catDetail: "", restrictions: "", ingredients: "", noSugarFilter: false),
+    cellData(text: "Gluten Free Banana Peach Walnut Pancakes", image: #imageLiteral(resourceName: "GlutenFreeBananaPeachWalnutPancakes1"), imageUrl: "", catDetail: "", restrictions: "Gluten Free", ingredients: "", noSugarFilter: false),
+    cellData(text: "Vegan Peach Hand Pies", image: #imageLiteral(resourceName: "PeachHandPies"), imageUrl: "", catDetail: "", restrictions: "Vegan", ingredients: "", noSugarFilter: false),
+    cellData( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	""	, catDetail:	"Lunch/Dinner"/*, headDetail: "Meals"*/	, restrictions:	"No Sugar Added, Vegan, Vegetarian, Dairy Free" , ingredients: "", noSugarFilter: true),
     //--------------------------------------------------
     //FULL RECIPES
     //--------------------------------------------------
+    /**
     cellData( text :	"Sugar Free Vanilla Ice Cream"	, image :#imageLiteral(resourceName:	"SugarFreeVanillaIceCream"	), imageUrl:	""	, catDetail:	"Ice Cream"	, restrictions:	""	, ingredients: 	"1 cup whole milk\n3/4 cup sugar substitute (ex. splenda)\n1 pinch kosher salt\n2 cups heavy cream\n1-2 teaspoons vanilla extract"	),
     cellData( text :	"Vegan Pad Thai"	, image :#imageLiteral(resourceName:	"VeganPadThai"	), imageUrl:	"https://www.peta.org/wp-content/uploads/2014/03/vegan-pad-thai-e1429117378854-637x320.jpg?20151027083426"	, catDetail:	"Lunch/Dinner"	, restrictions:	""	, ingredients: 	"1 cup water, plus more for soaking the noodles\nOne 10oz. package rice noodles or ramen style noodles\n2 tablespoons olive oil\n2 cloves garlic\n6 oz. extra-firm tofu, drained and cut into chunks\n4 tablespoons soy sauce\n 2 tablespoons peanutbutter\nJuice of 2 limes\n3 tablespoons sugar\nSriracha, to taste\nSliced green onions, for garnish\nChopped peanuts, for garnish (optional)"),
     cellData( text :	"Vegan Brownies"	, image :#imageLiteral(resourceName:	"VeganBrownies"	), imageUrl:	""	, catDetail:	"Batters"	, restrictions:	""	, ingredients: "2 cups unbleached all-purpose flour\n2 cups white sugar\n3/4 cup unsweetened cocoa powder\n1 teaspoon baking powder\n1 teaspoon salt\n1 cup water\n1 cup vegetable oil\n1 teaspoon vanilla extract"),
@@ -43,9 +44,6 @@ var arrayofCellData = [
     cellData( text :	"Chocolate Energy Balls"	, image : #imageLiteral(resourceName: "ChocolateEnergyBalls") , imageUrl:	""	, catDetail:	"Bars and Balls"	, restrictions:	""	, ingredients: "3/4 cup rolled oats\n1/2 cup peanut butter\n cup honey\n1/3 cup cocoa powder\n1/3 cup shredded coconut\n1/4 cup wheat germ\n2 teaaspoons vanilla extract\n1 pinch cinnamon "),
     cellData( text :	"Gluten Free Gingerbread Men"	, image :#imageLiteral(resourceName: "GlutenFreeGingerBreadMen"), imageUrl:	""	, catDetail:	"Doughs"	, restrictions:	""	, ingredients: "2 cups white rice flour\n1 cup tapioca flour (tapioca starch)\n1/2 cup buckwheat flour\n1 teaspoon baking soda\n1/2 teaspoon xantan gum\n2 teaspoons ground ginger\n1/2 teaspoon ground ginger\n1/2 teaspoon pumpkin spice\n1/2 teaspoon table salt\n1/2 cup (1 stick) unsalted butter, softened\n 2/3 cup dark brown sugar, packed\n 1 large egg, lightly beathen\n1/2 cup blackstrap molasses\n1 1/2 teaspoons gluten-free vanilla extract\nRoyal icing, for decorating\nCadies, nuts and sprinkles, for decorating"),
     cellData( text :	"Vegan No Churn Chocolate Ice Cream"	, image : #imageLiteral(resourceName: "VeganNoChurnIceCream") , imageUrl:	"https://mbkr-minimalistbaker.netdna-ssl.com/wp-content/uploads/2014/08/SUPER-Creamy-NO-CHURN-Vegan-Chocolate-Ice-Cream-Just-5-ingredients-and-NATURALLY-sweetened-with-dates1-673x1024.jpg"	, catDetail:	"Ice Cream"	, restrictions:	""	, ingredients: "2 14-ounce cans coconut cream OR ful- fat coconut milk, chilled overnight in the fridge (I like Trader Joe's coconut cream, or Thai Kitchen coconut milk)\n2/3 cup unsweetened cocoa or cacao powder powder\n14-16 ounces pitted dates (if not sticky and moist, soak in warm water for 10 minutes then drain)\n1 tsp pure vanilla extract\n1/2 cup unsweetened almond milk"),
-    cellData(text: "Cookie Dough Macarons", image: #imageLiteral(resourceName: "CookieDoughMacarons"), imageUrl: "", catDetail: "", restrictions: "", ingredients: ""),
-    cellData(text: "Gluten Free Banana Peach Walnut Pancakes", image: #imageLiteral(resourceName: "GlutenFreeBananaPeachWalnutPancakes1"), imageUrl: "", catDetail: "", restrictions: "Gluten Free", ingredients: ""),
-    cellData(text: "Vegan Peach Hand Pies", image: #imageLiteral(resourceName: "PeachHandPies"), imageUrl: "", catDetail: "", restrictions: "Vegan", ingredients: ""),
     //--------------------------------------------------
     //ALL RECIPES
     //--------------------------------------------------
@@ -83,6 +81,7 @@ var arrayofCellData = [
     cellData( text :	"Vegan Chicken Nuggets"	, image :#imageLiteral(resourceName:	"VeganChickenNuggets"	), imageUrl:	""	, catDetail:	"Lunch/Dinner"	, restrictions:	""	, ingredients: 	""	),
     cellData( text :	"Double Chocolate Zucchini Muffins"	, image : #imageLiteral(resourceName: "DoubleChocolateChipZucchiniMuffins") , imageUrl:	""	, catDetail:	"Batters"	, restrictions:	""	, ingredients: 	""	),
     cellData( text :	"Sugar Free Peanut Butter Fudge"	, image :#imageLiteral(resourceName:	"SugarFreePeanutButterFudge"	), imageUrl:	""	, catDetail:	"Doughs"	, restrictions:	""	, ingredients: 	""	),
+ */
  */
 ]
 

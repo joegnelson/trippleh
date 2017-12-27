@@ -9,18 +9,28 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    
-    //Switches for Restictions
-    
     //Outlet- talks to view by using outlet
     //Action- view pass on messages about view to ViewController by using action; updates a label
-    @IBOutlet weak var sugFswitch: UISwitch!
-    @IBOutlet weak var gluFswitch: UISwitch!
-    @IBOutlet weak var veganSwitch: UISwitch!
-    @IBOutlet weak var vegetSwitch: UISwitch!
-    @IBOutlet weak var nutFswitch: UISwitch!
-    @IBOutlet weak var dairyFswitch: UISwitch!
     
+    //Switches:
+    @IBAction func noSugarSwitch(_ sender: UISwitch) {
+        if (sender.isOn == false){
+            noSugarFilter = false
+        }
+        else {
+            noSugarFilter = true
+        }
+    }
+    @IBAction func noGlutenSwitch(_ sender: UISwitch) {
+    }
+    @IBAction func veganSwitch(_ sender: UISwitch) {
+    }
+    @IBAction func vegetarianSwitch(_ sender: UISwitch) {
+    }
+    @IBAction func noNutSwitch(_ sender: UISwitch) {
+    }
+    @IBAction func noDairySwitch(_ sender: UISwitch) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

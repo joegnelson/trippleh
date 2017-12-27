@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,26 +25,44 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-Zm-VNX">
                                 <rect key="frame" x="26" y="86" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="noSugarSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="hr2-Oy-6Pf"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-f8-Nx5">
                                 <rect key="frame" x="26" y="125" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="noGlutenSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="cIl-Qo-CPR"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-6U-LkA">
                                 <rect key="frame" x="26" y="164" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="veganSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="dr6-gi-mce"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K7q-yY-H1X">
                                 <rect key="frame" x="26" y="281" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="noDairySwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="8fD-HX-Yta"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IVo-eK-cVh">
                                 <rect key="frame" x="26" y="242" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="noNutSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ghI-j3-VYH"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u2t-AJ-e8f">
                                 <rect key="frame" x="26" y="203" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="vegetarianSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="26s-8n-Uxu"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Added Suger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9k-TE-K3j">
                                 <rect key="frame" x="94" y="91" width="295" height="24"/>
@@ -93,26 +111,17 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="first" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="Restiction FIlters" id="S0z-iR-7oB"/>
-                    <connections>
-                        <outlet property="dairyFswitch" destination="K7q-yY-H1X" id="YxC-Ky-vmx"/>
-                        <outlet property="gluFswitch" destination="n4Q-f8-Nx5" id="Q92-m2-z3n"/>
-                        <outlet property="nutFswitch" destination="IVo-eK-cVh" id="ghB-V9-ea2"/>
-                        <outlet property="sugFswitch" destination="lOJ-Zm-VNX" id="k4c-EI-wFW"/>
-                        <outlet property="veganSwitch" destination="kSa-6U-LkA" id="Ogg-0R-x51"/>
-                        <outlet property="vegetSwitch" destination="u2t-AJ-e8f" id="zzV-4d-SCt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1486" y="710"/>
+            <point key="canvasLocation" x="1338" y="711"/>
         </scene>
         <!--Filter-->
         <scene sceneID="jyx-Fn-umo">
             <objects>
                 <navigationController id="c49-ZA-B6O" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Filter" image="icons8-Filter and Sort Filled_25" selectedImage="icons8-Filter and Sort Filled_25" id="fqb-mn-Nk2"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gHU-VO-8Tl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gHU-VO-8Tl">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -157,7 +166,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xdy-C5-s1B" id="fWa-iz-Y8i">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -174,7 +183,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ltp-F6-ptr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="1"/>
+            <point key="canvasLocation" x="1338" y="0.0"/>
         </scene>
         <!--Search Results-->
         <scene sceneID="YCj-Wl-p0a">
@@ -189,7 +198,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nzd-p8-9qc" id="0bO-Ef-A3j">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -207,15 +216,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Or-38-Qvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2264" y="1"/>
+            <point key="canvasLocation" x="2014" y="0.0"/>
         </scene>
         <!--Home-->
         <scene sceneID="CeB-fi-uqU">
             <objects>
                 <navigationController id="wYL-b0-dyn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="icons8-Home-25" selectedImage="icons8-Home-25" id="E3o-AD-elJ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UOI-Bl-Old">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UOI-Bl-Old">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -239,7 +247,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QXx-gi-UaX" id="emc-97-W3R">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -256,7 +264,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MxU-eb-eZY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1483" y="-716"/>
+            <point key="canvasLocation" x="1338" y="-717"/>
         </scene>
         <!--Home Recipe View Controller-->
         <scene sceneID="uFO-5M-ANN">
@@ -351,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNW-VL-qH1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263.768115942029" y="-717.39130434782612"/>
+            <point key="canvasLocation" x="2013" y="-717"/>
         </scene>
         <!--Recipe View Controller-->
         <scene sceneID="hLI-Ui-Qo4">
@@ -431,15 +439,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akX-Tu-9oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3056.521739130435" y="0.81521739130434789"/>
+            <point key="canvasLocation" x="2683" y="0.0"/>
         </scene>
         <!--Search-->
         <scene sceneID="iZu-PV-Msn">
             <objects>
                 <navigationController id="QiZ-zV-RY7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="icons8-Search Filled_25" selectedImage="icons8-Search Filled_25" id="hpc-DF-gV3"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lq1-bi-hsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Lq1-bi-hsS">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

@@ -24,10 +24,18 @@ var allRecipes :[Recipe]=[]
 
 
 var arrayofCellData = [
-    cellData(text: "Cookie Dough Macarons", image: #imageLiteral(resourceName: "CookieDoughMacarons"), imageUrl: "", catDetail: "", restrictions: "", ingredients: "", noSugarFilter: false),
-    cellData(text: "Gluten Free Banana Peach Walnut Pancakes", image: #imageLiteral(resourceName: "GlutenFreeBananaPeachWalnutPancakes1"), imageUrl: "", catDetail: "", restrictions: "Gluten Free", ingredients: "", noSugarFilter: false),
-    cellData(text: "Vegan Peach Hand Pies", image: #imageLiteral(resourceName: "PeachHandPies"), imageUrl: "", catDetail: "", restrictions: "Vegan", ingredients: "", noSugarFilter: false),
+    
+    cellData(text: "Cookie Dough Macarons", image: #imageLiteral(resourceName: "CookieDoughMacarons"), imageUrl: "", catDetail: "Batters", restrictions: "", ingredients: "", noSugarFilter: false),
+    cellData(text: "Gluten Free Banana Peach Walnut Pancakes", image: #imageLiteral(resourceName: "GlutenFreeBananaPeachWalnutPancakes1"), imageUrl: "", catDetail: "Breakfast", restrictions: "Gluten Free", ingredients: "", noSugarFilter: true),
+    cellData(text: "Vegan Peach Hand Pies", image: #imageLiteral(resourceName: "PeachHandPies"), imageUrl: "", catDetail: "Pie", restrictions: "Vegan", ingredients: "", noSugarFilter: true),
     cellData( text :	"Vegan Beet Lasagna"	, image :#imageLiteral(resourceName:	"BeetLasagna"	), imageUrl:	""	, catDetail:	"Lunch/Dinner"/*, headDetail: "Meals"*/	, restrictions:	"No Sugar Added, Vegan, Vegetarian, Dairy Free" , ingredients: "", noSugarFilter: true),
+    cellData(text: "Vegan Pretzels", image: #imageLiteral(resourceName: "VeganPretzels"), imageUrl: "", catDetail: "Doughs", restrictions: "Vegan", ingredients: "4 teaspoons active dry yeast\n1 teaspoon white sugar\n1 1/4 cups warm water (110 degrees F)\n5 cups all purpose flour\n1 1/2 teaspoon salt\n1 tablespoon vegetable oil\n1/2 cup baking soda\n4 cups hot water\nCoarse sea salt (for finising)", noSugarFilter: false),
+    cellData(text: "Pumpkin Ravioli", image: #imageLiteral(resourceName: "DFPumpkinRavioli"), imageUrl: "", catDetail: "Lunch/Dinner", restrictions: "Dairy Free", ingredients: "", noSugarFilter: true),
+    cellData(text: "Vegan Pretzel Monkey Bread Bites", image: #imageLiteral(resourceName: "VeganPretzelMonkeyBites"), imageUrl: "", catDetail: "Doughs", restrictions: "Vegan", ingredients: "4 teaspoons active dry yeast\n1 teaspoon white sugar\n1 1/4 cups warm water (110 degrees F)\n5 cups all purpose flour\n1 1/2 teaspoon salt\n1 tablespoon vegetable oil\n3 tablespoons sugar\n2 tablespoons cinnamon", noSugarFilter: false),
+    cellData(text: "Vegan Kale Pesto", image: #imageLiteral(resourceName: "VeganKalePesto"), imageUrl: "", catDetail: "Dips", restrictions: "Vegan", ingredients: "", noSugarFilter: false),
+    cellData(text: "Vegan Roasted Brussel Sprouts", image: #imageLiteral(resourceName: "VeganRoastedBrusselSprouts"), imageUrl: "", catDetail: "Sides", restrictions: "Vegan", ingredients: "", noSugarFilter: true),
+    cellData(text: "Sweet Potato Pasta", image: #imageLiteral(resourceName: "SweetPotatoPasta"), imageUrl: "", catDetail: "Lunch/Dinner", restrictions: "Vegan", ingredients: "1 sweet potato\n1 tablespoon oil (cooking oil)\nSalt and pepper to taste", noSugarFilter: true),
+    
     //--------------------------------------------------
     //FULL RECIPES
     //--------------------------------------------------

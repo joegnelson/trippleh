@@ -16,19 +16,19 @@ class SearchResultsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "\(headers[(searchViewIndexPath?.section)!]): \(catagories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!])  "
+        self.navigationItem.title = "\(headers[(searchViewIndexPath?.section)!]): \(categories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!])  "
         
         
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lArrayofCellData.count
+        return categoryDatabase.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
-        cell.mainImageView1.image = lArrayofCellData[indexPath.row].image
-        cell.mainLabel1.text = lArrayofCellData[indexPath.row].text
+        cell.mainImageView1.image = categoryDatabase[indexPath.row].image
+        cell.mainLabel1.text = categoryDatabase[indexPath.row].text
         
         return cell
     }
@@ -38,7 +38,7 @@ class SearchResultsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        searchResultsSelectedCellData = lArrayofCellData[indexPath.row]
+        searchResultsSelectedCellData = categoryDatabase[indexPath.row]
         performSegue(withIdentifier: "searchSegue", sender: self)
     }
     

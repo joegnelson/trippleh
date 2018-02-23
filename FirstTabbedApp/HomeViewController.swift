@@ -13,14 +13,14 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayofCellData.count
+        return database.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
             let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
-            cell.mainImageView1.image = arrayofCellData[indexPath.row].image
-            cell.mainLabel1.text = arrayofCellData[indexPath.row].text
+            cell.mainImageView1.image = database[indexPath.row].image
+            cell.mainLabel1.text = database[indexPath.row].text
             return cell
     }
     

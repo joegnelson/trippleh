@@ -8,14 +8,14 @@
 
 import UIKit
 
-let catagories:[[String]] = [[/*"All Meals",*/ "Breakfast", "Lunch/Dinner", "Soup", "Sides"],
+let categories:[[String]] = [[/*"All Meals",*/ "Breakfast", "Lunch/Dinner", "Soup", "Sides"],
                              [/*"All Desserts",*/ "Ice Cream", "Batters","Doughs", "Pie"],
                              ["Chips", "Dips", "Bars and Balls"]]
 
 let headers:[String] = ["Meal", "Dessert", "Snacks"]
 
 var searchViewIndexPath:IndexPath?
-var lArrayofCellData = [cellData]()
+var categoryDatabase = [cellData]()
 
 class SearchViewController: UITableViewController {
     
@@ -27,16 +27,16 @@ class SearchViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return catagories.count
+        return categories.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catagories[section].count
+        return categories[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = catagories[indexPath.section][indexPath.row]
+        cell.textLabel?.text = categories[indexPath.section][indexPath.row]
         return cell
     }
 
@@ -46,11 +46,12 @@ class SearchViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchViewIndexPath = indexPath
-        lArrayofCellData = [cellData]()
-
-        for item in arrayofCellData {
-            if(item.catDetail==catagories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!]){
-                lArrayofCellData.append(item)
+        categoryDatabase = [cellData]()
+        
+        //Traversing through database and adding to categoryDatabase
+        for item in restrictionDatabase {
+            if(item.catDetail==categories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!]){
+                categoryDatabase.append(item)
             }
         }
     }

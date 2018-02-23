@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Restiction FIlters-->
+        <!--My Restrictions-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SettingsViewController" customModule="FirstTabbedApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,105 +22,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-Zm-VNX">
-                                <rect key="frame" x="26" y="86" width="51" height="31"/>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NoSugarImage" translatesAutoresizingMaskIntoConstraints="NO" id="RSP-Rh-4BI">
+                                <rect key="frame" x="40" y="97" width="144" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="noSugarSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="hr2-Oy-6Pf"/>
+                                    <outletCollection property="gestureRecognizers" destination="1vq-Qm-8a3" appends="YES" id="Ym3-Qf-rwH"/>
                                 </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-f8-Nx5">
-                                <rect key="frame" x="26" y="125" width="51" height="31"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glutenFreeImage" translatesAutoresizingMaskIntoConstraints="NO" id="7xP-61-4jD">
+                                <rect key="frame" x="237" y="97" width="142" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="noGlutenSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="cIl-Qo-CPR"/>
+                                    <outletCollection property="gestureRecognizers" destination="fnA-dm-L7z" appends="YES" id="fhn-kN-uGq"/>
                                 </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kSa-6U-LkA">
-                                <rect key="frame" x="26" y="164" width="51" height="31"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vegetarianImage" translatesAutoresizingMaskIntoConstraints="NO" id="996-ur-hss">
+                                <rect key="frame" x="42" y="383" width="142" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="veganSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="dr6-gi-mce"/>
+                                    <outletCollection property="gestureRecognizers" destination="2a8-OW-veh" appends="YES" id="YX3-Uu-v0G"/>
                                 </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="K7q-yY-H1X">
-                                <rect key="frame" x="26" y="281" width="51" height="31"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="veganImage" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-fy-YbW">
+                                <rect key="frame" x="237" y="240" width="142" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="noDairySwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="8fD-HX-Yta"/>
+                                    <outletCollection property="gestureRecognizers" destination="3e3-rb-cQp" appends="YES" id="g32-Gv-4Sy"/>
                                 </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IVo-eK-cVh">
-                                <rect key="frame" x="26" y="242" width="51" height="31"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dairyFreeImage" translatesAutoresizingMaskIntoConstraints="NO" id="FZn-Uv-XtF">
+                                <rect key="frame" x="42" y="240" width="142" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="noNutSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="ghI-j3-VYH"/>
+                                    <outletCollection property="gestureRecognizers" destination="ciP-4v-QTv" appends="YES" id="1ee-kS-Zlp"/>
                                 </connections>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u2t-AJ-e8f">
-                                <rect key="frame" x="26" y="203" width="51" height="31"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nutFreeImage" translatesAutoresizingMaskIntoConstraints="NO" id="nNQ-vL-nU4">
+                                <rect key="frame" x="237" y="383" width="142" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <action selector="vegetarianSwitch:" destination="8rJ-Kc-sve" eventType="valueChanged" id="26s-8n-Uxu"/>
+                                    <outletCollection property="gestureRecognizers" destination="fQ6-XP-o3S" appends="YES" id="T3Y-rP-Iag"/>
                                 </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No Added Suger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9k-TE-K3j">
-                                <rect key="frame" x="94" y="91" width="295" height="24"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-WT-VmM">
+                                <rect key="frame" x="157" y="554" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gluten Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrU-Dg-sWm">
-                                <rect key="frame" x="94" y="130" width="295" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY9-1O-aoU">
-                                <rect key="frame" x="94" y="169" width="295" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nut Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWb-TA-2u6">
-                                <rect key="frame" x="94" y="247" width="295" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dairy Free" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xR-7U-awE">
-                                <rect key="frame" x="94" y="286" width="295" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Isu-k4-AlY">
-                                <rect key="frame" x="94" y="208" width="295" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button" image="veganImage"/>
+                                <connections>
+                                    <action selector="veganImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="z3R-Ip-hxb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="first" id="cPa-gy-q4n"/>
-                    <navigationItem key="navigationItem" title="Restiction FIlters" id="S0z-iR-7oB"/>
+                    <tabBarItem key="tabBarItem" title="My Restrictions" image="first" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" title="My Restrictions" id="S0z-iR-7oB"/>
+                    <connections>
+                        <outlet property="dairyFreeImageSwitch" destination="FZn-Uv-XtF" id="P7O-st-Axg"/>
+                        <outlet property="glutenFreeImageSwitch" destination="7xP-61-4jD" id="9WN-H5-9GM"/>
+                        <outlet property="noSugarImageSwitch" destination="RSP-Rh-4BI" id="bOY-8m-2FV"/>
+                        <outlet property="nutFreeImageSwitch" destination="nNQ-vL-nU4" id="n1A-hi-yGf"/>
+                        <outlet property="veganImageSwitch" destination="ksb-fy-YbW" id="4n7-OI-K5X"/>
+                        <outlet property="vegetarianImageSwitch" destination="996-ur-hss" id="B5X-eS-Fb5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1vq-Qm-8a3"/>
+                <tapGestureRecognizer id="fnA-dm-L7z"/>
+                <tapGestureRecognizer id="ciP-4v-QTv"/>
+                <tapGestureRecognizer id="3e3-rb-cQp"/>
+                <tapGestureRecognizer id="2a8-OW-veh"/>
+                <tapGestureRecognizer id="fQ6-XP-o3S"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="711"/>
+            <point key="canvasLocation" x="1337.68115942029" y="710.86956521739137"/>
         </scene>
-        <!--Filter-->
+        <!--My Restrictions-->
         <scene sceneID="jyx-Fn-umo">
             <objects>
                 <navigationController id="c49-ZA-B6O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Filter" image="icons8-Filter and Sort Filled_25" selectedImage="icons8-Filter and Sort Filled_25" id="fqb-mn-Nk2"/>
+                    <tabBarItem key="tabBarItem" title="My Restrictions" image="icons8-Filter and Sort Filled_25" selectedImage="icons8-Filter and Sort Filled_25" id="fqb-mn-Nk2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gHU-VO-8Tl">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -275,29 +261,29 @@
                         <viewControllerLayoutGuide type="bottom" id="Mkh-49-FLQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g55-Tg-uvD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5A-Wa-Bgv">
-                                <rect key="frame" x="75" y="81" width="265" height="285"/>
+                                <rect key="frame" x="75" y="81" width="265" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tef-xg-m4G">
-                                <rect key="frame" x="92" y="374" width="230" height="21"/>
+                                <rect key="frame" x="92" y="110" width="230" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y8E-xh-DRT">
-                                <rect key="frame" x="34" y="406" width="347" height="291"/>
+                                <rect key="frame" x="34" y="142" width="347" height="291"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="291" id="kHw-NZ-Wub"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restrictions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j9J-x3-dpH">
-                                <rect key="frame" x="20" y="705" width="374" height="22"/>
+                                <rect key="frame" x="20" y="441" width="374" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="T5f-V9-vgx"/>
                                 </constraints>
@@ -306,7 +292,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqj-v5-JXM">
-                                <rect key="frame" x="34" y="735" width="347" height="154"/>
+                                <rect key="frame" x="34" y="471" width="347" height="154"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="154" id="XKb-TB-G5B"/>
                                 </constraints>
@@ -315,7 +301,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0l-9b-TrP">
-                                <rect key="frame" x="34" y="869" width="360" height="74"/>
+                                <rect key="frame" x="34" y="605" width="360" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="aWz-4z-DY0"/>
                                 </constraints>
@@ -349,7 +335,6 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="recipeDescrip" destination="tef-xg-m4G" id="X1w-yz-99Z"/>
                         <outlet property="recipeDirections" destination="N0l-9b-TrP" id="pJE-pQ-vsM"/>
@@ -461,10 +446,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NoSugarImage" width="225" height="225"/>
+        <image name="dairyFreeImage" width="225" height="225"/>
         <image name="first" width="30" height="30"/>
+        <image name="glutenFreeImage" width="225" height="225"/>
         <image name="icons8-Filter and Sort Filled_25" width="25" height="25"/>
         <image name="icons8-Home-25" width="25" height="25"/>
         <image name="icons8-Search Filled_25" width="25" height="25"/>
+        <image name="nutFreeImage" width="225" height="225"/>
         <image name="second" width="30" height="30"/>
+        <image name="veganImage" width="225" height="225"/>
+        <image name="vegetarianImage" width="600" height="600"/>
     </resources>
 </document>

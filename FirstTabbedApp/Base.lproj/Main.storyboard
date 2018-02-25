@@ -22,60 +22,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NoSugarImage" translatesAutoresizingMaskIntoConstraints="NO" id="RSP-Rh-4BI">
-                                <rect key="frame" x="40" y="97" width="144" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="1vq-Qm-8a3" appends="YES" id="Ym3-Qf-rwH"/>
-                                </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glutenFreeImage" translatesAutoresizingMaskIntoConstraints="NO" id="7xP-61-4jD">
-                                <rect key="frame" x="237" y="97" width="142" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fnA-dm-L7z" appends="YES" id="fhn-kN-uGq"/>
-                                </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vegetarianImage" translatesAutoresizingMaskIntoConstraints="NO" id="996-ur-hss">
-                                <rect key="frame" x="42" y="383" width="142" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="2a8-OW-veh" appends="YES" id="YX3-Uu-v0G"/>
-                                </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="veganImage" translatesAutoresizingMaskIntoConstraints="NO" id="ksb-fy-YbW">
-                                <rect key="frame" x="237" y="240" width="142" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="3e3-rb-cQp" appends="YES" id="g32-Gv-4Sy"/>
-                                </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dairyFreeImage" translatesAutoresizingMaskIntoConstraints="NO" id="FZn-Uv-XtF">
-                                <rect key="frame" x="42" y="240" width="142" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ciP-4v-QTv" appends="YES" id="1ee-kS-Zlp"/>
-                                </connections>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nutFreeImage" translatesAutoresizingMaskIntoConstraints="NO" id="nNQ-vL-nU4">
-                                <rect key="frame" x="237" y="383" width="142" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fQ6-XP-o3S" appends="YES" id="T3Y-rP-Iag"/>
-                                </connections>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-WT-VmM">
-                                <rect key="frame" x="157" y="554" width="100" height="100"/>
+                                <rect key="frame" x="67" y="481" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="vegetarianImage"/>
+                                <connections>
+                                    <action selector="vegetarianImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="CmL-Ck-rsW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksm-qa-zXJ">
+                                <rect key="frame" x="67" y="155" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="NoSugarImage"/>
+                                <connections>
+                                    <action selector="sugarFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="k1t-Sj-3rV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUr-l7-VzV">
+                                <rect key="frame" x="255" y="153" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="glutenFreeImage"/>
+                                <connections>
+                                    <action selector="glutenFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="sN0-wx-33V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLZ-qZ-FY5">
+                                <rect key="frame" x="67" y="319" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="dairyFreeImage"/>
+                                <connections>
+                                    <action selector="dairyFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="tBN-kU-KHs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ir-Je-SZH">
+                                <rect key="frame" x="255" y="318" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="nutFreeImage"/>
+                                <connections>
+                                    <action selector="nutFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="tga-q8-OeU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSo-yZ-7Ol">
+                                <rect key="frame" x="186" y="104" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIa-NT-kWF">
+                                <rect key="frame" x="255" y="480" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="veganImage"/>
                                 <connections>
-                                    <action selector="veganImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="z3R-Ip-hxb"/>
+                                    <action selector="veganImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wDf-Is-qeS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,12 +83,7 @@
                     <tabBarItem key="tabBarItem" title="My Restrictions" image="first" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="My Restrictions" id="S0z-iR-7oB"/>
                     <connections>
-                        <outlet property="dairyFreeImageSwitch" destination="FZn-Uv-XtF" id="P7O-st-Axg"/>
-                        <outlet property="glutenFreeImageSwitch" destination="7xP-61-4jD" id="9WN-H5-9GM"/>
-                        <outlet property="noSugarImageSwitch" destination="RSP-Rh-4BI" id="bOY-8m-2FV"/>
-                        <outlet property="nutFreeImageSwitch" destination="nNQ-vL-nU4" id="n1A-hi-yGf"/>
-                        <outlet property="veganImageSwitch" destination="ksb-fy-YbW" id="4n7-OI-K5X"/>
-                        <outlet property="vegetarianImageSwitch" destination="996-ur-hss" id="B5X-eS-Fb5"/>
+                        <outlet property="numRecipes" destination="OSo-yZ-7Ol" id="rMG-9R-GKg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -455,7 +449,7 @@
         <image name="icons8-Search Filled_25" width="25" height="25"/>
         <image name="nutFreeImage" width="225" height="225"/>
         <image name="second" width="30" height="30"/>
-        <image name="veganImage" width="225" height="225"/>
-        <image name="vegetarianImage" width="600" height="600"/>
+        <image name="veganImage" width="600" height="600"/>
+        <image name="vegetarianImage" width="225" height="225"/>
     </resources>
 </document>

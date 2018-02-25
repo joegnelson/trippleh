@@ -9,117 +9,193 @@
 import UIKit
 
 var restrictionDatabase = [cellData]()
+var isSugarFree = false
+var isGlutenFree = false
+var isDairyFree = false
+var isNutFree = false
+var isVegetarian = false
+var isVegan = false
 
 class SettingsViewController: UIViewController {
-    //Images:
-    @IBOutlet weak var noSugarImageSwitch: UIImageView!
-    @IBOutlet weak var glutenFreeImageSwitch: UIImageView!
-    @IBOutlet weak var dairyFreeImageSwitch: UIImageView!
-    @IBOutlet weak var veganImageSwitch: UIImageView!
-    @IBOutlet weak var vegetarianImageSwitch: UIImageView!
-    @IBOutlet weak var nutFreeImageSwitch: UIImageView!
-    //___________________________
+    //Label
+    @IBOutlet weak var numRecipes: UILabel!
     
-    //Image Button
+    //Image Buttons:
+    @IBAction func sugarFreeImageButton(_ sender: UIButton) {
+        if #imageLiteral(resourceName: "NoSugarImage") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+            isSugarFree = true
+            print("Sugar Free: " , isSugarFree)
+        }
+        else {
+            sender.setImage(#imageLiteral(resourceName: "NoSugarImage"), for: .normal)
+            isSugarFree = false
+            print("Sugar Free: " , isSugarFree)
+        }
+        recalculateDB()
+    }
+    @IBAction func glutenFreeImageButton(_ sender: UIButton) {
+        if #imageLiteral(resourceName: "glutenFreeImage") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+            isGlutenFree = true
+            print("Gluten Free: " , isGlutenFree)
+        }
+        else {
+            sender.setImage(#imageLiteral(resourceName: "glutenFreeImage"), for: .normal)
+            isGlutenFree = false
+            print("Gluten Free: " , isGlutenFree)
+        }
+        recalculateDB()
+    }
+    @IBAction func dairyFreeImageButton(_ sender: UIButton) {
+        if #imageLiteral(resourceName: "dairyFreeImage") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+            isDairyFree = true
+            print("Dairy Free: " , isDairyFree)
+        }
+        else {
+            sender.setImage(#imageLiteral(resourceName: "dairyFreeImage"), for: .normal)
+            isDairyFree = false
+            print("Dairy Free: " , isDairyFree)
+        }
+        recalculateDB()
+    }
+    @IBAction func nutFreeImageButton(_ sender: UIButton) {
+        if #imageLiteral(resourceName: "nutFreeImage") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+            isNutFree = true
+            print("Nut Free: " , isNutFree)
+        }
+        else {
+            sender.setImage(#imageLiteral(resourceName: "nutFreeImage"), for: .normal)
+            isNutFree = false
+            print("Nut Free: " , isNutFree)
+        }
+        recalculateDB()
+    }
+    @IBAction func vegetarianImageButton(_ sender: UIButton) {
+        if #imageLiteral(resourceName: "vegetarianImage") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+            isVegetarian = true
+            print("Vegetarian: " , isVegetarian)
+        }
+        else {
+            sender.setImage(#imageLiteral(resourceName: "vegetarianImage"), for: .normal)
+            isVegetarian = false
+            print("Vegetarian: " , isVegetarian)
+        }
+        recalculateDB()
+    }
     @IBAction func veganImageButton(_ sender: UIButton) {
         if #imageLiteral(resourceName: "veganImage") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "NoSugarImage"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+            isVegan = true
+            print("Vegan: " , isVegan)
         }
         else {
             sender.setImage(#imageLiteral(resourceName: "veganImage"), for: .normal)
+            isVegan = false
+            print("Vegan: " , isVegan)
         }
-        
+        recalculateDB()
     }
-    
     //---------------------------
     
     //Restrtiction Database:
-    let restriction: [String] = ["Sugar Free", "Gluten Free", "Dairy Free", "Vegan" , "Vegetarian", "Nut Free"]
-    
-    
-    func addToRD(selection: String) {
+    func addToRDB(selection: String) {
         //Traversing through database and adding to categoryDatabasefor item in database
         // var count=0
         print("-----")
         print(selection)
         for item in database {
-            // for restriction in item.restrictions
-            if(item.restrictions.contains(selection) ){
-                print(item.text);
+            if(item.restrictions.contains(selection)){
                 restrictionDatabase.append(item)
             }
         }
     }
+    func removeFromRDB(selection: String){
+        var i = 0
+        for item in restrictionDatabase {
+            if(!item.restrictions.contains(selection)){
+                restrictionDatabase.remove(at: i)
+            }
+            else{
+                i = i + 1
+            }
+        }
+    }
     
+    func recalculateDB() {
+        var foundRestriction = false
+        restrictionDatabase.removeAll()
+        if (isSugarFree){
+            if (!foundRestriction){
+                addToRDB(selection: "Sugar Free")
+            }
+            else{
+                removeFromRDB(selection: "Sugar Free")
+            }
+            foundRestriction = true
+        }
+        if (isGlutenFree){
+            if (!foundRestriction){
+                addToRDB(selection: "Gluten Free")
+            }
+            else{
+                removeFromRDB(selection: "Gluten Free")
+            }
+            foundRestriction = true
+        }
+        if (isDairyFree){
+            if (!foundRestriction){
+                addToRDB(selection: "Dairy Free")
+            }
+            else{
+                removeFromRDB(selection: "Dairy Free")
+            }
+            foundRestriction = true
+        }
+        if (isNutFree){
+            if (!foundRestriction){
+                addToRDB(selection: "Nut Free")
+            }
+            else{
+                removeFromRDB(selection: "Nut Free")
+            }
+            foundRestriction = true
+        }
+        if (isVegetarian){
+            if (!foundRestriction){
+                addToRDB(selection: "Vegetarian")
+            }
+            else{
+                removeFromRDB(selection: "Vegetarian")
+            }
+            foundRestriction = true
+        }
+        if (isVegan){
+            if (!foundRestriction){
+                addToRDB(selection: "Vegan")
+            }
+            else{
+                removeFromRDB(selection: "Vegan")
+            }
+            foundRestriction = true
+        }
+        numRecipes.text = String(restrictionDatabase.count)
+        for item in restrictionDatabase {
+            print(item.text)
+        }
+     }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //Image test: (tap)
-        let SugarFreeTapGesture = UITapGestureRecognizer(target: self, action: #selector(SettingsViewController.SFImageTapped(recognizer:)))
-        SugarFreeTapGesture.numberOfTapsRequired = 1
-        //noSugar
-        noSugarImageSwitch.isUserInteractionEnabled = true
-        noSugarImageSwitch.addGestureRecognizer(SugarFreeTapGesture)
-        
-        let GlutenFreeTapGesture = UITapGestureRecognizer(target: self, action: #selector(SettingsViewController.GFImageTapped(recognizer:)))
-        GlutenFreeTapGesture.numberOfTapsRequired = 1
-        //glutenFree
-        glutenFreeImageSwitch.isUserInteractionEnabled = true
-        glutenFreeImageSwitch.addGestureRecognizer(GlutenFreeTapGesture)
-        
-        let DairyFreeTapGesture = UITapGestureRecognizer(target: self, action: #selector(SettingsViewController.DFImageTapped(recognizer:)))
-        DairyFreeTapGesture.numberOfTapsRequired = 1
-        //dairyFree
-        dairyFreeImageSwitch.isUserInteractionEnabled = true
-        dairyFreeImageSwitch.addGestureRecognizer(DairyFreeTapGesture)
-        
-        let VeganTapGesture = UITapGestureRecognizer(target: self, action: #selector(SettingsViewController.VplusImageTapped(recognizer:)))
-        VeganTapGesture.numberOfTapsRequired = 1
-        //vegan
-        veganImageSwitch.isUserInteractionEnabled = true
-        veganImageSwitch.addGestureRecognizer(VeganTapGesture)
-        
-        let NutFreeTapGesture = UITapGestureRecognizer(target: self, action: #selector(SettingsViewController.NFImageTapped(recognizer:)))
-        NutFreeTapGesture.numberOfTapsRequired = 1
-        //nutFree
-        nutFreeImageSwitch.isUserInteractionEnabled = true
-        nutFreeImageSwitch.addGestureRecognizer(NutFreeTapGesture)
-        
-        let VegetarianTapGesture = UITapGestureRecognizer(target: self, action: #selector(SettingsViewController.VImageTapped(recognizer:)))
-        VegetarianTapGesture.numberOfTapsRequired = 1
-        //vegetarian
-        vegetarianImageSwitch.isUserInteractionEnabled = true
-        vegetarianImageSwitch.addGestureRecognizer(VegetarianTapGesture)
-        
         //Vegan Image **BUTTON**
         
     }
-    //Image tap function
-    func SFImageTapped(recognizer: UITapGestureRecognizer) {
-        print("SF Tapped")
-        addToRD(selection: "No Sugar Added")
-    }
-    func GFImageTapped(recognizer: UITapGestureRecognizer) {
-        print("GF Tapped")
-        addToRD(selection: "Gluten Free")
-    }
-    func DFImageTapped(recognizer: UITapGestureRecognizer) {
-        print("DF Tapped")
-        addToRD(selection: "Dairy Free")
-    }
-    func VplusImageTapped(recognizer: UITapGestureRecognizer) {
-        print("V+ Tapped")
-        addToRD(selection: "Vegan")
-    }
-    func VImageTapped(recognizer: UITapGestureRecognizer) {
-        print("V Tapped")
-        addToRD(selection: "Vegetarian")
-    }
-    func NFImageTapped(recognizer: UITapGestureRecognizer) {
-        print("NF Tapped")
-        addToRD(selection: "Nut Free")
-    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

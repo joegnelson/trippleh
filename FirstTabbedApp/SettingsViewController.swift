@@ -22,78 +22,78 @@ class SettingsViewController: UIViewController {
     
     //Image Buttons:
     @IBAction func sugarFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "NoSugarImage") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+        if #imageLiteral(resourceName: "SugarFreeOFF") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "NoSugarImage"), for: .normal)
             isSugarFree = true
             print("Sugar Free: " , isSugarFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "NoSugarImage"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "SugarFreeOFF"), for: .normal)
             isSugarFree = false
             print("Sugar Free: " , isSugarFree)
         }
         recalculateDB()
     }
     @IBAction func glutenFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "glutenFreeImage") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+        if #imageLiteral(resourceName: "GlutenFreeOFF") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "glutenFreeImage"), for: .normal)
             isGlutenFree = true
             print("Gluten Free: " , isGlutenFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "glutenFreeImage"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "GlutenFreeOFF"), for: .normal)
             isGlutenFree = false
             print("Gluten Free: " , isGlutenFree)
         }
         recalculateDB()
     }
     @IBAction func dairyFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "dairyFreeImage") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+        if #imageLiteral(resourceName: "DairyFreeOFF") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "dairyFreeImage"), for: .normal)
             isDairyFree = true
             print("Dairy Free: " , isDairyFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "dairyFreeImage"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "DairyFreeOFF"), for: .normal)
             isDairyFree = false
             print("Dairy Free: " , isDairyFree)
         }
         recalculateDB()
     }
     @IBAction func nutFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "nutFreeImage") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+        if #imageLiteral(resourceName: "NutFreeOFF") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "nutFreeImage"), for: .normal)
             isNutFree = true
             print("Nut Free: " , isNutFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "nutFreeImage"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "NutFreeOFF"), for: .normal)
             isNutFree = false
             print("Nut Free: " , isNutFree)
         }
         recalculateDB()
     }
     @IBAction func vegetarianImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "vegetarianImage") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+        if #imageLiteral(resourceName: "VegetarianOFF") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "vegetarianImage"), for: .normal)
             isVegetarian = true
             print("Vegetarian: " , isVegetarian)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "vegetarianImage"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "VegetarianOFF"), for: .normal)
             isVegetarian = false
             print("Vegetarian: " , isVegetarian)
         }
         recalculateDB()
     }
     @IBAction func veganImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "veganImage") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "second"), for: .normal)
+        if #imageLiteral(resourceName: "VeganOFF") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "veganImage"), for: .normal)
             isVegan = true
             print("Vegan: " , isVegan)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "veganImage"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "VeganOFF"), for: .normal)
             isVegan = false
             print("Vegan: " , isVegan)
         }
@@ -102,6 +102,11 @@ class SettingsViewController: UIViewController {
     //---------------------------
     
     //Restrtiction Database:
+    func addAllToRDB() {
+        for item in database {
+                restrictionDatabase.append(item)
+        }
+    }
     func addToRDB(selection: String) {
         //Traversing through database and adding to categoryDatabasefor item in database
         // var count=0
@@ -131,9 +136,6 @@ class SettingsViewController: UIViewController {
         if (isSugarFree){
             if (!foundRestriction){
                 addToRDB(selection: "Sugar Free")
-            }
-            else{
-                removeFromRDB(selection: "Sugar Free")
             }
             foundRestriction = true
         }
@@ -182,14 +184,18 @@ class SettingsViewController: UIViewController {
             }
             foundRestriction = true
         }
+        if(!foundRestriction){
+            addAllToRDB();
+        }
         numRecipes.text = String(restrictionDatabase.count)
         for item in restrictionDatabase {
-            print(item.text)
+            print("Number of Recpes: ", item.text)
         }
      }
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        recalculateDB();
         // Do any additional setup after loading the view, typically from a nib.
         
         //Vegan Image **BUTTON**

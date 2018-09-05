@@ -21,6 +21,8 @@
 		D244E71A1F5CA73B00D8B3D3 /* HomeRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */; };
 		D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2489D331F54CD320094D91F /* TableViewCell1.swift */; };
 		D2489D361F54CD320094D91F /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2489D341F54CD320094D91F /* TableViewCell1.xib */; };
+		D2A3BFFE2138C6C7002DAB15 /* Login2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */; };
+		D2A3C0002139C6C1002DAB15 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecipeViewController.swift; sourceTree = "<group>"; };
 		D2489D331F54CD320094D91F /* TableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		D2489D341F54CD320094D91F /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
+		D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login2ViewController.swift; sourceTree = "<group>"; };
+		D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 		08562AC41F0C03DD0057E481 /* FirstTabbedApp */ = {
 			isa = PBXGroup;
 			children = (
+				D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */,
+				D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */,
 				08EA6AD01F5DC16D00D10A73 /* Recipe.swift */,
 				D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */,
 				D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */,
@@ -284,8 +290,10 @@
 				D211B5F61F5A39EA0092998A /* RecipeViewController.swift in Sources */,
 				D244E71A1F5CA73B00D8B3D3 /* HomeRecipeViewController.swift in Sources */,
 				D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */,
+				D2A3BFFE2138C6C7002DAB15 /* Login2ViewController.swift in Sources */,
 				08562ACA1F0C03DD0057E481 /* SettingsViewController.swift in Sources */,
 				08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */,
+				D2A3C0002139C6C1002DAB15 /* ProfileViewController.swift in Sources */,
 				08562AC81F0C03DD0057E481 /* SearchResultsViewController.swift in Sources */,
 				08EA6AD11F5DC16D00D10A73 /* Recipe.swift in Sources */,
 				D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */,

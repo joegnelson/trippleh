@@ -68,21 +68,31 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         //showLoadingScreen()
         
         //URL stuff
-        let request = URLRequest(url: URL(string: "http:/ccc-restrictless-login-t1.appspot.com/demo")!)
+        let request = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=joex&pass=joe1")!)
         let task = URLSession.shared.dataTask(with: request) { dataX, response, error in guard let data2 = dataX, error == nil else {
             print("error = \(String(describing: error))")
             return
             }
-            
+            var loginSuccess = false;
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                print(response)
+                
+                print(response ?? "response is nil")
+                loginSuccess=false;
+                
+            }else{
+                loginSuccess=true;
+
             }
-            
             let responseString = String(data: data2, encoding: .utf8)
-            self.joeMethod(data: responseString!, name: "joe")
+//            self.joeMethod(data: responseString!, name: "joe")
             DispatchQueue.main.async {
-                print(responseString!)
+                if(!loginSuccess){
+                    print("LOGIN FAILED!")
+                    print(responseString!)
+                }else{
+                    print(responseString!)
+                }
             }
         }
         

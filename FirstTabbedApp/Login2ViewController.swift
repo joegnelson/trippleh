@@ -21,8 +21,10 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var _btn: UIButton!
     @IBOutlet weak var _label: UILabel!
     
+
+    
     //Button Action
-    @IBAction func _btnAction(_ sender: Any) {
+    @IBAction func _btnAction2(_ sender: Any) {
         if (_user.text! != "" && _pass.text != ""){
             let dictionaryPass = usersAndPass[_user.text!]
             
@@ -54,6 +56,31 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func _btnAction(_ sender: Any) {
+        //Create request
+        print(_user.text!)
+        print(_pass.text!)
+        let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=\(_user.text!)&pass=\(_pass.text!)")!)
+        //Create task
+        let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {
+            print("error = \(String(describing: error))")
+            return
+            }
+            let responseString = self.processLoginResponse(data: data, response: response)
+            
+            // ???
+            DispatchQueue.main.async {
+                if(responseString == nil){
+                    print("LOGIN FAILED 2!")
+                    self._label.text = "Try Again 2"
+                } else{
+                    print(responseString ?? "Logical Error")
+                }
+            }
+        }
+        task.resume()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -82,7 +109,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        //Execute lofin API request
+        //Execute login API request
         task.resume()
     }
     func processLoginResponse(data: Data?, response: URLResponse?)-> String?{

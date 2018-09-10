@@ -54,10 +54,6 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func joeMethod(data: String, name: String){
-        print(data)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,37 +64,42 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         //showLoadingScreen()
         
         //URL stuff
-        let request = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=joex&pass=joe1")!)
-        let task = URLSession.shared.dataTask(with: request) { dataX, response, error in guard let data2 = dataX, error == nil else {
-            print("error = \(String(describing: error))")
-            return
+        //Create login request
+        let request = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=hailey1&pass=hailey1")!)
+        //Create login API task
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in guard let data2 = data, error == nil else {
+                print("error = \(String(describing: error))")
+                return
             }
-            var loginSuccess = false;
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
-                print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                
-                print(response ?? "response is nil")
-                loginSuccess=false;
-                
-            }else{
-                loginSuccess=true;
-
-            }
-            let responseString = String(data: data2, encoding: .utf8)
-//            self.joeMethod(data: responseString!, name: "joe")
+            let responseString = self.processLoginResponse(data: data, response: response)
+            
+            // ???
             DispatchQueue.main.async {
-                if(!loginSuccess){
+                if(responseString == nil){
                     print("LOGIN FAILED!")
-                    print(responseString!)
-                }else{
-                    print(responseString!)
+                } else{
+                    print(responseString ?? "Logical Error")
                 }
             }
         }
-        
+        //Execute lofin API request
         task.resume()
     }
-
+    func processLoginResponse(data: Data?, response: URLResponse?)-> String?{
+        //var loginSuccess = false;
+        //Check response code from login request AND set login success flag accordingly
+        if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+            print("statusCode should be 200, but is \(httpStatus.statusCode)")
+            
+            print(response ?? "response is nil")
+            return nil
+        }
+        
+        //Get response
+        let responseString = String(data: data!, encoding: .utf8)
+        return responseString!
+    }
+    
     //Splash Screen
     /**
      func showLoadingScreen (){

@@ -76,10 +76,12 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
                 } else{
                     print(responseString ?? "Logical Error")
                     self.performSegue(withIdentifier: "welcome", sender: self)
+                    self._label.text = ""
                 }
             }
         }
         task.resume()
+        _label.text = ""
     }
     
     override func viewDidLoad() {

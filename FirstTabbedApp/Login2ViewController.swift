@@ -57,9 +57,9 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func _btnAction(_ sender: Any) {
-        //Create request
         print(_user.text!)
         print(_pass.text!)
+        //Create request
         let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=\(_user.text!)&pass=\(_pass.text!)")!)
         //Create task
         let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {
@@ -75,6 +75,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
                     self._label.text = "Try Again 2"
                 } else{
                     print(responseString ?? "Logical Error")
+                    self.performSegue(withIdentifier: "welcome", sender: self)
                 }
             }
         }
@@ -92,6 +93,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         
         //URL stuff
         //Create login request
+        /**
         let request = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=hailey1&pass=hailey1")!)
         //Create login API task
         let task = URLSession.shared.dataTask(with: request) { data, response, error in guard let data2 = data, error == nil else {
@@ -110,7 +112,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         //Execute login API request
-        task.resume()
+        task.resume() */
     }
     func processLoginResponse(data: Data?, response: URLResponse?)-> String?{
         //var loginSuccess = false;

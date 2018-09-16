@@ -8,19 +8,28 @@ var homeViewIndex:Int=0
 
 class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("COunt: \(restrictionDatabase.count)")
+        self.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(restrictionDatabase.count)
     }
     
+    //only runs on initial load
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return database.count
+        print("DB count = \(database.count)")
+        return restrictionDatabase.count
     }
     
+    //only loads what you can see on one screen
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+            print("icu")
             let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
-            cell.mainImageView1.image = database[indexPath.row].image
-            cell.mainLabel1.text = database[indexPath.row].text
+            cell.mainImageView1.image = restrictionDatabase[indexPath.row].image
+            cell.mainLabel1.text = restrictionDatabase[indexPath.row].text
             return cell
     }
     

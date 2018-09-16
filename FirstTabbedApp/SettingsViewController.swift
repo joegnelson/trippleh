@@ -8,7 +8,7 @@
 
 import UIKit
 
-var restrictionDatabase = [cellData]()
+var restrictionDatabase = database
 var isSugarFree = false
 var isGlutenFree = false
 var isDairyFree = false

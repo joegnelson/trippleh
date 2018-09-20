@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QAQ-4b-Ce3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -146,23 +146,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-lv-imR">
-                                <rect key="frame" x="163" y="254" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-lv-imR">
+                                <rect key="frame" x="163" y="387" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIT-2a-8bM">
+                                <rect key="frame" x="127" y="249" width="120" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="kqy-gQ-GOP"/>
+                                </constraints>
+                                <state key="normal" image="Image-1"/>
                                 <connections>
-                                    <segue destination="QAQ-4b-Ce3" kind="show" id="2Eh-Mo-Ygt"/>
+                                    <action selector="_btnAction:" destination="QAQ-4b-Ce3" eventType="touchUpInside" id="vtx-zV-1ro"/>
+                                    <segue destination="QAQ-4b-Ce3" kind="show" id="IFs-UC-edt"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aL8-pL-Fhz">
+                                <rect key="frame" x="159" y="330" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aL8-pL-Fhz" firstAttribute="top" secondItem="qIT-2a-8bM" secondAttribute="bottom" constant="20" id="7mp-jY-Iqp"/>
+                            <constraint firstItem="qIT-2a-8bM" firstAttribute="leading" secondItem="Ii1-wu-3ZF" secondAttribute="leading" constant="127" id="8MZ-vZ-eQx"/>
+                            <constraint firstItem="ct8-lv-imR" firstAttribute="top" secondItem="Ii1-wu-3ZF" secondAttribute="top" constant="367" id="Cim-wr-dnh"/>
+                            <constraint firstItem="ct8-lv-imR" firstAttribute="centerX" secondItem="qIT-2a-8bM" secondAttribute="centerX" id="Hmg-ky-mlM"/>
+                            <constraint firstItem="ct8-lv-imR" firstAttribute="centerX" secondItem="smd-O9-9LQ" secondAttribute="centerX" id="IfP-C5-4eR"/>
+                            <constraint firstItem="aL8-pL-Fhz" firstAttribute="centerX" secondItem="ct8-lv-imR" secondAttribute="centerX" id="brm-Tr-vVn"/>
+                            <constraint firstItem="qIT-2a-8bM" firstAttribute="top" secondItem="ct8-lv-imR" secondAttribute="bottom" constant="-168" id="tTb-ny-lCK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ii1-wu-3ZF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="rSA-Wp-33s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNi-Lk-3YA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="1437"/>
+            <point key="canvasLocation" x="652" y="1451.4242878560722"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pqc-6z-E3f">
@@ -218,7 +238,7 @@
                                     <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="g3t-ii-XZG"/>
+                                    <segue destination="24V-AO-bb9" kind="show" id="EoM-xH-c5w"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -255,12 +275,11 @@
                         <outlet property="_label" destination="eAH-NT-Ud2" id="bQw-zX-BIG"/>
                         <outlet property="_pass" destination="OHu-92-7RT" id="BFr-gY-AyG"/>
                         <outlet property="_user" destination="oJA-Mc-C89" id="jIf-ze-2qN"/>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="welcome" id="SQ4-E5-1UR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8E-bb-gtr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1087.2" y="342.27886056971516"/>
+            <point key="canvasLocation" x="1497" y="1451"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -629,6 +648,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g3t-ii-XZG"/>
+        <segue reference="EoM-xH-c5w"/>
     </inferredMetricsTieBreakers>
 </document>

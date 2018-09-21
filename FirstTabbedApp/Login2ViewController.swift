@@ -8,62 +8,55 @@
 
 import UIKit
 
-var gloUser = ""
-var gloPass = ""
+struct User: Codable {
+    var firstName: String
+    var email: String
+    //var description: String?
+}
 
-let usersAndPass = ["hailey": "hailey1", "joe": "joe1", "mari": "mari1"]
+var user: User?
 
 class Login2ViewController: UIViewController, UITextFieldDelegate {
-    
 
     @IBOutlet weak var _user: UITextField!
     @IBOutlet weak var _pass: UITextField!
     @IBOutlet weak var _btn: UIButton!
     @IBOutlet weak var _label: UILabel!
     
-
-    
-    //Button Action
-    @IBAction func _btnAction2(_ sender: Any) {
-        if (_user.text! != "" && _pass.text != ""){
-            let dictionaryPass = usersAndPass[_user.text!]
+    //----------------------------------------------------------
+    // ACTION
+    //----------------------------------------------------------
+    func flashBG(){
+        UIView.animate(withDuration: 0.7, animations: {
+            self._btn.backgroundColor = UIColor.green
             
-            if dictionaryPass != nil {
-                print("Dictionary Password: \(dictionaryPass!)")
-                
-                if(_pass.text == dictionaryPass){
-                    print("Same, same")
-                    
-                    gloUser = _user.text!
-                    gloPass = _pass.text!
-                    
-                    //Segue
-                    performSegue(withIdentifier: "welcome", sender: self)
-                }
-                else{
-                    _label.text = "Try Again"
-                    print("Correct Username")
-                    print("Wrong Password. Try Again.")
-                }
-            }
-            else{
-                _label.text = "Try Again"
-                print("Wrong Username. Try Again.")
-            }
-            
-            print(gloUser)
-            print(gloPass)
-        }
+        })
     }
-    
+    func flashBtn(){
+        UIButton.animate(withDuration: 0.5, animations: {
+            self._btn.backgroundColor = UIColor.green
+        })
+    }
+    func flashBtn2(){
+        UIView.animate(withDuration: 1.0, delay: 1.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            
+            self._label.backgroundColor = UIColor.green
+
+        }, completion: nil)
+    }
     @IBAction func _btnAction(_ sender: Any) {
+        self._label.backgroundColor = UIColor.white
+        self._label.text = "LOADING...."
         print(_user.text!)
         print(_pass.text!)
-        //Create request
+        
+        //CREATE REQUUEST
         let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=\(_user.text!)&pass=\(_pass.text!)")!)
-        //Create task
+        
+        //CREATE TASK
         let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {
             print("error = \(String(describing: error))")
+            self.flashBtn2()
             return
             }
             let responseString = self.processLoginResponse(data: data, response: response)
@@ -73,6 +66,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
                 if(responseString == nil){
                     print("LOGIN FAILED 2!")
                     self._label.text = "Try Again 2"
+                    self.flashBtn2()
                 } else{
                     print(responseString ?? "Logical Error")
                     self.performSegue(withIdentifier: "welcome", sender: self)
@@ -80,54 +74,46 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+        //EXECUTE TASK
         task.resume()
         _label.text = ""
     }
     
+    //----------------------------------------------------------
+    // OVER RIDES
+    //----------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self._user.delegate = self
-        self._pass.delegate = self
-        
-        //LOADING SCREEN
-        //showLoadingScreen()
-        
-        //URL stuff
-        //Create login request
-        /**
-        let request = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=hailey1&pass=hailey1")!)
-        //Create login API task
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in guard let data2 = data, error == nil else {
-                print("error = \(String(describing: error))")
-                return
-            }
-            let responseString = self.processLoginResponse(data: data, response: response)
-            
-            // ???
-            DispatchQueue.main.async {
-                if(responseString == nil){
-                    print("LOGIN FAILED!")
-                } else{
-                    print(responseString ?? "Logical Error")
-                }
-            }
-        }
-        //Execute login API request
-        task.resume() */
     }
+    
+    //----------------------------------------------------------
+    // HELPER FUNCTIONS
+    //----------------------------------------------------------
     func processLoginResponse(data: Data?, response: URLResponse?)-> String?{
         //var loginSuccess = false;
         //Check response code from login request AND set login success flag accordingly
         if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
             print("statusCode should be 200, but is \(httpStatus.statusCode)")
-            
+
+
             print(response ?? "response is nil")
             return nil
         }
         
         //Get response
         let responseString = String(data: data!, encoding: .utf8)
+        
+        
+        //let responseString = String(data: data!, encoding: .utf8)
+        //let jsonData=responseString?.data(using: .utf8)!
+        do {
+            let decoder = JSONDecoder()
+            user = try decoder.decode(User.self, from: data!)
+            print("email:\(user?.email ?? "")") // Prints "Durian"
+        } catch {
+            //handle error
+            print(error)
+        }
         return responseString!
     }
     

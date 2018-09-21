@@ -154,25 +154,15 @@
                                     <segue destination="QAQ-4b-Ce3" kind="show" id="2Eh-Mo-Ygt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEh-Lc-5gA">
-                                <rect key="frame" x="16" y="381" width="343" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ii1-wu-3ZF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="rSA-Wp-33s"/>
-                    <connections>
-                        <outlet property="emailLabel" destination="eEh-Lc-5gA" id="H4b-GD-WHR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNi-Lk-3YA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="1435.2323838080961"/>
+            <point key="canvasLocation" x="652" y="1437"/>
         </scene>
         <!--Profile-->
         <scene sceneID="pqc-6z-E3f">

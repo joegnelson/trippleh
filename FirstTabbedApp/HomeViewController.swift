@@ -31,7 +31,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             print("icu")
             let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
-            cell.mainImageView1.image = restrictionDatabase[indexPath.row].image
+ //           cell.mainImageView1.image = restrictionDatabase[indexPath.row].image
 //            cell.mainLabel1.text = restrictionDatabase[indexPath.row].text
 //            return cell
         let imageUrl=URL(string: database[indexPath.row].imageUrl)!

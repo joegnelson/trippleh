@@ -15,9 +15,9 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let data:cellData=searchResultsSelectedCellData!
-        recipeImage.image = data.image
+       // recipeImage.image = data.image
         recipeTitle.text = data.text
-        recipeDescrip.text=data.catDetail
+        recipeDescrip.text=data.category
         recipeRestrictions.text=data.restrictions
         self.navigationItem.title=data.text
         

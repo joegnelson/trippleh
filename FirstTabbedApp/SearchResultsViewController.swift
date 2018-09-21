@@ -27,7 +27,7 @@ class SearchResultsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
-        cell.mainImageView1.image = categoryDatabase[indexPath.row].image
+       // cell.mainImageView1.image = categoryDatabase[indexPath.row].image
         cell.mainLabel1.text = categoryDatabase[indexPath.row].text
         
         return cell

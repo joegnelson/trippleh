@@ -20,9 +20,9 @@ class HomeRecipeViewController:UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let data:cellData = database[homeViewIndex];
-        recipeImage.image = data.image
+//        recipeImage.image = data.image
         recipeTitle.text = data.text
-        recipeDescrip.text = data.catDetail
+        recipeDescrip.text = data.category
         recipeRestrictions.text = data.restrictions
         recipeIngredients.text = data.ingredients
         self.navigationItem.title=data.text

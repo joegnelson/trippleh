@@ -15,8 +15,59 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //CREATE REQUUEST
+        let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/recipe")!)
+        
+        //CREATE TASK
+        let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {
+            print("ERROR = \(String(describing: error))")
+            return
+            }
+            let responseString = self.processRecipeResponse(data: data, response: response)
+            
+            // ???
+            DispatchQueue.main.async {
+                if(responseString == nil){
+                    print("GET RECIPES FAILED!!!!!")
+                } else{
+                    print(responseString ?? "Logical Error!!!")
+                }
+            }
+        }
+        //EXECUTE TASK
+        task.resume()
+
         return true
+    }
+    //----------------------------------------------------------
+    // HELPER FUNCTIONS
+    //----------------------------------------------------------
+    func processRecipeResponse(data: Data?, response: URLResponse?)-> String?{
+        //var loginSuccess = false;
+        //Check response code from login request AND set login success flag accordingly
+        if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+            print("statusCode should be 200, but is \(httpStatus.statusCode)")
+            
+            
+            print(response ?? "response is nil")
+            return nil
+        }
+        
+        //Get response
+        let responseString = String(data: data!, encoding: .utf8)
+        
+        
+        //let responseString = String(data: data!, encoding: .utf8)
+        //let jsonData=responseString?.data(using: .utf8)!
+        do {
+            let decoder = JSONDecoder()
+            database = try decoder.decode(cellDataList.self, from: data!).recipes
+            print("email:\(user?.email ?? "")") // Prints "Durian"
+        } catch {
+            //handle error
+            print(error)
+        }
+        return responseString!
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

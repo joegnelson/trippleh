@@ -7,39 +7,23 @@
 //
 
 import UIKit
-
-struct cellData {
-    let text: String!
-    let image: UIImage!
-    let imageUrl: String!
-    let catDetail: String!
-    let restrictions: String!
-    let ingredients: String!
+struct cellDataList:Codable{
+    var recipes:[cellData]
+}
+struct cellData:Codable {
+    var text: String!
+//    var image: UIImage!
+    var imageUrl: String!
+    var category: String!
+    var restrictions: String!
+    var ingredients: String!
     let directions: String!
 }
 
 var allRecipes : [Recipe]=[]
 
 
-var database = [
-    
-    cellData( text :    "Gluten Free Banana Peach Walnut Pancakes"    , image :#imageLiteral(resourceName:    "GlutenFreeBananaPeachWalnutPancakes"    )
-        //, imageUrl:    "https://ccc-restrictless-login-t1.appspot.com/beetLasanga.png"
-        ,imageUrl:      "https://ccc-restrictless-login-t1.appspot.com/beetLasanga.png"
-        , catDetail:    "Breakfast"    , restrictions:    "Gluten Free, Dairy Free, Vegetarian"    , ingredients:     "1 mashed banana\n2 eggs\n1 teaspoon baking powder\n1/2 teaspoon cinnamon\n1/2 Chopped walnuts\nA pinch of salt"    , directions:     ""    ),
-/*
-    cellData( text :    "Gluten Free Banana Peach Walnut Pancakes"    , image :#imageLiteral(resourceName:    "GlutenFreeBananaPeachWalnutPancakes"    ), imageUrl:    ""    , catDetail:    "Breakfast"    , restrictions:    "Gluten Free, Dairy Free, Vegetarian"    , ingredients:     "1 mashed banana\n2 eggs\n1 teaspoon baking powder\n1/2 teaspoon cinnamon\n1/2 Chopped walnuts\nA pinch of salt"    , directions:     ""    ),
-    cellData( text :    "Vegan Pretzels "    , image :#imageLiteral(resourceName:    "VeganPretzels"    ), imageUrl:    ""    , catDetail:    "Doughs"    , restrictions:    "Dairy Free, Nut Free, Vegetarian, Vegan"    , ingredients:     "4 teaspoons active dry yeast\n1 teaspoon white sugar\n1 1/4 cups warm water (110 degrees F)\n5 cups all purpose flour\n1 1/2 teaspoon salt\n1 tablespoon vegetable oil\n1/2 cup baking soda\n4 cups hot water\nCoarse sea salt (for finising)"    , directions:     ""    ),
-    cellData( text :    "Vegan Roasted Brussel Sprouts"    , image :#imageLiteral(resourceName:    "VeganRoastedBrusselSprouts"    ), imageUrl:    ""    , catDetail:    "Sides"    , restrictions:    "Sugar Free, Gluten Free, Dairy Free, Nut Free, Vegetarian, Vegan"    , ingredients:     ""    , directions:     ""    ),
-    cellData( text :    "Cookie Dough Macarons"    , image :#imageLiteral(resourceName:    "CookieDoughMacarons"    ), imageUrl:    ""    , catDetail:    "Batters"    , restrictions:    "Dairy Free, Vegetarian"    , ingredients:     ""    , directions:     ""    ),
-    cellData( text :    "Dairy Free Pumpkin Ravioli"    , image :#imageLiteral(resourceName:    "DFPumpkinRavioli"    ), imageUrl:    ""    , catDetail:    "Lunch/Dinner"    , restrictions:    "Dairy Free, Vegetarian, Nut Free"    , ingredients:     ""    , directions:     ""    ),
-    cellData( text :    "Vegan Pretzel Monkey Bread Bites"    , image :#imageLiteral(resourceName:    "VeganPretzelMonkeyBites"    ), imageUrl:    ""    , catDetail:    "Doughs"    , restrictions:    "Dairy Free, Nut Free, Vegetarian, Vegan"    , ingredients:     "4 teaspoons active dry yeast\n1 teaspoon white sugar\n1 1/4 cups warm water (110 degrees F)\n5 cups all purpose flour\n1 1/2 teaspoon salt\n1 tablespoon vegetable oil\n3 tablespoons sugar\n2 tablespoons cinnamon"    , directions:     ""    ),
-    cellData( text :    "Vegan Kale Pesto"    , image :#imageLiteral(resourceName:    "VeganKalePesto"    ), imageUrl:    ""    , catDetail:    "Dips"    , restrictions:    "Sugar Free, Gluten Free, Dairy Free, Vegetarian, Vegan"    , ingredients:     ""    , directions:     ""    ),
-    cellData( text :    "Vegan Peach Hand Pies"    , image :#imageLiteral(resourceName:    "PeachHandPies"    ), imageUrl:    ""    , catDetail:    "Pie"    , restrictions:    "Dairy Free, Nut Free, Vegetarian, Vegan"    , ingredients:     ""    , directions:     ""    ),
-    cellData( text :    "Vegan Sweet Potato Pasta"    , image :#imageLiteral(resourceName:    "SweetPotatoPasta"    ), imageUrl:    ""    , catDetail:    "Lunch/Dinner"    , restrictions:    "Sugar Free, Gluten Free, Dairy Free, Nut Free, Vegetarian, Vegan"    , ingredients:     "1 sweet potato\n1 tablespoon oil (cooking oil)\nSalt and pepper to taste"    , directions:     ""    ), 
-*/
- 
- ]
+var database : [cellData ]=[]
 
 class Recipe: NSObject {
     var date:String
@@ -50,7 +34,6 @@ class Recipe: NSObject {
 
     override init() {
         date=NSDate().description
-                
         
     }
     func dictionary()-> NSDictionary{

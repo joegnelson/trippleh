@@ -50,7 +50,7 @@ class SearchViewController: UITableViewController {
         
         //Traversing through database and adding to categoryDatabase
         for item in restrictionDatabase {
-            if(item.catDetail==categories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!]){
+            if(item.category==categories[(searchViewIndexPath?.section)!][(searchViewIndexPath?.item)!]){
                 categoryDatabase.append(item)
             }
         }

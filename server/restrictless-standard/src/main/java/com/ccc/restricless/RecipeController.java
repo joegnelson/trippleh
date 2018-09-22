@@ -23,7 +23,7 @@ public class RecipeController extends HttpServlet {
 		Recipe VeganPretzelMonkeyBread = new Recipe	("6"	,"Vegan Pretzel Monkey Bread Bites"	,"VeganPretzelMonkeyBites"	,"https://ccc-restrictless-login-t1.appspot.com/beetLasanga.png"	,"Doughs"	,"Doughs"	,""	,""	);															
 		Recipe VeganKalePesto = new Recipe	("7"	,"Vegan Kale Pesto"	,"VeganKalePesto"	,"https://ccc-restrictless-login-t1.appspot.com/beetLasanga.png"	,"Dips"	,"Dips"	,""	,""	);															
 		Recipe VeganPeach = new Recipe	("8"	,"Vegan Peach Hand Pies"	,"PeachHandPies"	,"https://ccc-restrictless-login-t1.appspot.com/beetLasanga.png"	,"Pie"	,"Pie"	,""	,""	);															
-		Recipe VeganSweetPotato = new Recipe	("9"	,"Vegan Sweet Potato Pasta"	,"SweetPotatoPasta"	,"https://ccc-restrictless-login-t1.appspot.com/SweetPotatoPasta.jpg"	,"Lunch/Dinner"	,"Lunch/Dinner"	,""	,""	);															
+		Recipe VeganSweetPotato = new Recipe	("9"	,"Vegan Sweet Potato Pasta"	,"SweetPotatoPasta"	,"https://ccc-restrictless-login-t1.appspot.com/SweetPotatoPastaSmall.jpg"	,"Lunch/Dinner"	,"Lunch/Dinner"	,""	,""	);															
 		
 		
 		

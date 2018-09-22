@@ -21,11 +21,11 @@ class HomeRecipeViewController:UIViewController {
         super.viewDidLoad()
         let data:cellData = database[homeViewIndex];
 //        recipeImage.image = data.image
-        recipeTitle.text = data.text
+        recipeTitle.text = data.title
         recipeDescrip.text = data.category
         recipeRestrictions.text = data.restrictions
         recipeIngredients.text = data.ingredients
-        self.navigationItem.title=data.text
+        self.navigationItem.title=data.title
         
         recipeIngredients.numberOfLines = 0;
         

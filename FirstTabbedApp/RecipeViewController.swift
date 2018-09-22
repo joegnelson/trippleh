@@ -16,10 +16,10 @@ class RecipeViewController: UIViewController {
         super.viewDidLoad()
         let data:cellData=searchResultsSelectedCellData!
        // recipeImage.image = data.image
-        recipeTitle.text = data.text
+        recipeTitle.text = data.title
         recipeDescrip.text=data.category
         recipeRestrictions.text=data.restrictions
-        self.navigationItem.title=data.text
+        self.navigationItem.title=data.title
         
         let url:String  = data.imageUrl
         if(!url.isEmpty){

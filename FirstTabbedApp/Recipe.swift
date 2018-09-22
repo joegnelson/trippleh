@@ -7,12 +7,12 @@
 //
 
 import UIKit
-struct cellDataList:Codable{
+struct cellDataList: Codable{
     var recipes:[cellData]
 }
-struct cellData:Codable {
-    var text: String!
-//    var image: UIImage!
+struct cellData: Codable {
+    var title: String!
+//  var image: UIImage!
     var imageUrl: String!
     var category: String!
     var restrictions: String!
@@ -38,10 +38,10 @@ class Recipe: NSObject {
     }
     func dictionary()-> NSDictionary{
         return [
-            "date":date
-            ,"recipeId":recipeId
-            ,"recipeName":recipeName
-            ,"recipeCategory":recipeCategory
+            "date": date
+            ,"recipeId": recipeId
+            ,"recipeName": recipeName
+            ,"recipeCategory": recipeCategory
         ]
         
     }

@@ -29,26 +29,13 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     
     //only loads what you can see on one screen
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            print("icu")
             let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
  //           cell.mainImageView1.image = restrictionDatabase[indexPath.row].image
-//            cell.mainLabel1.text = restrictionDatabase[indexPath.row].text
+           cell.mainLabel1.text = restrictionDatabase[indexPath.row].title
 //            return cell
-        let imageUrl=URL(string: database[indexPath.row].imageUrl)!
+        let imageUrl=URL(string: restrictionDatabase[indexPath.row].imageUrl)!
         
         HomeViewController.downloadImage(cell:cell, url:imageUrl, completion:completionX)
- /*
-        HomeViewController.downloadImage(cell:cell,imageUrl){
-            (cell,data, error)  in
-            guard let data = data, error == nil else { return }
-            //print(response?.suggestedFilename ?? url.lastPathComponent)
-            DispatchQueue.main.async() { () -> Void in
-                cell.mainImageView1.image = data
-            }
-        }
- */
-        
-        
         //cell.mainImageView1.image=database[indexPath.row].imageUrl
         return cell
     }
@@ -92,8 +79,6 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
             }
         }
     }
-    
-    
     
     static func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {

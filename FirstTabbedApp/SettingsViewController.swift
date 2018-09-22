@@ -189,7 +189,7 @@ class SettingsViewController: UIViewController {
         }
         numRecipes.text = String(restrictionDatabase.count)
         for item in restrictionDatabase {
-            print("Number of Recpes: ", item.text)
+            print("Number of Recpes: ", item.title)
         }
      }
  

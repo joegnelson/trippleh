@@ -21,31 +21,20 @@ class RecipeViewController: UIViewController {
         recipeRestrictions.text=data.restrictions
         self.navigationItem.title=data.title
         
-        let url:String  = data.imageUrl
-        if(!url.isEmpty){
-            if let checkedUrl = URL(string: url) {
-                self.recipeImage.contentMode = .scaleAspectFit
-                downloadImage(url: checkedUrl)
+        let url  = URL(string:data.imageUrl)
+        
+        HomeViewController.downloadImage(cell:recipeImage, url:url!, completion:completionX)
+
+
+    }
+    func completionX(imageView:Any,image: UIImage?, error: Error?)->Void{
+        guard  error == nil else { return }
+        DispatchQueue.main.async() { () -> Void in
+            if let view = imageView as? UIImageView{
+                view.image = image
             }
         }
     }
-    
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-            }.resume()
-    }
-    func downloadImage(url: URL) {
-        print("Download Started")
-        getDataFromUrl(url: url) { (data, response, error)  in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
-            DispatchQueue.main.async() { () -> Void in
-                self.recipeImage.image = UIImage(data: data)
-            }
-        }
-    }
-    
+
+
 }

@@ -10,13 +10,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var emailLabel: UILabel!
+//    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var emailLabel2: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        emailLabel.text = user?.email
-
+       
+        if let email = user?.email{
+        emailLabel2.text = email
+        }
         // Do any additional setup after loading the view.
     }
 

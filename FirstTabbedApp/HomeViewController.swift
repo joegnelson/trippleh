@@ -26,8 +26,16 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
         print("DB count = \(database.count)")
         return restrictionDatabase.count
     }
-    
-    //only loads what you can see on one screen
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+        
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        homeViewIndex = indexPath.row
+        performSegue(withIdentifier: "homeSegue", sender: self)
+    }
+
+    //only loads what you can see on one screen (FOR ONE CELL)
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = Bundle.main.loadNibNamed("TableViewCell1", owner: self, options: nil)?.first as! TableViewCell1
  //           cell.mainImageView1.image = restrictionDatabase[indexPath.row].image
@@ -39,28 +47,23 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
         //cell.mainImageView1.image=database[indexPath.row].imageUrl
         return cell
     }
-    func completionX(cell:TableViewCell1,image: UIImage?, error: Error?)->Void{
+    
+    func completionX(cell:Any,image: UIImage?, error: Error?)->Void{
         guard let data = image, error == nil else { return }
         //print(response?.suggestedFilename ?? url.lastPathComponent)
         DispatchQueue.main.async() { () -> Void in
-            cell.mainImageView1.image = data
+            if let cell2 = cell as? TableViewCell1{
+                cell2.mainImageView1.image = data
+            }
         }
 
-    }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 250
-        
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        homeViewIndex = indexPath.row
-        performSegue(withIdentifier: "homeSegue", sender: self)
     }
     
     
     //-----------------------------------------------------------------
     // HELPER FUCTIONS
     //-----------------------------------------------------------------
-    static func downloadImage(cell:TableViewCell1,url: URL, completion: @escaping (_ cell:TableViewCell1, _ image: UIImage?, _ error: Error? ) -> Void) {
+    static func downloadImage(cell:Any,url: URL, completion: @escaping (_ cell:Any, _ image: UIImage?, _ error: Error? ) -> Void) {
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
             print("found image in cache")
             completion(cell,cachedImage, nil)

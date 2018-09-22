@@ -16,6 +16,7 @@
 		08562AE81F0C03DD0057E481 /* FirstTabbedAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08562AE71F0C03DD0057E481 /* FirstTabbedAppUITests.swift */; };
 		08EA6AD11F5DC16D00D10A73 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EA6AD01F5DC16D00D10A73 /* Recipe.swift */; };
 		D211B5F61F5A39EA0092998A /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211B5F51F5A39EA0092998A /* RecipeViewController.swift */; };
+		D23DAF962156C9BD009657DC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23DAF952156C9BD009657DC /* RegisterViewController.swift */; };
 		D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */; };
 		D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */; };
 		D244E71A1F5CA73B00D8B3D3 /* HomeRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */; };
@@ -58,6 +59,7 @@
 		08562AE91F0C03DD0057E481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08EA6AD01F5DC16D00D10A73 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		D211B5F51F5A39EA0092998A /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		D23DAF952156C9BD009657DC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D244E7171F5CA0D200D8B3D3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecipeViewController.swift; sourceTree = "<group>"; };
@@ -115,8 +117,6 @@
 		08562AC41F0C03DD0057E481 /* FirstTabbedApp */ = {
 			isa = PBXGroup;
 			children = (
-				D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */,
-				D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */,
 				08EA6AD01F5DC16D00D10A73 /* Recipe.swift */,
 				D244E7151F5C950C00D8B3D3 /* HomeViewController.swift */,
 				D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */,
@@ -124,8 +124,11 @@
 				08562AC71F0C03DD0057E481 /* SearchResultsViewController.swift */,
 				D211B5F51F5A39EA0092998A /* RecipeViewController.swift */,
 				08562AC91F0C03DD0057E481 /* SettingsViewController.swift */,
+				D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */,
+				D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */,
 				08562ACB1F0C03DD0057E481 /* Main.storyboard */,
 				08562ACE1F0C03DD0057E481 /* Assets.xcassets */,
+				D23DAF952156C9BD009657DC /* RegisterViewController.swift */,
 				D2489D331F54CD320094D91F /* TableViewCell1.swift */,
 				D2489D341F54CD320094D91F /* TableViewCell1.xib */,
 				08562AC51F0C03DD0057E481 /* AppDelegate.swift */,
@@ -220,7 +223,7 @@
 				TargetAttributes = {
 					08562AC11F0C03DD0057E481 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3CEPUU2ZZ9;
+						DevelopmentTeam = VGLRZ78LLJ;
 						ProvisioningStyle = Automatic;
 					};
 					08562AD71F0C03DD0057E481 = {
@@ -290,6 +293,7 @@
 				D211B5F61F5A39EA0092998A /* RecipeViewController.swift in Sources */,
 				D244E71A1F5CA73B00D8B3D3 /* HomeRecipeViewController.swift in Sources */,
 				D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */,
+				D23DAF962156C9BD009657DC /* RegisterViewController.swift in Sources */,
 				D2A3BFFE2138C6C7002DAB15 /* Login2ViewController.swift in Sources */,
 				08562ACA1F0C03DD0057E481 /* SettingsViewController.swift in Sources */,
 				08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */,
@@ -443,10 +447,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CEPUU2ZZ9;
+				DEVELOPMENT_TEAM = VGLRZ78LLJ;
 				INFOPLIST_FILE = FirstTabbedApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cccentric.FirstTabbedApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cccentric.development.FirstTabbedApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -456,10 +460,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CEPUU2ZZ9;
+				DEVELOPMENT_TEAM = VGLRZ78LLJ;
 				INFOPLIST_FILE = FirstTabbedApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cccentric.FirstTabbedApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cccentric.development.FirstTabbedApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

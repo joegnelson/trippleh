@@ -65,10 +65,10 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     //-----------------------------------------------------------------
     static func downloadImage(cell:Any,url: URL, completion: @escaping (_ cell:Any, _ image: UIImage?, _ error: Error? ) -> Void) {
         if let cachedImage = imageCache.object(forKey: url.absoluteString as NSString) {
-            print("found image in cache")
+            //print("found image in cache")
             completion(cell,cachedImage, nil)
         } else {
-            print("go get image, not in cache")
+            print("go get image, not in cache \(url.absoluteString)")
             getDataFromUrl(url: url) { data, response, error in
                 if let error = error {
                     completion(cell, nil, error)

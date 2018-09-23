@@ -24,39 +24,32 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var _label: UILabel!
     
     //----------------------------------------------------------
+    // OVER RIDES
+    //----------------------------------------------------------
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    var failCount=0
+    //----------------------------------------------------------
     // ACTION
     //----------------------------------------------------------
-    func flashBG(){
-        UIView.animate(withDuration: 0.7, animations: {
-            self._btn.backgroundColor = UIColor.green
-            
-        })
-    }
-    func flashBtn(){
-        UIButton.animate(withDuration: 0.5, animations: {
-            self._btn.backgroundColor = UIColor.green
-        })
-    }
-    func flashBtn2(){
-        UIView.animate(withDuration: 1.0, delay: 1.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-            
-            self._label.backgroundColor = UIColor.green
-
-        }, completion: nil)
+    @IBAction func registerBtn(_ sender: Any) {
     }
     @IBAction func _btnAction(_ sender: Any) {
-        self._label.backgroundColor = UIColor.white
         self._label.text = "LOADING...."
-        print(_user.text!)
-        print(_pass.text!)
-        
+        //VALIDATE INPUTS
+        if (_user.text?.isEmpty)! || (_pass.text?.isEmpty)!  {
+            self._label.text = "UserName and Password required"
+            return
+            
+        }
+
         //CREATE REQUUEST
         let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=\(_user.text!)&pass=\(_pass.text!)")!)
         
         //CREATE TASK
         let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {
             print("error = \(String(describing: error))")
-            self.flashBtn2()
             return
             }
             let responseString = self.processLoginResponse(data: data, response: response)
@@ -64,13 +57,16 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
             // ???
             DispatchQueue.main.async {
                 if(responseString == nil){
-                    print("LOGIN FAILED 2!")
-                    self._label.text = "Try Again 2"
-                    self.flashBtn2()
+                    print("LOGIN FAILED!")
+                    self.failCount=self.failCount+1;
+                    self._label.text = "Try Again \(self.failCount)"
+                    
                 } else{
+                    //LOGIN SUCCESFFUL, GOTO HOMEPAGE
                     print(responseString ?? "Logical Error")
                     self.performSegue(withIdentifier: "welcome", sender: self)
                     self._label.text = ""
+                    self.failCount=0
                 }
             }
         }
@@ -79,12 +75,6 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         _label.text = ""
     }
     
-    //----------------------------------------------------------
-    // OVER RIDES
-    //----------------------------------------------------------
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     //----------------------------------------------------------
     // HELPER FUNCTIONS

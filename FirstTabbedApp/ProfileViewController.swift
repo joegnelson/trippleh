@@ -10,18 +10,24 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-//    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var emailLabel2: UILabel!
     
+    @IBOutlet weak var recipeBttn: UIButton!
+    @IBOutlet weak var logLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
        
         if let email = user?.email{
-        emailLabel2.text = email
+            logLabel.text = "rd.size:\(restrictionDatabase.capacity) | \(email)"
+        }else{
+            logLabel.text = "\(restrictionDatabase.capacity)"
+
         }
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func recipeTouchUpInside(_ sender: Any) {
+        logLabel.text = "\(restrictionDatabase.capacity)"
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

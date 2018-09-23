@@ -63,6 +63,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                             user = try decoder.decode(User.self, from: data!)
                             print("email:\(user?.email ?? "")")
                             obj._label.text="Registration Success"
+                            self.performSegue(withIdentifier: "register", sender: self)
                         }else if(statusCode == 403){
                             obj._label.text="This UserName or Email is already registered"
 
@@ -70,7 +71,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                             obj._label.text="This Email is already registered"
                         }else{
                             obj._label.text="Unknow Error"
-
                         }
                         
                     } catch {

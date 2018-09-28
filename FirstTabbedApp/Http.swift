@@ -8,4 +8,4 @@
 
 import Foundation
 
-let baseDomain = "http://restrictless.cccentric.com/"
+let baseDomain = "https://restrictless.cccentric.com/"

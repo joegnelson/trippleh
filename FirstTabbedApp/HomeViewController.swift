@@ -115,15 +115,18 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
             }
         }
     }
-    //Refresh
-    func reload(){
-        print("REFRESH!")
-        AppDelegate.getRecipes()
-        
+    func completionX(){
         refresher.endRefreshing()
         print("Before tableview reload")
         tableView.reloadData()
         print("After tableview reload")
+
+    }
+    //Refresh
+    func reload(){
+        print("REFRESH!")
+        AppDelegate.getRecipes(completion:completionX)
+        
     }
 
 }

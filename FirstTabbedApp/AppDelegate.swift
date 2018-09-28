@@ -13,12 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func completionX(){
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        AppDelegate.getRecipes()
+        AppDelegate.getRecipes(completion: completionX)
         return true
     }
-    static func getRecipes (){
+    static func getRecipes (completion: @escaping ( ) -> Void){
         //CREATE REQUUEST
         let request2 = URLRequest(url: URL(string: "\(baseDomain)/recipe")!)
         
@@ -37,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     print(responseString ?? "Logical Error!!!")
                 }
             }
+            completion()
         }
         //EXECUTE TASK
         task.resume()

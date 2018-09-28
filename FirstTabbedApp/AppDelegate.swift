@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //CREATE REQUUEST
-        let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/recipe")!)
+        let request2 = URLRequest(url: URL(string: "\(baseDomain)/recipe")!)
         
         //CREATE TASK
         let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {

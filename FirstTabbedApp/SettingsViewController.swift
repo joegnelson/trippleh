@@ -22,78 +22,78 @@ class SettingsViewController: UIViewController {
     
     //Image Buttons:
     @IBAction func sugarFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "SugarFreeOFF") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "NoSugarImage"), for: .normal)
+        if #imageLiteral(resourceName: "SugarFreeOffNew") == sender.image (for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "sugarFreeOnNew"), for: .normal)
             isSugarFree = true
             print("Sugar Free: " , isSugarFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "SugarFreeOFF"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "SugarFreeOffNew"), for: .normal)
             isSugarFree = false
             print("Sugar Free: " , isSugarFree)
         }
         recalculateDB()
     }
     @IBAction func glutenFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "GlutenFreeOFF") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "glutenFreeImage"), for: .normal)
+        if #imageLiteral(resourceName: "GlutenFreeOffNew") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "glutenFreeOnNew"), for: .normal)
             isGlutenFree = true
             print("Gluten Free: " , isGlutenFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "GlutenFreeOFF"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "GlutenFreeOffNew"), for: .normal)
             isGlutenFree = false
             print("Gluten Free: " , isGlutenFree)
         }
         recalculateDB()
     }
     @IBAction func dairyFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "DairyFreeOFF") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "dairyFreeImage"), for: .normal)
+        if #imageLiteral(resourceName: "DairyFreeOffNew") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "dairyOnNew"), for: .normal)
             isDairyFree = true
             print("Dairy Free: " , isDairyFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "DairyFreeOFF"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "DairyFreeOffNew"), for: .normal)
             isDairyFree = false
             print("Dairy Free: " , isDairyFree)
         }
         recalculateDB()
     }
     @IBAction func nutFreeImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "NutFreeOFF") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "nutFreeImage"), for: .normal)
+        if #imageLiteral(resourceName: "NutFreeOffNew") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "nutFreeOnNew"), for: .normal)
             isNutFree = true
             print("Nut Free: " , isNutFree)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "NutFreeOFF"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "NutFreeOffNew"), for: .normal)
             isNutFree = false
             print("Nut Free: " , isNutFree)
         }
         recalculateDB()
     }
     @IBAction func vegetarianImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "VegetarianOFF") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "vegetarianImage"), for: .normal)
+        if #imageLiteral(resourceName: "VegetarianOffNew") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "VegetarianOnNew"), for: .normal)
             isVegetarian = true
             print("Vegetarian: " , isVegetarian)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "VegetarianOFF"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "VegetarianOffNew"), for: .normal)
             isVegetarian = false
             print("Vegetarian: " , isVegetarian)
         }
         recalculateDB()
     }
     @IBAction func veganImageButton(_ sender: UIButton) {
-        if #imageLiteral(resourceName: "VeganOFF") == sender.image(for: .normal){
-            sender.setImage(#imageLiteral(resourceName: "veganImage"), for: .normal)
+        if #imageLiteral(resourceName: "VeganNew") == sender.image(for: .normal){
+            sender.setImage(#imageLiteral(resourceName: "VeganImageOnNew"), for: .normal)
             isVegan = true
             print("Vegan: " , isVegan)
         }
         else {
-            sender.setImage(#imageLiteral(resourceName: "VeganOFF"), for: .normal)
+            sender.setImage(#imageLiteral(resourceName: "VeganNew"), for: .normal)
             isVegan = false
             print("Vegan: " , isVegan)
         }
@@ -187,7 +187,13 @@ class SettingsViewController: UIViewController {
         if(!foundRestriction){
             addAllToRDB();
         }
-        numRecipes.text = String(restrictionDatabase.count)
+        if restrictionDatabase.count==1 {
+             numRecipes.text = String("There is \(restrictionDatabase.count) recipe available.")
+        }
+        else {
+             numRecipes.text = String("There are \(restrictionDatabase.count) recipes available.")
+        }
+       
         for item in restrictionDatabase {
             print("Number of Recpes: ", item.title)
         }

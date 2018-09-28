@@ -20,53 +20,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mji-WT-VmM">
-                                <rect key="frame" x="46" y="478" width="100" height="100"/>
-                                <state key="normal" title="Button" image="VegetarianOFF"/>
+                                <rect key="frame" x="-20" y="448" width="241" height="170"/>
+                                <state key="normal" title="Button" image="VegetarianOffNew"/>
                                 <connections>
                                     <action selector="vegetarianImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="CmL-Ck-rsW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksm-qa-zXJ">
-                                <rect key="frame" x="46" y="152" width="100" height="100"/>
+                                <rect key="frame" x="-20" y="124" width="241" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="1Uu-Oz-8D9"/>
-                                    <constraint firstAttribute="height" constant="100" id="Wor-St-C5T"/>
+                                    <constraint firstAttribute="width" constant="241" id="1Uu-Oz-8D9"/>
+                                    <constraint firstAttribute="height" constant="170" id="Wor-St-C5T"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="SugarFreeOFF"/>
+                                <state key="normal" title="Button" image="SugarFreeOffNew"/>
                                 <connections>
                                     <action selector="sugarFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="k1t-Sj-3rV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUr-l7-VzV">
-                                <rect key="frame" x="234" y="150" width="100" height="100"/>
+                                <rect key="frame" x="153" y="124" width="241" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="qTE-mk-e4b"/>
+                                    <constraint firstAttribute="height" constant="170" id="qTE-mk-e4b"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="GlutenFreeOFF"/>
+                                <state key="normal" title="Button" image="GlutenFreeOffNew"/>
                                 <connections>
                                     <action selector="glutenFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="sN0-wx-33V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ir-Je-SZH">
-                                <rect key="frame" x="234" y="315" width="100" height="100"/>
+                                <rect key="frame" x="153" y="277" width="241" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="it8-xx-dwo"/>
+                                    <constraint firstAttribute="height" constant="170" id="it8-xx-dwo"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="NutFreeOFF"/>
+                                <state key="normal" title="Button" image="NutFreeOffNew"/>
                                 <connections>
                                     <action selector="nutFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="tga-q8-OeU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIa-NT-kWF">
-                                <rect key="frame" x="234" y="476" width="100" height="100"/>
-                                <state key="normal" title="Button" image="VeganOFF"/>
-                                <connections>
-                                    <action selector="veganImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wDf-Is-qeS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLZ-qZ-FY5">
-                                <rect key="frame" x="40" y="313" width="112" height="105"/>
-                                <state key="normal" title="Button" image="DairyFreeOFF"/>
+                                <rect key="frame" x="-20" y="277" width="241" height="170"/>
+                                <state key="normal" title="Button" image="DairyFreeOffNew"/>
                                 <connections>
                                     <action selector="dairyFreeImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="tBN-kU-KHs"/>
                                 </connections>
@@ -77,30 +70,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select which food restrictions you have." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pe-dC-unx">
+                                <rect key="frame" x="35" y="78" width="305" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIa-NT-kWF">
+                                <rect key="frame" x="153" y="448" width="241" height="170"/>
+                                <state key="normal" title="Button" image="VeganNew"/>
+                                <connections>
+                                    <action selector="veganImageButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wDf-Is-qeS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qLZ-qZ-FY5" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="40" id="11t-ic-fVs"/>
+                            <constraint firstItem="qLZ-qZ-FY5" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="-20" id="11t-ic-fVs"/>
                             <constraint firstItem="ksm-qa-zXJ" firstAttribute="leading" secondItem="Mji-WT-VmM" secondAttribute="leading" id="5C6-NG-d2A"/>
-                            <constraint firstItem="qLZ-qZ-FY5" firstAttribute="top" secondItem="ksm-qa-zXJ" secondAttribute="bottom" constant="61" id="71E-hO-dGr"/>
-                            <constraint firstItem="Mji-WT-VmM" firstAttribute="top" secondItem="qLZ-qZ-FY5" secondAttribute="bottom" constant="60" id="9Zh-PX-cur"/>
-                            <constraint firstItem="6cK-H9-wPi" firstAttribute="trailing" secondItem="mUr-l7-VzV" secondAttribute="trailing" constant="41" id="BTb-Tp-cFe"/>
-                            <constraint firstItem="mUr-l7-VzV" firstAttribute="top" secondItem="6cK-H9-wPi" secondAttribute="top" constant="86" id="Efl-DP-oC1"/>
-                            <constraint firstItem="ksm-qa-zXJ" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="46" id="HMM-hE-579"/>
-                            <constraint firstItem="6cK-H9-wPi" firstAttribute="bottom" secondItem="ZIa-NT-kWF" secondAttribute="bottom" constant="42" id="HTp-dd-WeI"/>
-                            <constraint firstItem="ZIa-NT-kWF" firstAttribute="top" secondItem="5Ir-Je-SZH" secondAttribute="bottom" constant="61" id="IWn-Z8-POp"/>
+                            <constraint firstItem="qLZ-qZ-FY5" firstAttribute="top" secondItem="ksm-qa-zXJ" secondAttribute="bottom" constant="-17" id="71E-hO-dGr"/>
+                            <constraint firstItem="Mji-WT-VmM" firstAttribute="top" secondItem="qLZ-qZ-FY5" secondAttribute="bottom" constant="1" id="9Zh-PX-cur"/>
+                            <constraint firstItem="6cK-H9-wPi" firstAttribute="trailing" secondItem="mUr-l7-VzV" secondAttribute="trailing" constant="-19" id="BTb-Tp-cFe"/>
+                            <constraint firstItem="Mji-WT-VmM" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="199.5" id="C5w-wT-Ycu"/>
+                            <constraint firstItem="qLZ-qZ-FY5" firstAttribute="centerX" secondItem="ksm-qa-zXJ" secondAttribute="centerX" id="EBX-hL-C3g"/>
+                            <constraint firstItem="mUr-l7-VzV" firstAttribute="top" secondItem="6cK-H9-wPi" secondAttribute="top" constant="60" id="Efl-DP-oC1"/>
+                            <constraint firstItem="qLZ-qZ-FY5" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="28.5" id="FR5-Tr-JqZ"/>
+                            <constraint firstItem="ksm-qa-zXJ" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="-20" id="HMM-hE-579"/>
+                            <constraint firstItem="6cK-H9-wPi" firstAttribute="bottom" secondItem="ZIa-NT-kWF" secondAttribute="bottom" id="HTp-dd-WeI"/>
+                            <constraint firstItem="ZIa-NT-kWF" firstAttribute="top" secondItem="5Ir-Je-SZH" secondAttribute="bottom" constant="1" id="IWn-Z8-POp"/>
                             <constraint firstItem="ksm-qa-zXJ" firstAttribute="trailing" secondItem="Mji-WT-VmM" secondAttribute="trailing" id="KKS-sz-Or9"/>
-                            <constraint firstItem="ksm-qa-zXJ" firstAttribute="top" secondItem="6cK-H9-wPi" secondAttribute="top" constant="88" id="Prw-rf-Sys"/>
+                            <constraint firstItem="ksm-qa-zXJ" firstAttribute="top" secondItem="5pe-dC-unx" secondAttribute="bottom" constant="25" id="Oo7-4s-18d"/>
+                            <constraint firstItem="ksm-qa-zXJ" firstAttribute="top" secondItem="6cK-H9-wPi" secondAttribute="top" constant="60" id="Prw-rf-Sys"/>
                             <constraint firstItem="5Ir-Je-SZH" firstAttribute="trailing" secondItem="ZIa-NT-kWF" secondAttribute="trailing" id="UhB-Xm-YH2"/>
                             <constraint firstItem="qLZ-qZ-FY5" firstAttribute="centerX" secondItem="Mji-WT-VmM" secondAttribute="centerX" id="VHt-5m-TiK"/>
-                            <constraint firstItem="5Ir-Je-SZH" firstAttribute="leading" secondItem="qLZ-qZ-FY5" secondAttribute="trailing" constant="82" id="WkA-Xv-kLV"/>
+                            <constraint firstItem="5Ir-Je-SZH" firstAttribute="leading" secondItem="qLZ-qZ-FY5" secondAttribute="trailing" constant="-68" id="WkA-Xv-kLV"/>
+                            <constraint firstItem="ZIa-NT-kWF" firstAttribute="centerY" secondItem="Mji-WT-VmM" secondAttribute="centerY" id="Xbl-LN-V7L"/>
                             <constraint firstItem="5Ir-Je-SZH" firstAttribute="leading" secondItem="ZIa-NT-kWF" secondAttribute="leading" id="Yu4-Xs-I4j"/>
-                            <constraint firstItem="5Ir-Je-SZH" firstAttribute="top" secondItem="mUr-l7-VzV" secondAttribute="bottom" constant="65" id="a1n-wS-aL8"/>
+                            <constraint firstItem="5Ir-Je-SZH" firstAttribute="top" secondItem="mUr-l7-VzV" secondAttribute="bottom" constant="-17" id="a1n-wS-aL8"/>
                             <constraint firstItem="mUr-l7-VzV" firstAttribute="leading" secondItem="5Ir-Je-SZH" secondAttribute="leading" id="chc-vw-v8b"/>
-                            <constraint firstItem="6cK-H9-wPi" firstAttribute="bottom" secondItem="Mji-WT-VmM" secondAttribute="bottom" constant="40" id="fNf-SW-ngi"/>
+                            <constraint firstItem="ZIa-NT-kWF" firstAttribute="centerX" secondItem="mUr-l7-VzV" secondAttribute="centerX" id="dO8-3s-oyq"/>
+                            <constraint firstItem="6cK-H9-wPi" firstAttribute="bottom" secondItem="Mji-WT-VmM" secondAttribute="bottom" id="fNf-SW-ngi"/>
                             <constraint firstItem="OSo-yZ-7Ol" firstAttribute="top" secondItem="6cK-H9-wPi" secondAttribute="top" constant="40" id="fTl-RU-tcK"/>
                             <constraint firstItem="mUr-l7-VzV" firstAttribute="trailing" secondItem="5Ir-Je-SZH" secondAttribute="trailing" id="gUl-Pn-tAx"/>
+                            <constraint firstItem="OSo-yZ-7Ol" firstAttribute="centerX" secondItem="5pe-dC-unx" secondAttribute="centerX" id="khP-1g-iwa"/>
+                            <constraint firstItem="Mji-WT-VmM" firstAttribute="centerX" secondItem="ksm-qa-zXJ" secondAttribute="centerX" id="lFS-e0-zfj"/>
+                            <constraint firstItem="5Ir-Je-SZH" firstAttribute="centerX" secondItem="qLZ-qZ-FY5" secondAttribute="centerX" constant="173" id="pHy-1Q-kZ8"/>
+                            <constraint firstItem="5Ir-Je-SZH" firstAttribute="centerX" secondItem="mUr-l7-VzV" secondAttribute="centerX" id="qtN-dV-2vd"/>
                             <constraint firstItem="OSo-yZ-7Ol" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="qxp-gk-PGP"/>
+                            <constraint firstItem="5Ir-Je-SZH" firstAttribute="centerY" secondItem="qLZ-qZ-FY5" secondAttribute="centerY" id="wjB-Sn-nhK"/>
+                            <constraint firstItem="ksm-qa-zXJ" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" constant="-124.5" id="x3r-e2-f9i"/>
                             <constraint firstItem="qLZ-qZ-FY5" firstAttribute="centerY" secondItem="5Ir-Je-SZH" secondAttribute="centerY" id="zfS-CQ-M8S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6cK-H9-wPi"/>
@@ -119,7 +137,7 @@
                 <tapGestureRecognizer id="2a8-OW-veh"/>
                 <tapGestureRecognizer id="fQ6-XP-o3S"/>
             </objects>
-            <point key="canvasLocation" x="1337.68115942029" y="710.86956521739137"/>
+            <point key="canvasLocation" x="1336.8" y="710.19490254872574"/>
         </scene>
         <!--My Restrictions-->
         <scene sceneID="jyx-Fn-umo">
@@ -784,14 +802,14 @@
     </scenes>
     <resources>
         <image name="Background gradiant" width="263" height="301"/>
-        <image name="DairyFreeOFF" width="2000" height="2000"/>
-        <image name="GlutenFreeOFF" width="2000" height="2000"/>
+        <image name="DairyFreeOffNew" width="2100" height="1500"/>
+        <image name="GlutenFreeOffNew" width="2100" height="1500"/>
         <image name="Image-1" width="2100" height="1500"/>
-        <image name="NutFreeOFF" width="2000" height="2000"/>
+        <image name="NutFreeOffNew" width="2100" height="1500"/>
         <image name="Screen Shot 2018-08-31 at 1.28.05 PM" width="240" height="242"/>
-        <image name="SugarFreeOFF" width="2000" height="2000"/>
-        <image name="VeganOFF" width="2000" height="2000"/>
-        <image name="VegetarianOFF" width="2000" height="2000"/>
+        <image name="SugarFreeOffNew" width="2100" height="1500"/>
+        <image name="VeganNew" width="2100" height="1500"/>
+        <image name="VegetarianOffNew" width="2100" height="1500"/>
         <image name="first" width="30" height="30"/>
         <image name="icons8-Filter and Sort Filled_25" width="25" height="25"/>
         <image name="icons8-Home-25" width="24" height="24"/>
@@ -799,6 +817,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hqw-Uw-a0K"/>
+        <segue reference="SQ4-E5-1UR"/>
     </inferredMetricsTieBreakers>
 </document>

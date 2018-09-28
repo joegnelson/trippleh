@@ -7,7 +7,7 @@ import UIKit
 var homeViewIndex:Int=0
 let imageCache = NSCache<NSString, UIImage>()
 class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
-    
+    var refresher: UIRefreshControl!
     //-----------------------------------------------------------------
     // OVERRIDE
     //-----------------------------------------------------------------
@@ -19,6 +19,11 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(restrictionDatabase.count)
+        
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector(HomeViewController.reload), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refresher)
+        
     }
     
     //only runs on initial load
@@ -88,6 +93,17 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
             (data, response, error) in
             completion(data, response, error)
             }.resume()
+    }
+    
+    //Refresh
+    func reload(){
+        print("REFRESH!")
+        AppDelegate.getRecipes()
+        
+        refresher.endRefreshing()
+        print("Before tableview reload")
+        tableView.reloadData()
+        print("After tableview reload")
     }
 
 }

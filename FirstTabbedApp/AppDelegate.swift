@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        AppDelegate.getRecipes()
+        return true
+    }
+    static func getRecipes (){
         //CREATE REQUUEST
         let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/recipe")!)
         
@@ -23,9 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("ERROR = \(String(describing: error))")
             return
             }
-            let responseString = self.processRecipeResponse(data: data, response: response)
+            let responseString = AppDelegate.processRecipeResponse(data: data, response: response)
             
-            // ???
+            //???
             DispatchQueue.main.async {
                 if(responseString == nil){
                     print("GET RECIPES FAILED!!!!!")
@@ -36,13 +40,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //EXECUTE TASK
         task.resume()
-
-        return true
     }
     //----------------------------------------------------------
     // HELPER FUNCTIONS
     //----------------------------------------------------------
-    func processRecipeResponse(data: Data?, response: URLResponse?)-> String?{
+    static func processRecipeResponse(data: Data?, response: URLResponse?)-> String?{
         //var loginSuccess = false;
         //Check response code from login request AND set login success flag accordingly
         if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
@@ -62,7 +64,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         do {
             let decoder = JSONDecoder()
             database = try decoder.decode(cellDataList.self, from: data!).recipes
-            print("email:\(user?.email ?? "")") // Prints "Durian"
+            SettingsViewController.recalculateDB()
+            //print("email:\(user?.email ?? "")") // Prints "Durian"
+            print("Refresh??? : \(database.count)")
         } catch {
             //handle error
             print(error)

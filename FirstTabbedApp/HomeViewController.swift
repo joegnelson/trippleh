@@ -116,10 +116,12 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
         }
     }
     func completionX(){
-        refresher.endRefreshing()
-        print("Before tableview reload")
-        tableView.reloadData()
-        print("After tableview reload")
+        DispatchQueue.main.async() { () -> Void in
+            self.refresher.endRefreshing()
+            print("Before tableview reload")
+            self.tableView.reloadData()
+            print("After tableview reload")
+        }
 
     }
     //Refresh

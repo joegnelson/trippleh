@@ -41,7 +41,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
         //CREATE REQUUEST
         let request = URL(string: "http://ccc-restrictless-login-t1.appspot.com/register?username=\(_user.text!)&pass=\(_pass.text!)&email=\(_email.text!)")!
-        RegisterViewController.query(obj: self,url: request,completion: completionX)
+        HomeViewController.query(obj: self,url: request,completion: completionX)
     }
     func completionX(obj:Any,data: Data?, error: Error?,_ statusCode:Int)->Void{
         if let data = data{
@@ -83,33 +83,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
     }
 
-    static func query(obj:Any,url: URL, completion: @escaping (_ obj:Any, _ data: Data?, _ error: Error? ,_ httpStatus:Int) -> Void) {
-        HomeViewController.getDataFromUrl(url: url) { data, response, error in
-            if let error = error {
-                completion(obj, nil, error,0)
-                return
-            }
-            
-            if let httpStatus = response as? HTTPURLResponse {
-                print(httpStatus.statusCode)
-                if(httpStatus.statusCode != 200){
-                    print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                    print(response ?? "response is nil")
-                    completion(obj, nil, error,httpStatus.statusCode)
-                    return
-                }
-                if let data = data {
-                    completion(obj, data, nil,httpStatus.statusCode)
-                } else {
-                    completion(obj, nil, nil,httpStatus.statusCode)
-                }
-            }
 
-            
-            
-        }
-
-    }
     /*
     // MARK: - Navigation
 

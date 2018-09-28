@@ -95,6 +95,26 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
             }.resume()
     }
     
+    static func query(obj:Any,url: URL, completion: @escaping (_ obj:Any, _ data: Data?, _ error: Error? ,_ httpStatus:Int) -> Void) {
+        HomeViewController.getDataFromUrl(url: url) { data, response, error in
+            if let error = error {
+                completion(obj, nil, error,0)
+                return
+            }
+            if let response = response as? HTTPURLResponse {
+                if(response.statusCode != 200){
+                    print("statusCode should be 200, but is \(response.statusCode)")
+                    print(response )
+                }
+                completion(obj, data, error,response.statusCode)
+                return
+                
+            }else{
+                completion(obj, nil, nil,0)
+                
+            }
+        }
+    }
     //Refresh
     func reload(){
         print("REFRESH!")

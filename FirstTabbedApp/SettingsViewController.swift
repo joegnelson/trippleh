@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
             isSugarFree = false
             print("Sugar Free: " , isSugarFree)
         }
-        recalculateDB()
+        SettingsViewController.recalculateDB()
     }
     @IBAction func glutenFreeImageButton(_ sender: UIButton) {
         if #imageLiteral(resourceName: "GlutenFreeOffNew") == sender.image(for: .normal){
@@ -45,7 +45,7 @@ class SettingsViewController: UIViewController {
             isGlutenFree = false
             print("Gluten Free: " , isGlutenFree)
         }
-        recalculateDB()
+        SettingsViewController.recalculateDB()
     }
     @IBAction func dairyFreeImageButton(_ sender: UIButton) {
         if #imageLiteral(resourceName: "DairyFreeOffNew") == sender.image(for: .normal){
@@ -58,7 +58,7 @@ class SettingsViewController: UIViewController {
             isDairyFree = false
             print("Dairy Free: " , isDairyFree)
         }
-        recalculateDB()
+        SettingsViewController.recalculateDB()
     }
     @IBAction func nutFreeImageButton(_ sender: UIButton) {
         if #imageLiteral(resourceName: "NutFreeOffNew") == sender.image(for: .normal){
@@ -71,7 +71,7 @@ class SettingsViewController: UIViewController {
             isNutFree = false
             print("Nut Free: " , isNutFree)
         }
-        recalculateDB()
+        SettingsViewController.recalculateDB()
     }
     @IBAction func vegetarianImageButton(_ sender: UIButton) {
         if #imageLiteral(resourceName: "VegetarianOffNew") == sender.image(for: .normal){
@@ -84,7 +84,7 @@ class SettingsViewController: UIViewController {
             isVegetarian = false
             print("Vegetarian: " , isVegetarian)
         }
-        recalculateDB()
+        SettingsViewController.recalculateDB()
     }
     @IBAction func veganImageButton(_ sender: UIButton) {
         if #imageLiteral(resourceName: "VeganNew") == sender.image(for: .normal){
@@ -97,17 +97,17 @@ class SettingsViewController: UIViewController {
             isVegan = false
             print("Vegan: " , isVegan)
         }
-        recalculateDB()
+        SettingsViewController.recalculateDB()
     }
     //---------------------------
     
     //Restrtiction Database:
-    func addAllToRDB() {
+    static func addAllToRDB() {
         for item in database {
                 restrictionDatabase.append(item)
         }
     }
-    func addToRDB(selection: String) {
+    static func addToRDB(selection: String) {
         //Traversing through database and adding to categoryDatabasefor item in database
         // var count=0
         print("-----")
@@ -118,7 +118,7 @@ class SettingsViewController: UIViewController {
             }
         }
     }
-    func removeFromRDB(selection: String){
+    static func removeFromRDB(selection: String){
         var i = 0
         for item in restrictionDatabase {
             if(!item.restrictions.contains(selection)){
@@ -130,7 +130,7 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    func recalculateDB() {
+    static func recalculateDB() {
         var foundRestriction = false
         restrictionDatabase.removeAll()
         if (isSugarFree){
@@ -187,12 +187,12 @@ class SettingsViewController: UIViewController {
         if(!foundRestriction){
             addAllToRDB();
         }
-        if restrictionDatabase.count==1 {
-             numRecipes.text = String("There is \(restrictionDatabase.count) recipe available.")
-        }
-        else {
-             numRecipes.text = String("There are \(restrictionDatabase.count) recipes available.")
-        }
+//        if restrictionDatabase.count==1 {
+//             numRecipes.text = String("There is \(restrictionDatabase.count) recipe available.")
+//        }
+//        else {
+//             numRecipes.text = String("There are \(restrictionDatabase.count) recipes available.")
+//        }
        
         for item in restrictionDatabase {
             print("Number of Recpes: ", item.title)
@@ -201,7 +201,7 @@ class SettingsViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        recalculateDB();
+        SettingsViewController.recalculateDB();
         // Do any additional setup after loading the view, typically from a nib.
         
         //Vegan Image **BUTTON**

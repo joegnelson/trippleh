@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     static func getRecipes (){
         //CREATE REQUUEST
-        let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/recipe")!)
+        let request2 = URLRequest(url: URL(string: "\(baseDomain)/recipe")!)
         
         //CREATE TASK
         let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {

@@ -45,7 +45,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         }
 
         //CREATE REQUUEST
-        let request2 = URLRequest(url: URL(string: "http://ccc-restrictless-login-t1.appspot.com/login?username=\(_user.text!)&pass=\(_pass.text!)")!)
+        let request2 = URLRequest(url: URL(string: "\(baseDomain)/login?username=\(_user.text!)&pass=\(_pass.text!)")!)
         
         //CREATE TASK
         let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {

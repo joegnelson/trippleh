@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSo-yZ-7Ol">
-                                <rect key="frame" x="152" y="104" width="70" height="21"/>
+                                <rect key="frame" x="48" y="104" width="276" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                             <constraint firstItem="5Ir-Je-SZH" firstAttribute="top" secondItem="OSo-yZ-7Ol" secondAttribute="bottom" constant="152" id="BcQ-uc-hx7"/>
                             <constraint firstItem="mUr-l7-VzV" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="153" id="Cl8-L8-Euq"/>
                             <constraint firstItem="qLZ-qZ-FY5" firstAttribute="top" secondItem="OSo-yZ-7Ol" secondAttribute="bottom" constant="152" id="FBU-cP-KMl"/>
-                            <constraint firstItem="OSo-yZ-7Ol" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="152" id="FJa-3R-AWU"/>
+                            <constraint firstItem="OSo-yZ-7Ol" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="48" id="FJa-3R-AWU"/>
                             <constraint firstItem="mUr-l7-VzV" firstAttribute="top" secondItem="5pe-dC-unx" secondAttribute="bottom" constant="25" id="Fzn-lI-GaA"/>
                             <constraint firstItem="5Ir-Je-SZH" firstAttribute="leading" secondItem="6cK-H9-wPi" secondAttribute="leading" constant="153" id="Fzw-fq-Yc5"/>
                             <constraint firstItem="qLZ-qZ-FY5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="-20" id="HI2-Rx-sPI"/>
@@ -119,7 +119,7 @@
                             <constraint firstItem="OSo-yZ-7Ol" firstAttribute="top" secondItem="5pe-dC-unx" secondAttribute="bottom" constant="5" id="kd7-Xx-TPX"/>
                             <constraint firstItem="OSo-yZ-7Ol" firstAttribute="top" secondItem="5pe-dC-unx" secondAttribute="bottom" constant="5" id="klA-dV-Lcd"/>
                             <constraint firstItem="6cK-H9-wPi" firstAttribute="trailing" secondItem="5pe-dC-unx" secondAttribute="trailing" constant="35" id="mVj-Ts-VPp"/>
-                            <constraint firstItem="6cK-H9-wPi" firstAttribute="trailing" secondItem="OSo-yZ-7Ol" secondAttribute="trailing" constant="153" id="rrB-ds-Zcq"/>
+                            <constraint firstItem="6cK-H9-wPi" firstAttribute="trailing" secondItem="OSo-yZ-7Ol" secondAttribute="trailing" constant="51" id="rrB-ds-Zcq"/>
                             <constraint firstItem="Mji-WT-VmM" firstAttribute="top" secondItem="ksm-qa-zXJ" secondAttribute="bottom" constant="154" id="sQS-Qy-29B"/>
                             <constraint firstAttribute="trailing" secondItem="ZIa-NT-kWF" secondAttribute="trailing" constant="-19" id="tQ3-5E-h2N"/>
                             <constraint firstAttribute="trailing" secondItem="mUr-l7-VzV" secondAttribute="trailing" constant="-19" id="tXo-zp-zCo"/>

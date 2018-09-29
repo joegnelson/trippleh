@@ -27,23 +27,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //CREATE TASK
         let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {
+            loadDatabaseFromLocalStorage()
             print("ERROR = \(String(describing: error))")
             return
             }
             let responseString = AppDelegate.processRecipeResponse(data: data, response: response)
             
-            //???
-            DispatchQueue.main.async {
-                if(responseString == nil){
-                    print("GET RECIPES FAILED!!!!!")
-                } else{
-                    print(responseString ?? "Logical Error!!!")
-                }
-            }
+//            //???
+//            DispatchQueue.main.async {
+//                if(responseString == nil){
+//                    print("GET RECIPES FAILED!!!!!")
+//                } else{
+//                    print(responseString ?? "Logical Error!!!")
+//                }
+//            }
             completion()
         }
         //EXECUTE TASK
         task.resume()
+    }
+    static func loadDatabaseFromLocalStorage(){
+        let ds2 = UserDefaults.standard.object(forKey:  "jsonDatabase") as! String
+        let lsData = Data(ds2.utf8)
+        do {
+            database = try JSONDecoder().decode(cellDataList.self, from: lsData).recipes
+        } catch {
+            //handle error
+            print(error)
+        }
+        SettingsViewController.recalculateDBStatic()
+
     }
     //----------------------------------------------------------
     // HELPER FUNCTIONS
@@ -53,15 +66,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Check response code from login request AND set login success flag accordingly
         if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
             print("statusCode should be 200, but is \(httpStatus.statusCode)")
-            
+            loadDatabaseFromLocalStorage()
             
             print(response ?? "response is nil")
-            return nil
+           return nil
         }
         
         //Get response
-        let responseString = String(data: data!, encoding: .utf8)
-        
+        let jsonDatabase = String(data: data!, encoding: .utf8)
+        UserDefaults.standard.set(jsonDatabase, forKey: "jsonDatabase")
+
         
         //let responseString = String(data: data!, encoding: .utf8)
         //let jsonData=responseString?.data(using: .utf8)!
@@ -75,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //handle error
             print(error)
         }
-        return responseString!
+        return jsonDatabase!
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

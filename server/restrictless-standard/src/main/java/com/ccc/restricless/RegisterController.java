@@ -29,19 +29,23 @@ public class RegisterController extends HttpServlet {
 			resp.setStatus(HTTPStatus.BadRequest400.getValue());//400 Bad Request
 			return;
 		}
-		
+		User user =User.get(request_username);
 		//lookup user by the requested username
-		if(LoginController.global_userByName.get(request_username)!=null) {
+		if(user!=null) {
 			resp.setStatus(HTTPStatus.Forbidden403.getValue());//forbidedn
 			return;
 		}
-		if(LoginController.global_userByEmail.get(request_email)!=null) {
-			resp.setStatus(HTTPStatus.Forbidden403.getValue());//forbidedn
-			return;
-		}
-		User user =LoginController.addUser(new User(request_username,request_pass,request_email,null,null,null));
-		
+//		if(LoginController.global_userByEmail.get(request_email)!=null) {
+//			resp.setStatus(HTTPStatus.Forbidden403.getValue());//forbidedn
+//			return;
+//		}
+//		User user =LoginController.addUser(new User(request_username,request_pass,request_email,null,null,null));
+		user=new User();
+		user.setEmail(request_email);
+		user.setUsername(request_username);
+		user.setPasword(request_pass);
 		user.setLastLogin(new Date());
+		User.insert(user);
 		
 		
 		//returning the response

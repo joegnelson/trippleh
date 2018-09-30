@@ -59,6 +59,17 @@
       <version>4.12</version>
       <scope>test</scope>
     </dependency>
+        <dependency>                        <!-- Google Cloud Client Library for Java -->
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud</artifactId>
+      <version>0.47.0-alpha</version>
+    </dependency>
+	<dependency>
+	  <groupId>com.google.cloud</groupId>
+	  <artifactId>google-cloud-datastore</artifactId>
+	  <version>1.40.0</version>
+	</dependency>
+    
   </dependencies>
 
   <build>
@@ -85,6 +96,9 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>${appengine.maven.plugin.version}</version>
       </plugin>
+      
+      
+      
     </plugins>
   </build>
 </project>

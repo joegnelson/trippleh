@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("ERROR = \(String(describing: error))")
             return
             }
-            let responseString = AppDelegate.processRecipeResponse(data: data, response: response)
+            _ = AppDelegate.processRecipeResponse(data: data, response: response)
             
 //            //???
 //            DispatchQueue.main.async {

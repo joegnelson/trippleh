@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.KeyFactory;
+
 
 @WebServlet(name = "login", urlPatterns = { "/login" })
 public class LoginController extends HttpServlet {
@@ -25,21 +29,27 @@ public class LoginController extends HttpServlet {
 
         public int getValue() { return value; }
 	}
-	public static HashMap<String,User> global_userByName = new HashMap<String,User>();
-	public static HashMap<String,User> global_userByEmail = new HashMap<String,User>();
-	static {
-		addUser( new User("joe","joe1","joe@cccentric.com","joe","nelson",null));
-		addUser( new User("hailey","hailey1","hailey@cccentric.com","Hailey","Nelson",null));
-		addUser( new User("julia","julia1","julia@cccentric.com","Julia","Oneil",null));
+//	public static HashMap<String,User> global_userByName = new HashMap<String,User>();
+//	public static HashMap<String,User> global_userByEmail = new HashMap<String,User>();
+//	static {
+//		addUser( new User("joe","joe1","joe@cccentric.com","joe","nelson",null));
+//		addUser( new User("hailey","hailey1","hailey@cccentric.com","Hailey","Nelson",null));
+//		addUser( new User("julia","julia1","julia@cccentric.com","Julia","Oneil",null));
+//	}
+	
+//	public static User addUser(User user) {
+//		global_userByName.put(user.getUsername(), user);
+//		global_userByEmail.put(user.getEmail(), user);
+//		return user;
+//	}
+	
+	private Datastore datastore;
+//	private KeyFactory keyFactory;
+
+	public LoginController() {
+	  datastore = DatastoreOptions.getDefaultInstance().getService(); // Authorized Datastore service
+//	  keyFactory = datastore.newKeyFactory().setKind("recipe");      // Is used for creating keys later
 	}
-	
-	public static User addUser(User user) {
-		global_userByName.put(user.getUsername(), user);
-		global_userByEmail.put(user.getEmail(), user);
-		return user;
-	}
-	
-	
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
@@ -53,7 +63,8 @@ public class LoginController extends HttpServlet {
 		}
 		
 		//lookup user by the requested username
-		User found_user = global_userByName.get(request_username);
+		//User found_user = global_userByName.get(request_username);
+		User found_user =User.get(request_username);
 		if(found_user==null) {
 			resp.setStatus(HTTPStatus.NotFound404.getValue());
 			return;
@@ -73,6 +84,9 @@ public class LoginController extends HttpServlet {
 		resp.setContentType("application/json");
 		resp.getWriter().println(found_user.toJson());
 		System.out.println("ICU " + found_user.getUsername() + "/" + found_user.getEmail());
+		
+		
+		
 		resp.setStatus(200);
 	}
 

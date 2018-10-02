@@ -23,8 +23,10 @@
 		D244E71A1F5CA73B00D8B3D3 /* HomeRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */; };
 		D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2489D331F54CD320094D91F /* TableViewCell1.swift */; };
 		D2489D361F54CD320094D91F /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2489D341F54CD320094D91F /* TableViewCell1.xib */; };
+		D295E9562162E9850088FF7C /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D295E9552162E9850088FF7C /* ResetPassViewController.swift */; };
 		D2A3BFFE2138C6C7002DAB15 /* Login2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */; };
 		D2A3C0002139C6C1002DAB15 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */; };
+		D2C854A3215FE88600E207F5 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C854A2215FE88600E207F5 /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +69,10 @@
 		D244E7191F5CA73B00D8B3D3 /* HomeRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecipeViewController.swift; sourceTree = "<group>"; };
 		D2489D331F54CD320094D91F /* TableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		D2489D341F54CD320094D91F /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
+		D295E9552162E9850088FF7C /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login2ViewController.swift; sourceTree = "<group>"; };
 		D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D2C854A2215FE88600E207F5 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,8 +134,10 @@
 				D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */,
 				D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */,
 				08562ACB1F0C03DD0057E481 /* Main.storyboard */,
+				D2C854A2215FE88600E207F5 /* LocalStorage.swift */,
 				08562ACE1F0C03DD0057E481 /* Assets.xcassets */,
 				D23DAF952156C9BD009657DC /* RegisterViewController.swift */,
+				D295E9552162E9850088FF7C /* ResetPassViewController.swift */,
 				D2489D331F54CD320094D91F /* TableViewCell1.swift */,
 				D2489D341F54CD320094D91F /* TableViewCell1.xib */,
 				08562AC51F0C03DD0057E481 /* AppDelegate.swift */,
@@ -298,12 +304,14 @@
 				D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */,
 				D23DAF962156C9BD009657DC /* RegisterViewController.swift in Sources */,
 				D2A3BFFE2138C6C7002DAB15 /* Login2ViewController.swift in Sources */,
+				D2C854A3215FE88600E207F5 /* LocalStorage.swift in Sources */,
 				08562ACA1F0C03DD0057E481 /* SettingsViewController.swift in Sources */,
 				08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */,
 				D2A3C0002139C6C1002DAB15 /* ProfileViewController.swift in Sources */,
 				08562AC81F0C03DD0057E481 /* SearchResultsViewController.swift in Sources */,
 				08EA6AD11F5DC16D00D10A73 /* Recipe.swift in Sources */,
 				D2489D351F54CD320094D91F /* TableViewCell1.swift in Sources */,
+				D295E9562162E9850088FF7C /* ResetPassViewController.swift in Sources */,
 				D244E7161F5C950C00D8B3D3 /* HomeViewController.swift in Sources */,
 				08837B76215E277F0036EFE1 /* Http.swift in Sources */,
 			);

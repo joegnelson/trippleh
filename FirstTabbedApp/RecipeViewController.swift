@@ -19,6 +19,8 @@ class RecipeViewController: UIViewController {
         recipeTitle.text = data.title
         recipeDescrip.text=data.category
         recipeRestrictions.text=data.restrictions
+        recipeDirect.text=data.directions
+        recipeIngred.text=data.ingredients
         self.navigationItem.title=data.title
         
         let url  = URL(string:data.imageUrl)

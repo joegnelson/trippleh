@@ -26,7 +26,6 @@
 		D295E9562162E9850088FF7C /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D295E9552162E9850088FF7C /* ResetPassViewController.swift */; };
 		D2A3BFFE2138C6C7002DAB15 /* Login2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */; };
 		D2A3C0002139C6C1002DAB15 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */; };
-		D2C854A3215FE88600E207F5 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C854A2215FE88600E207F5 /* LocalStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		D295E9552162E9850088FF7C /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
 		D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login2ViewController.swift; sourceTree = "<group>"; };
 		D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		D2C854A2215FE88600E207F5 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +132,6 @@
 				D2A3BFFD2138C6C7002DAB15 /* Login2ViewController.swift */,
 				D2A3BFFF2139C6C1002DAB15 /* ProfileViewController.swift */,
 				08562ACB1F0C03DD0057E481 /* Main.storyboard */,
-				D2C854A2215FE88600E207F5 /* LocalStorage.swift */,
 				08562ACE1F0C03DD0057E481 /* Assets.xcassets */,
 				D23DAF952156C9BD009657DC /* RegisterViewController.swift */,
 				D295E9552162E9850088FF7C /* ResetPassViewController.swift */,
@@ -304,7 +301,6 @@
 				D244E7181F5CA0D200D8B3D3 /* SearchViewController.swift in Sources */,
 				D23DAF962156C9BD009657DC /* RegisterViewController.swift in Sources */,
 				D2A3BFFE2138C6C7002DAB15 /* Login2ViewController.swift in Sources */,
-				D2C854A3215FE88600E207F5 /* LocalStorage.swift in Sources */,
 				08562ACA1F0C03DD0057E481 /* SettingsViewController.swift in Sources */,
 				08562AC61F0C03DD0057E481 /* AppDelegate.swift in Sources */,
 				D2A3C0002139C6C1002DAB15 /* ProfileViewController.swift in Sources */,

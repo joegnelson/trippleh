@@ -29,25 +29,12 @@ public class LoginController extends HttpServlet {
 
         public int getValue() { return value; }
 	}
-//	public static HashMap<String,User> global_userByName = new HashMap<String,User>();
-//	public static HashMap<String,User> global_userByEmail = new HashMap<String,User>();
-//	static {
-//		addUser( new User("joe","joe1","joe@cccentric.com","joe","nelson",null));
-//		addUser( new User("hailey","hailey1","hailey@cccentric.com","Hailey","Nelson",null));
-//		addUser( new User("julia","julia1","julia@cccentric.com","Julia","Oneil",null));
-//	}
 	
-//	public static User addUser(User user) {
-//		global_userByName.put(user.getUsername(), user);
-//		global_userByEmail.put(user.getEmail(), user);
-//		return user;
-//	}
-	
-	private Datastore datastore;
+//	private Datastore datastore;
 //	private KeyFactory keyFactory;
 
 	public LoginController() {
-	  datastore = DatastoreOptions.getDefaultInstance().getService(); // Authorized Datastore service
+//	  datastore = DatastoreOptions.getDefaultInstance().getService(); // Authorized Datastore service
 //	  keyFactory = datastore.newKeyFactory().setKind("recipe");      // Is used for creating keys later
 	}
 	@Override

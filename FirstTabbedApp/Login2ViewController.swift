@@ -36,11 +36,35 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func forgotPassBtn(_ sender: Any) {
         if (_user.text!.isEmpty){
             _label.text = "Enter username or email first."
+            return
         }
-        else {
-            //Segue
-            performSegue(withIdentifier: "resetPass", sender: self)
+        
+        
+        //CREATE REQUUEST
+        let request2 = URLRequest(url: URL(string: "\(baseDomain)/resetpassword?email=\(_user.text!)&onlyValidateEmail=true")!)
+        
+        //CREATE TASK
+        let task = URLSession.shared.dataTask(with: request2) { data, response, error in guard (data != nil), error == nil else {
+            print("error = \(String(describing: error))")
+            return
+            }
+
+            DispatchQueue.main.async {
+                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                    self.failCount=self.failCount+1;
+                    self._label.text = "Invalid Email. \(self.failCount)"
+                    return
+                }
+                //Segue
+                self.performSegue(withIdentifier: "resetPass", sender: self)
+                self._label.text = ""
+                self.failCount=0
+            }
         }
+        //EXECUTE TASK
+        task.resume()
+
+        
     }
     @IBAction func registerBtn(_ sender: Any) {
     }

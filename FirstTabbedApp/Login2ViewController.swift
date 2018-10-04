@@ -34,8 +34,13 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
     // ACTION
     //----------------------------------------------------------
     @IBAction func forgotPassBtn(_ sender: Any) {
-        //Segue
-        performSegue(withIdentifier: "resetPass", sender: self)
+        if (_user.text!.isEmpty){
+            _label.text = "Enter username or email first."
+        }
+        else {
+            //Segue
+            performSegue(withIdentifier: "resetPass", sender: self)
+        }
     }
     @IBAction func registerBtn(_ sender: Any) {
     }

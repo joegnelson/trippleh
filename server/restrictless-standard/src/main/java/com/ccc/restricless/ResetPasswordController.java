@@ -36,7 +36,9 @@ public class ResetPasswordController extends HttpServlet {
 		}
 		
 		//GET USER BY EMAIL
-		User user =User.getByEmail(request_email);
+		User user =User.get(request_email);
+		//GET USER BY EMAIL
+		if(user==null) {user =User.getByEmail(request_email);}
 		if(user==null) {
 			resp.setStatus(HTTPStatus.NotFound404.getValue());
 			return;

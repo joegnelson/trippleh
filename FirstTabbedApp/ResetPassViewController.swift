@@ -10,7 +10,7 @@ import UIKit
 
 var fourDigitCode: String!
 
-class ResetPassViewController: UIViewController {
+class ResetPassViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var digit1: UITextField!
     @IBOutlet weak var digit2: UITextField!
@@ -21,6 +21,22 @@ class ResetPassViewController: UIViewController {
     @IBOutlet weak var _label: UILabel!
     
     var failCount=0
+    
+    //Hide keyboard- touch
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //Hide keyboard- enter
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        _email.resignFirstResponder()
+        _pass.resignFirstResponder()
+        digit1.resignFirstResponder()
+        digit2.resignFirstResponder()
+        digit3.resignFirstResponder()
+        digit4.resignFirstResponder()
+        return(true)
+    }
     
     @IBAction func codeValueChanged(_ sender: Any) {
         let textField:UITextField = sender as! UITextField

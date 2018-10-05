@@ -22,6 +22,11 @@ class ResetPassViewController: UIViewController {
     
     var failCount=0
     
+    @IBAction func codeValueChanged(_ sender: Any) {
+        let textField:UITextField = sender as! UITextField
+        print(textField.text ?? "NOTHING")
+    }
+    
     @IBAction func resetButtonAct(_ sender: Any) {
         
         fourDigitCode = digit1.text! + digit2.text! + digit3.text! + digit4.text!
@@ -66,9 +71,37 @@ class ResetPassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //digit1.delegate = self
+        //digit2.delegate = self
+
+//        digit1.addTarget(self, action: Selector(("textFieldDidChange:")), for: UIControlEvents.editingChanged)
+//        digit2.addTarget(self, action: Selector(("textFieldDidChange:")), for: UIControlEvents.editingChanged)
 
         //Segue
         //performSegue(withIdentifier: "resetPass", sender: self)
+    }
+    
+    @IBAction func codeDidTouchDown(_ sender: Any) {
+        let textField:UITextField = sender as! UITextField
+        textField.text=""
+    }
+    @IBAction func editingChanged(_ sender: Any) {
+        let textField:UITextField = sender as! UITextField
+            switch textField{
+            case digit1:
+                digit2.text = ""
+                digit2.becomeFirstResponder()
+            case digit2:
+                digit3.text = ""
+                digit3.becomeFirstResponder()
+            case digit3:
+                digit4.text = ""
+                digit4.becomeFirstResponder()
+            default:
+                break
+            }
+//        }else{
+//        }
     }
     
 }

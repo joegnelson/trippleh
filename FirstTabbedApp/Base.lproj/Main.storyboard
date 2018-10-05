@@ -243,6 +243,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="codeDidTouchDown:" destination="339-oE-0wq" eventType="touchDown" id="pzN-Fo-WNg"/>
+                                    <action selector="editingChanged:" destination="339-oE-0wq" eventType="editingChanged" id="Tyb-U1-P5f"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i1c-Dr-Gqb">
                                 <rect key="frame" x="207" y="193" width="30" height="30"/>
@@ -252,6 +256,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="codeDidTouchDown:" destination="339-oE-0wq" eventType="touchDown" id="zOR-ku-t6a"/>
+                                    <action selector="editingChanged:" destination="339-oE-0wq" eventType="editingChanged" id="MIg-3D-R2B"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ebs-Q1-NwF">
                                 <rect key="frame" x="82" y="193" width="30" height="30"/>
@@ -261,6 +269,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="codeDidTouchDown:" destination="339-oE-0wq" eventType="touchDown" id="4rE-GC-Dhf"/>
+                                    <action selector="editingChanged:" destination="339-oE-0wq" eventType="editingChanged" id="XtO-WZ-dHz"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IsR-OE-2gY">
                                 <rect key="frame" x="267" y="193" width="30" height="30"/>
@@ -271,6 +283,11 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="codeDidTouchDown:" destination="339-oE-0wq" eventType="touchDown" id="D1o-O8-8Eb"/>
+                                    <action selector="codeValueChanged:" destination="339-oE-0wq" eventType="editingChanged" id="FNS-Y1-XsJ"/>
+                                    <action selector="editingChanged:" destination="339-oE-0wq" eventType="editingDidEnd" id="ZgD-lh-hxY"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 4 Digit Security Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMo-QM-evh">
                                 <rect key="frame" x="16" y="148" width="343" height="21"/>
@@ -1073,7 +1090,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SQ4-E5-1UR"/>
-        <segue reference="2Eh-Mo-Ygt"/>
+        <segue reference="ohc-uU-Zjb"/>
+        <segue reference="tuy-jC-cCs"/>
     </inferredMetricsTieBreakers>
 </document>

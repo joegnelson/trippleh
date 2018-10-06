@@ -197,9 +197,9 @@ class SettingsViewController: UIViewController {
             addAllToRDB();
         }
        
-        for item in restrictionDatabase {
-            print("Number of Recpes: ", item.title)
-        }
+//        for item in restrictionDatabase {
+//            print("Number of Recpes: ", item.title)
+//        }
      }
  
     override func viewDidLoad() {

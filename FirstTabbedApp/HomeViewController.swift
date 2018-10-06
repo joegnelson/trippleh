@@ -12,13 +12,13 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     // OVERRIDE
     //-----------------------------------------------------------------
    override func viewDidAppear(_ animated: Bool) {
-        print("COunt: \(restrictionDatabase.count)")
+        //print("COunt: \(restrictionDatabase.count)")
         self.tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(restrictionDatabase.count)
+        //print("viewDidLoad() \(restrictionDatabase.count)")
         
         refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(HomeViewController.reload), for: UIControl.Event.valueChanged)
@@ -28,7 +28,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     
     //only runs on initial load
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("DB count = \(database.count)")
+        //print("DB count = \(database.count)")
         return restrictionDatabase.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -73,7 +73,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
             //print("found image in cache")
             completion(cell,cachedImage, nil)
         } else {
-            print("go get image, not in cache \(url.absoluteString)")
+            //print("go get image, not in cache \(url.absoluteString)")
             getDataFromUrl(url: url) { data, response, error in
                 if let error = error {
                     completion(cell, nil, error)
@@ -118,9 +118,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
     func completionX(){
         DispatchQueue.main.async() { () -> Void in
             self.refresher.endRefreshing()
-            print("Before tableview reload")
             self.tableView.reloadData()
-            print("After tableview reload")
         }
 
     }

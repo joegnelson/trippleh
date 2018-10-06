@@ -17,16 +17,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
        
         if let email = user?.email{
-            logLabel.text = "rd.size:\(restrictionDatabase.capacity) | \(email)"
+            logLabel.text = "rd.size:\(restrictionDatabase.count) | \(email)"
         }else{
-            logLabel.text = "\(restrictionDatabase.capacity)"
+            logLabel.text = "rd size:\(restrictionDatabase.count)"
 
         }
         // Do any additional setup after loading the view.
     }
 
     @IBAction func recipeTouchUpInside(_ sender: Any) {
-        logLabel.text = "\(restrictionDatabase.capacity)"
+        logLabel.text = "rd size:\(restrictionDatabase.count)"
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

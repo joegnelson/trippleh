@@ -21,7 +21,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
         print(restrictionDatabase.count)
         
         refresher = UIRefreshControl()
-        refresher.addTarget(self, action: #selector(HomeViewController.reload), for: UIControlEvents.valueChanged)
+        refresher.addTarget(self, action: #selector(HomeViewController.reload), for: UIControl.Event.valueChanged)
         tableView.addSubview(refresher)
         
     }
@@ -125,7 +125,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
 
     }
     //Refresh
-    func reload(){
+    @objc func reload(){
         print("REFRESH!")
         AppDelegate.getRecipes(completion:completionX)
         

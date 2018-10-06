@@ -96,7 +96,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
                     
                 } else{
                     //LOGIN SUCCESFFUL, GOTO HOMEPAGE
-                    print(responseString ?? "Logical Error")
+                    //print(responseString ?? "Logical Error")
                     self.performSegue(withIdentifier: "welcome", sender: self)
                     self._label.text = ""
                     self.failCount=0
@@ -132,7 +132,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
         do {
             let decoder = JSONDecoder()
             user = try decoder.decode(User.self, from: data!)
-            print("email:\(user?.email ?? "")") // Prints "Durian"
+            //print("email:\(user?.email ?? "")") // Prints "Durian"
         } catch {
             //handle error
             print(error)

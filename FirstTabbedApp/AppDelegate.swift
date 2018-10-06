@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             database = try decoder.decode(cellDataList.self, from: data!).recipes
             SettingsViewController.recalculateDBStatic()
             //print("email:\(user?.email ?? "")") // Prints "Durian"
-            print("Refresh??? : \(database.count)")
+            //print("Refresh??? : \(database.count)")
         } catch {
             //handle error
             print(error)

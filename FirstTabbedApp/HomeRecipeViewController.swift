@@ -26,7 +26,7 @@ class HomeRecipeViewController:UIViewController {
         recipeRestrictions.text = data.restrictions
         recipeIngredients.text = data.ingredients
         recipeDirections.text = data.directions
-        print(data.directions)
+        //print(data.directions)
         self.navigationItem.title=data.title
         
         recipeIngredients.numberOfLines = 0;

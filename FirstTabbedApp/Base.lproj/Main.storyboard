@@ -444,13 +444,14 @@
                             <constraint firstItem="5Ea-Qq-zOo" firstAttribute="bottom" secondItem="0eJ-93-KS1" secondAttribute="bottom" id="GU3-9Y-eS8"/>
                             <constraint firstItem="0PD-7x-7jv" firstAttribute="trailing" secondItem="MUw-nR-9mV" secondAttribute="trailing" id="H8P-Fo-vjx"/>
                             <constraint firstItem="PD4-aM-2gX" firstAttribute="leading" secondItem="0eJ-93-KS1" secondAttribute="leading" constant="67.5" id="Ifj-im-L2c"/>
-                            <constraint firstItem="yXw-Cg-yIQ" firstAttribute="trailing" secondItem="0PD-7x-7jv" secondAttribute="trailing" id="KLF-IK-pgO"/>
+                            <constraint firstItem="yXw-Cg-yIQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0PD-7x-7jv" secondAttribute="trailing" id="KLF-IK-pgO"/>
                             <constraint firstItem="0eJ-93-KS1" firstAttribute="bottom" secondItem="Gur-3k-Q8v" secondAttribute="bottom" constant="201" id="LI6-ic-qle"/>
                             <constraint firstAttribute="trailing" secondItem="PD4-aM-2gX" secondAttribute="trailing" constant="67.5" id="Ona-bh-IsK"/>
                             <constraint firstItem="5Ea-Qq-zOo" firstAttribute="leading" secondItem="nXM-4D-1tk" secondAttribute="leading" id="Qda-HI-icM"/>
-                            <constraint firstItem="yXw-Cg-yIQ" firstAttribute="centerX" secondItem="MCx-lh-qTD" secondAttribute="centerX" id="Qi9-3f-fyu"/>
+                            <constraint firstItem="MCx-lh-qTD" firstAttribute="centerX" secondItem="yXw-Cg-yIQ" secondAttribute="centerX" id="Snn-mv-9Rm"/>
                             <constraint firstItem="MUw-nR-9mV" firstAttribute="leading" secondItem="0eJ-93-KS1" secondAttribute="leading" constant="55" id="TSo-Lu-JDp"/>
                             <constraint firstItem="MUw-nR-9mV" firstAttribute="top" secondItem="PD4-aM-2gX" secondAttribute="bottom" constant="40" id="Tap-dE-GNK"/>
+                            <constraint firstItem="MCx-lh-qTD" firstAttribute="centerX" secondItem="0PD-7x-7jv" secondAttribute="centerX" id="Tmp-RC-mL6"/>
                             <constraint firstItem="MCx-lh-qTD" firstAttribute="top" secondItem="yXw-Cg-yIQ" secondAttribute="bottom" constant="24" id="Xbq-im-EMh"/>
                             <constraint firstItem="0eJ-93-KS1" firstAttribute="trailing" secondItem="Gur-3k-Q8v" secondAttribute="trailing" constant="122" id="ZRT-Dy-zb4"/>
                             <constraint firstItem="0PD-7x-7jv" firstAttribute="leading" secondItem="0eJ-93-KS1" secondAttribute="leading" constant="55" id="eGz-Yu-DwF"/>
@@ -458,7 +459,7 @@
                             <constraint firstItem="0eJ-93-KS1" firstAttribute="trailing" secondItem="MUw-nR-9mV" secondAttribute="trailing" constant="57" id="h6n-tA-Lah"/>
                             <constraint firstItem="Gur-3k-Q8v" firstAttribute="leading" secondItem="0eJ-93-KS1" secondAttribute="leading" constant="122" id="hrA-oe-fdh"/>
                             <constraint firstItem="OXD-Rs-S6x" firstAttribute="top" secondItem="0eJ-93-KS1" secondAttribute="top" constant="106" id="sSY-wF-95e"/>
-                            <constraint firstItem="yXw-Cg-yIQ" firstAttribute="leading" secondItem="0PD-7x-7jv" secondAttribute="leading" id="tPs-Ga-Sir"/>
+                            <constraint firstItem="yXw-Cg-yIQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0PD-7x-7jv" secondAttribute="leading" id="tPs-Ga-Sir"/>
                             <constraint firstItem="0PD-7x-7jv" firstAttribute="top" secondItem="MUw-nR-9mV" secondAttribute="bottom" constant="36" id="wx4-pI-hmr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0eJ-93-KS1"/>

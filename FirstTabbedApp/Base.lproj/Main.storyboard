@@ -832,7 +832,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqj-v5-JXM">
-                                                <rect key="frame" x="34" y="447" width="341" height="154"/>
+                                                <rect key="frame" x="289" y="447" width="86" height="154"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="154" id="XKb-TB-G5B"/>
                                                 </constraints>
@@ -870,7 +870,7 @@
                                             <constraint firstItem="tef-xg-m4G" firstAttribute="leading" secondItem="dbM-ja-fdr" secondAttribute="leading" constant="88" id="rbe-wf-Lho"/>
                                             <constraint firstItem="Y8E-xh-DRT" firstAttribute="leading" secondItem="dbM-ja-fdr" secondAttribute="leading" constant="30" id="v4R-7e-Hid"/>
                                             <constraint firstItem="tef-xg-m4G" firstAttribute="top" secondItem="U5A-Wa-Bgv" secondAttribute="bottom" constant="8" symbolic="YES" id="w6v-Tr-vf9"/>
-                                            <constraint firstItem="eqj-v5-JXM" firstAttribute="leading" secondItem="dbM-ja-fdr" secondAttribute="leading" constant="34" id="x2n-RP-iXc"/>
+                                            <constraint firstItem="eqj-v5-JXM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dbM-ja-fdr" secondAttribute="leading" constant="20" symbolic="YES" id="x2n-RP-iXc"/>
                                             <constraint firstItem="tef-xg-m4G" firstAttribute="centerX" secondItem="Y8E-xh-DRT" secondAttribute="centerX" id="xDC-vu-Tae"/>
                                             <constraint firstAttribute="trailing" secondItem="N0l-9b-TrP" secondAttribute="trailing" id="xwg-Yq-qrz"/>
                                         </constraints>

@@ -75,7 +75,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                             let decoder = JSONDecoder()
                             
                             user = try decoder.decode(User.self, from: data!)
-                            print("email:\(user?.email ?? "")")
+ //                           print("email:\(user?.email ?? "")")
                             obj._label.text="Registration Success"
                             self.performSegue(withIdentifier: "register", sender: self)
                         }else if(statusCode == 403){

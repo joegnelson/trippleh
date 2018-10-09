@@ -38,7 +38,7 @@ class Login2ViewController: UIViewController, UITextFieldDelegate {
             _label.text = "Enter username or email first."
             return
         }
-        
+        print (_user.text!)
         
         //CREATE REQUUEST
         let request2 = URLRequest(url: URL(string: "\(baseDomain)/resetpassword?email=\(_user.text!)&onlyValidateEmail=true")!)

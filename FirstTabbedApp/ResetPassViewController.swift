@@ -39,15 +39,15 @@ class ResetPassViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func codeValueChanged(_ sender: Any) {
-        let textField:UITextField = sender as! UITextField
-        print(textField.text ?? "NOTHING")
+//        let textField:UITextField = sender as! UITextField
+//        print(textField.text ?? "NOTHING")
     }
     
     @IBAction func resetButtonAct(_ sender: Any) {
         
         fourDigitCode = digit1.text! + digit2.text! + digit3.text! + digit4.text!
         
-        print(fourDigitCode!)
+        //print(fourDigitCode!)
         
         if (digit1.text!.isEmpty || digit2.text!.isEmpty || digit3.text!.isEmpty || digit4.text!.isEmpty) {
             _label.text = "Check email for security code."

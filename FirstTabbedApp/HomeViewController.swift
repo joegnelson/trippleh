@@ -21,7 +21,7 @@ class HomeViewController: UITableViewController /**, UITableViewDataSource*/ {
         //print("viewDidLoad() \(restrictionDatabase.count)")
         
         refresher = UIRefreshControl()
-        refresher.addTarget(self, action: #selector(HomeViewController.reload), for: UIControl.Event.valueChanged)
+        refresher.addTarget(self, action: #selector(HomeViewController.reload), for: UIControlEvents.valueChanged)
         tableView.addSubview(refresher)
         
     }

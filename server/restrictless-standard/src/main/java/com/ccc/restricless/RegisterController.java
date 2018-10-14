@@ -45,6 +45,7 @@ public class RegisterController extends HttpServlet {
 		user.setUsername(request_username);
 		user.setPasword(request_pass);
 		user.setLastLogin(new Date());
+		user.setResetCode("none");
 		User.upsert(user);
 		
 		

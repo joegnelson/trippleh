@@ -32,23 +32,21 @@ public class HelloAppEngineTest {
   }
   @Test
   public void httpTest() throws SocketTimeoutException, ConnectTimeoutException {
-	 if(true) {
+	 if(false) {
 		  MyHttpResponse login_response =get("https://ccc-restrictless-login-t1.appspot.com/"
 		  		+ "login"
 		  		+ "?username=joe"
 				+ "&pass=apple"
-				 // +"&code=1234"
-		  		//+ "&onlyValidateEmail=true"
 				  );
 		  System.out.println(login_response);
 	 }
 	 if(true) {
 		  MyHttpResponse response =get("https://ccc-restrictless-login-t1.appspot.com/"
 		  		+ "resetpassword"
-		  		+ "?email=joe@cccentric.com"
+		  		+ "?email=joegnelson@gmail.com"
 				+ "&pass=joe1"
-				+ "&code=9148"
-		  		//+ "&onlyValidateEmail=true"
+				+ "&code=3971"
+		  		//+ "	"
 				  );
 		  System.out.println(response);
 	 }

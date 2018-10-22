@@ -25,12 +25,10 @@ class SettingsViewController: UIViewController {
         if #imageLiteral(resourceName: "SugarFreeOffNew") == sender.image (for: .normal){
             sender.setImage(#imageLiteral(resourceName: "sugarFreeOnNew"), for: .normal)
             isSugarFree = true
-            print("Sugar Free: " , isSugarFree)
         }
         else {
             sender.setImage(#imageLiteral(resourceName: "SugarFreeOffNew"), for: .normal)
             isSugarFree = false
-            print("Sugar Free: " , isSugarFree)
         }
         recalculateDB()
     }
@@ -38,12 +36,10 @@ class SettingsViewController: UIViewController {
         if #imageLiteral(resourceName: "GlutenFreeOffNew") == sender.image(for: .normal){
             sender.setImage(#imageLiteral(resourceName: "glutenFreeOnNew"), for: .normal)
             isGlutenFree = true
-            print("Gluten Free: " , isGlutenFree)
         }
         else {
             sender.setImage(#imageLiteral(resourceName: "GlutenFreeOffNew"), for: .normal)
             isGlutenFree = false
-            print("Gluten Free: " , isGlutenFree)
         }
         recalculateDB()
     }
@@ -51,12 +47,10 @@ class SettingsViewController: UIViewController {
         if #imageLiteral(resourceName: "DairyFreeOffNew") == sender.image(for: .normal){
             sender.setImage(#imageLiteral(resourceName: "dairyOnNew"), for: .normal)
             isDairyFree = true
-            print("Dairy Free: " , isDairyFree)
         }
         else {
             sender.setImage(#imageLiteral(resourceName: "DairyFreeOffNew"), for: .normal)
             isDairyFree = false
-            print("Dairy Free: " , isDairyFree)
         }
         recalculateDB()
     }
@@ -64,12 +58,10 @@ class SettingsViewController: UIViewController {
         if #imageLiteral(resourceName: "NutFreeOffNew") == sender.image(for: .normal){
             sender.setImage(#imageLiteral(resourceName: "nutFreeOnNew"), for: .normal)
             isNutFree = true
-            print("Nut Free: " , isNutFree)
         }
         else {
             sender.setImage(#imageLiteral(resourceName: "NutFreeOffNew"), for: .normal)
             isNutFree = false
-            print("Nut Free: " , isNutFree)
         }
         recalculateDB()
     }
@@ -77,12 +69,10 @@ class SettingsViewController: UIViewController {
         if #imageLiteral(resourceName: "VegetarianOffNew") == sender.image(for: .normal){
             sender.setImage(#imageLiteral(resourceName: "VegetarianOnNew"), for: .normal)
             isVegetarian = true
-            print("Vegetarian: " , isVegetarian)
         }
         else {
             sender.setImage(#imageLiteral(resourceName: "VegetarianOffNew"), for: .normal)
             isVegetarian = false
-            print("Vegetarian: " , isVegetarian)
         }
         recalculateDB()
     }
@@ -90,12 +80,10 @@ class SettingsViewController: UIViewController {
         if #imageLiteral(resourceName: "VeganNew") == sender.image(for: .normal){
             sender.setImage(#imageLiteral(resourceName: "VeganImageOnNew"), for: .normal)
             isVegan = true
-            print("Vegan: " , isVegan)
         }
         else {
             sender.setImage(#imageLiteral(resourceName: "VeganNew"), for: .normal)
             isVegan = false
-            print("Vegan: " , isVegan)
         }
         recalculateDB()
     }
@@ -110,8 +98,6 @@ class SettingsViewController: UIViewController {
     static func addToRDB(selection: String) {
         //Traversing through database and adding to categoryDatabasefor item in database
         // var count=0
-        print("-----")
-        print(selection)
         for item in database {
             if(item.restrictions.contains(selection)){
                 restrictionDatabase.append(item)
